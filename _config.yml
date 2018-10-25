@@ -25,7 +25,7 @@ description: Site note lại những kiến thức và bài viết hay.
 navbar-links:
   About Me: "Software engineer tò mò về machine learning, deep learning và công nghệ mới "
   Resources:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+    #- Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - GitHub Pages: "https://github.com/vankhangfet"
   Author's home: "https://github.com/vankhangfet"
 

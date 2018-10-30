@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Transfer learning
-image: /img/hello_world.jpeg
+image: /img/CNN_Net.jpeg
 ---
 
 This is my first post, how exciting!

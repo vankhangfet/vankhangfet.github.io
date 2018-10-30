@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Transfer learning
-image: /img/CNN_Net.jpeg
+image: /img/CNN_Net.jpg
 ---
 
 Bài này sẽ giúp các bạn tìm hiểu kỹ thuật Transfer learning là gì? Chúng ta sẽ trả lời 2 câu hỏi
@@ -16,6 +16,8 @@ Nếu như bạn đặt câu hỏi này, nghĩa là bạn đang đến với Dee
 
 Mạng CNN có thể học và mapping được những function rất phực tạp khi có đủ data. Chúng ta vẫn không thể hoàn toàn hiểu
 convnet học như thế nào. Về cơ bản thì một mạng CNN sẽ có cấu trúc như sau:
+
+![Cnn Net](/img/CNN_Net.jpg "Cnn Net")
 
 Và quá trình training mạng CNN là tìm ra giá trị thích hợp cho mỗi filter để trích xuất thông tin ảnh đầu vào, khi bức ảnh được
 đi qua nhiều Convnet layer. 

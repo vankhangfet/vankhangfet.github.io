@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Machine learning with Orange
-image: image/Orange_2.jpg
+image: /image/Orange_2.jpg
 ---
 Orange là một công cụ khá trực quan để nghiên cưu về các thuật toán machine learning và thực hành data mining. Chi tiết về tool này các bạn có thể
 xem ở trang web sau: https://orange.biolab.si/, còn đây là quảng cáo trên site .

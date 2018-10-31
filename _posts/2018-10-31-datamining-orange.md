@@ -17,7 +17,15 @@ Phía bên trái là các công cụ được chia làm nhiều nhóm khác nhau
 3. Model
 4. Evaluate
 5. Unsupervised
+
 Các bước 1 ~4 cũng chính là các steps để chúng ta xây dựng nên một chương trình dùng machine learning.
 Chi tiết các nhóm 1 ~ 4 ra sao, hy vọng các bạn sẽ tự tìm hiểu và bổ xung vào một bài viết khác.
 
 OK! Để xem tool này ra sao ta sẽ xây dựng một flow như sau:
+
+![Orange_1](/img/Orange_1.jpg "Orange_1")
+
+Ví dụ ở workflow trên là bài toán phân loại hoa Iris dựa vào đặc điểm của chiều dài, rộng của cánh hoa,...
+Các bước thực hiện như sau:
+
+Step1: Load data set, ta sử dụng công cụ Data như sau:

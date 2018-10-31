@@ -29,3 +29,5 @@ Ví dụ ở workflow trên là bài toán phân loại hoa Iris dựa vào đ�
 Các bước thực hiện như sau:
 
 Step1: Load data set, ta sử dụng công cụ Data như sau:
+
+![Orange_2](/img/Orange_2.jpg "Orange_2")

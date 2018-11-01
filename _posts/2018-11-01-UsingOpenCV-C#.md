@@ -15,6 +15,11 @@ Tình huống mình gặp phải đó là trên app của mình có hiển thị
 
 Để dùng OpenCV trên project.Net bạn cần phải xây dựng một class warpper, class này sẽ làm nhiệm vụ giao tiếp giữa C++ và C# như trong project của mình. Việc viết một class wrapper như thế nào mình sẽ viết chi tiết vào một topic khác ^^.
 
+Nguyên lý hoạt động của lớp wrap như sau:
+
+![Wrap-opencv](/img/wrap-opencv.jpg "Wrap-opencv")
+
+
 Khi có lớp wrapper này rồi thì công việc còn lại chỉ là convert kiểu dữ liệu để xử dụng. Các bạn sử dụng các method sau:
 Convert Bitpmap to Mat trong Open CV
 

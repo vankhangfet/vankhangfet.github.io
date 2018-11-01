@@ -6,8 +6,8 @@ tags: [.Net]
 Nếu bạn đã từng làm một số project có liên quan đến xử lý ảnh thì chắc hẳn sẽ biết thư viện OpenCV. Hiện tại đã có phiên bản OpenCV cho .Net là EmgCV, tuy nhiên với ứng dụng thương mại bạn sẽ phải trả tiền. Để tăng tốc độ xử lý cũng như dễ dàng hơn thì theo mình bạn nên sử dụng OpenCV trước sau đó mới đến EmguCV.
 
 Với những ai chưa nghe đến OpenCV hoặc EmguCV bao giờ thì bạn có thể tham khảo ở link sau:
-Open CV [https://opencv.org](https://opencv.org)
-EMGU CV [http://www.emgu.com/wiki/index.php/Main_Page](http://www.emgu.com/wiki/index.php/Main_Page)
+1. Open CV [https://opencv.org](https://opencv.org)
+2. EMGU CV [http://www.emgu.com/wiki/index.php/Main_Page](http://www.emgu.com/wiki/index.php/Main_Page)
 
 OpenCV được viết bằng C++, nên sẽ có chút khó khăn khi bạn muốn sử dụng các function của OpenCV trên C#.Net.
 

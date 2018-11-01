@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Machine learning with Orange
-image: /image/Orange_2.jpg
+image:/img/Orange_1.jpg
 tags: [Machine learning]
 ---
 Orange là một công cụ khá trực quan để nghiên cưu về các thuật toán machine learning và thực hành data mining. Chi tiết về tool này các bạn có thể

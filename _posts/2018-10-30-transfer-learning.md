@@ -2,6 +2,7 @@
 layout: post
 title: Transfer learning
 image: /img/CNN_Net.jpg
+tags: [Machine learning]
 ---
 
 Bài này sẽ giúp các bạn tìm hiểu kỹ thuật Transfer learning là gì? Chúng ta sẽ trả lời 2 câu hỏi

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sử dụng Open CV với C#
+image: /img/wrap-opencv.jpg 
 tags: [.Net]
 ---
 Nếu bạn đã từng làm một số project có liên quan đến xử lý ảnh thì chắc hẳn sẽ biết thư viện OpenCV. Hiện tại đã có phiên bản OpenCV cho .Net là EmgCV, tuy nhiên với ứng dụng thương mại bạn sẽ phải trả tiền. Để tăng tốc độ xử lý cũng như dễ dàng hơn thì theo mình bạn nên sử dụng OpenCV trước sau đó mới đến EmguCV.

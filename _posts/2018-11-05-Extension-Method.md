@@ -57,4 +57,8 @@ class Program
 }
 ~~~~
 
+Có một điểm rất hay các bạn nên biết đó là "LINQ is built upon extension methods that operate on IEnumerable and IQeryable type."
+Trong LINQ có rất nhiều extension method build trên kiểu dữ liệu là IEnumerable và IQueryable. Hy vọng qua bài viết này, các bạn đã biết cách sử dụng một extension method.
+
+
 

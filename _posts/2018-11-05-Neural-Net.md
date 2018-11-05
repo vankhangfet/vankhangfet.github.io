@@ -5,9 +5,6 @@ image: /img/neuralnetworks.jpg
 tags: [Machine learning]
 ---
 
-Bài này mình có tham khảo từ trang web sau:
-https://www.learnopencv.com/understanding-feedforward-neural-networks/
-
 Lý do mình viết về Neural Networks là trong quá trình làm việc, mình phải làm với một số bài toán có sử dụng machine leaning và tất nhiên giờ đang là thời đại của BigData và Deep learning nên mình cũng rất tò mò về những khái niệm này. Sau một thời gian tìm hiểu thì mình thấy thích làm về ML, vừa đọc vừa thử nghiệm, nên cách tốt nhất là note lại và cố gắng giải thích theo cách hiểu của mình. 
 
 Trong machine learning thì Neural Networks là một phần cũng rất quan trọng, chúng ta hãy thử tìm hiểu về NN mà không cần quá nhiều kiến thức toán học xem sao.
@@ -22,3 +19,18 @@ quá nhiều kiến thức toán, hay thống kê.
 Cách tốt nhất là bắt đầu với một ví dụ. Ta sẽ giải quyết bài toán "Binary Classification". Trong machine learning thì
 "Classification" được xếp vào nhóm Supervised Learning, trong đó dữ liệu được phân chia vào các nhóm xác định trước bởi
 Decision Function và hàm này được học qua dataset được gán nhãn trước. Nếu chúng ta chỉ có 2 group cần phân loại, thì bài toán đó là "Binary Classification".
+
+![Data_set](/img/datasets.jpg "Data_set")
+
+### 1. Understanding the Neural Network
+![Neural_net](/img/neuralnetworks.jpg "Neural_net")
+Hình vẽ trên là một ví dụ về Feedforward Neural network. Dữ liệu được truyền thẳng từ Input vào trong mạng. Trong mạng này thì không có feedback connections cũng như loop trong mạng.
+
+Một mạng thì gồm có Input layer, Output layer và Hidden layer. Thông thường một mạng Neural network sẽ có thể có nhiều Hidden layer. Mỗi một node trong một layer gọi là Neuron.
+
+### 1.1 What is a Neuron
+![image-neuron-1.jpg](/img/image-neuron-1.jpg "image-neuron-1")
+
+
+Bài này mình có tham khảo từ trang web sau:
+https://www.learnopencv.com/understanding-feedforward-neural-networks/

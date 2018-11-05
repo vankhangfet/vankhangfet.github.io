@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Understanding Feedforward Neural Networks
+image: /img/neuralnetworks.jpg
 tags: [Machine learning]
 ---
 
@@ -12,7 +13,7 @@ Lý do mình viết về Neural Networks là trong quá trình làm việc, mìn
 Trong machine learning thì Neural Networks là một phần cũng rất quan trọng, chúng ta hãy thử tìm hiểu về NN mà không cần quá nhiều kiến thức toán học xem sao.
 
 ### Feedforware Neural Network là gì?
-
+![Neural_net](/img/neuralnetworks.jpg "Neural_net")
 Post này chúng ta sẽ nghiên cứu về Feedforward Neural Networks hay tên gọi khác là Multi-layer Perceptrons.
 Kiến trúc mạng Neural rất quan trọng và được sử dụng trong các mạng CNN or RNN. Để hiểu về mạng Neural Networks hoạt
 động ra sao, các bạn cần trang bị kiến thức toán và thông kê. Tuy nhiên bài này mình sẽ giải thích một cách dễ hiểu, mà không dùng

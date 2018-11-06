@@ -31,6 +31,40 @@ Một mạng thì gồm có Input layer, Output layer và Hidden layer. Thông t
 ### 1.1 What is a Neuron
 ![image-neuron-1.jpg](/img/image-neuron-1.jpg "image-neuron-1")
 
+Hình vẽ trên là ví dụ về Neuron gồm các đầu vào input với các trọng số Wi khác nhau.
+Tính tổng các đầu vào sau đó applies một active function để normalize kết quả. Activation function có thể là linear hoặc nonlinear.
+
+### 1.2 Activation function
+Trong neural net chúng ta hay gặp các active function sau: 
+![Active function.jpg](/img/active-function.jpg "Active function")
+
+### 1.3 Input Layer
+Input layer là layer đầu tiên của mạng neural, dùng để input data hoặc feature
+
+ ### 1.4 Output Layer
+Đây là layer đưa ra kết quả dự đoán. Với những bài toán khác nhau thì active function ở layer cũng sẽ khác nhau.
+Ví dụ với bài toán binary classification chúng ta có output là 0 hoặc 1, do đó active function là sigmoid function.
+Với bài toán dạng multiclass classification, active function được sử dụng là Softmax. Trong trường hợp là regression, output
+không phải phân chia vào category, ta có thể sử dụng linear unit.
+
+### 1.5 Hidden Layer
+Một feedforward network bao gồm một chuỗi các function. Bởi có nhiều hidden layers, chúng ta có thể mô tả hay tính toán
+những hàm số phức tạp bằng cách kết hợp các layer và nhiều hàm số đơn giản. Ví dụ chúng ta muốn mô phỏng hàm số mũ 7,
+ta có thể sử dụng những hàm đơn giản như square hoặc cube để tạo ra hàm số này. Trong hidden layer, active function được sử dụng phổ biến là hàm ReLU (Rectified Linear Unit).
+
+Việc chọn hidden layer không có quy tắc hay một câu trả lời chính xác. Về cơ bản thì deeper networks có thể học hay mô phỏng những function phức tạp hơn.
+
+### 1.6 How does the network learn?
+Dữ liệu từ training sample được đưa vào mạng network, sau đó kết quả output được so sánh với actual output. Sự sai khác này được sử dụng để thay đổi weights của những neutron. Việc tính toán, thay đổi trọng số thông qua thuật toán "Backpropagation".
+
+Backpropagation thường được sử dụng trong các thuật toán gradient để hiệu chỉnh các weight của neutron trong multi-layer neutral networks.
+
+### 2. Why use Hidden Layer?
+Để trả lời câu hỏi tại sao chúng ta cần hidden layer, ta có thể sử dụng một công cụ rất trực quan trên web site
+http://playground.tensorflow.org để mô phỏng mạng neural và xem tại sao lại cần sử dụng hidden layer.
+
+Giả sử chúng ta có tập dữ liệu với phân bố như sau:
+
 
 Bài này mình có tham khảo từ trang web sau:
 https://www.learnopencv.com/understanding-feedforward-neural-networks/

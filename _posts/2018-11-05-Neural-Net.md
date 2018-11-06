@@ -64,7 +64,16 @@ Backpropagation thường được sử dụng trong các thuật toán gradient
 http://playground.tensorflow.org để mô phỏng mạng neural và xem tại sao lại cần sử dụng hidden layer.
 
 Giả sử chúng ta có tập dữ liệu với phân bố như sau:
+![data-sample.jpg](/img/data-sample.jpg "Data sample")
 
+Với dữ liệu như vậy thì chúng ta cần một decision bound phải có dạng circle, trong trường hợp này linear decision bound không thể phân lớp được dữ liệu.
+
+Chúng ta hãy xem xét các ví dụ dưới đây. Trong hợp không có hidden layer, thì đường phân lớp là linear. Ta có thể thấy rằng, dữ liệu bị phân lớp sai rất nhiều. 
+![Hidden-1.jpg](/img/hidden-1.jpg "hidden-1")
+
+Khi chúng ta tăng hidden layer và kết quả như sau:
+Với 1 hidden layer, có vẻ như bound decision có vẻ tốt hơn. Với nhũng dữ liệu phức tạp thì việc chúng ta phải tăng thêm hidden layer hoặc tăng thêm neural đều dựa trên thực nghiệm, sẽ không có công thức tổng quát nào để tối ưu việc này.
+![Hidden-2.jpg](/img/hidden-2.jpg "hidden-2")
 
 Bài này mình có tham khảo từ trang web sau:
 https://www.learnopencv.com/understanding-feedforward-neural-networks/

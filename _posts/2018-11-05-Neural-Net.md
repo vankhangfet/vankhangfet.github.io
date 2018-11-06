@@ -73,7 +73,16 @@ Chúng ta hãy xem xét các ví dụ dưới đây. Trong hợp không có hidd
 
 Khi chúng ta tăng hidden layer và kết quả như sau:
 Với 1 hidden layer, có vẻ như bound decision có vẻ tốt hơn. Với nhũng dữ liệu phức tạp thì việc chúng ta phải tăng thêm hidden layer hoặc tăng thêm neural đều dựa trên thực nghiệm, sẽ không có công thức tổng quát nào để tối ưu việc này.
+
 ![Hidden-2.jpg](/img/hidden-2.jpg "hidden-2")
+
+Chúng ta sẽ thử tiếp với 2 hidden layer, và kết quả có vẻ rất khả thi như dưới đây:
+
+![Hidden-3.jpg](/img/hidden-3.jpg "hidden-3")
+
+Như vậy ta có thể thấy rằng, với nhiều hidden layer ta có thể xấp xỉ được những hàm số phức tạp, hay nói cách khác ta có model để biểu diễn mô hình phức tạp.
+
+
 
 Bài này mình có tham khảo từ trang web sau:
 https://www.learnopencv.com/understanding-feedforward-neural-networks/

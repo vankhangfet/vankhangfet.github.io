@@ -64,6 +64,7 @@ Backpropagation thường được sử dụng trong các thuật toán gradient
 http://playground.tensorflow.org để mô phỏng mạng neural và xem tại sao lại cần sử dụng hidden layer.
 
 Giả sử chúng ta có tập dữ liệu với phân bố như sau:
+
 ![data-sample.jpg](/img/data-sample.jpg "Data sample")
 
 Với dữ liệu như vậy thì chúng ta cần một decision bound phải có dạng circle, trong trường hợp này linear decision bound không thể phân lớp được dữ liệu.

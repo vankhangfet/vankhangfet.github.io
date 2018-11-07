@@ -67,17 +67,62 @@ clf_0 = LogisticRegression().fit(X, y)
 #Predict on training set
 pred_y_0 = clf_0.predict(X)
 
-# How's the accuracy?
+#How's the accuracy?
 print( accuracy_score(pred_y_0, y) )
 # 0.9216
 
 Nêu như chúng ta training model train thì kết quả chính xác là 92%, tuy nhiên khi kiểm tra kết quả dự đoán thực tế thì 
-# Should we be excited?
+#Should we be excited?
 print( np.unique( pred_y_0 ) )
 
 Kết quả dự đoán hoàn toàn sai. Chúng ta hãy thử áp dụng kỹ thuật đầu tiên
 
 ### 1. Up-sample Minority Class
+Ý tưởng của kỹ thuật này là tăng số lượng class có số lượng ít nên, để làm cho dữ liệu cân bằng hơn.
+Trong Scikit-Learn đã cung cấp sẵn cho ta module để thực hiện việc này:
 
+~~~~
+from sklearn.utils import resample
+# Separate majority and minority classes
+df_majority = df[df.balance==0]
+df_minority = df[df.balance==1]
+ 
+# Upsample minority class
+df_minority_upsampled = resample(df_minority, 
+                                 replace=True,     # sample with replacement
+                                 n_samples=576,    # to match majority class
+                                 random_state=123) # reproducible results
+ 
+# Combine majority class with upsampled minority class
+df_upsampled = pd.concat([df_majority, df_minority_upsampled])
+ 
+# Display new class counts
+df_upsampled.balance.value_counts()
+# 1    576
+# 0    576
+# Name: balance, dtype: int64
+~~~~
+Khi dữ liệu đã balance chúng ta hãy kiểm thử model 
+~~~
+#Separate input features (X) and target variable (y)
+y = df_upsampled.balance
+X = df_upsampled.drop('balance', axis=1)
+ 
+#Train model
+clf_1 = LogisticRegression().fit(X, y)
+ 
+#Predict on training set
+pred_y_1 = clf_1.predict(X)
+ 
+#Is our model still predicting just one class?
+print( np.unique( pred_y_1 ) )
+# [0 1]
+ 
+# How's our accuracy?
+print( accuracy_score(y, pred_y_1) )
+# 0.513888888889
+~~~~ 
+
+Bây giờ độ chính xác chỉ đạt 51%.
 
 Bài này mình lược dịch từ link sau: https://elitedatascience.com/imbalanced-classes

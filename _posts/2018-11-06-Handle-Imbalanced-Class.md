@@ -49,11 +49,15 @@ df.head()
 #Import algorithm and accuracy metricPython
 
 from sklearn.linear_model import LogisticRegression
+
 from sklearn.metrics import accuracy_score
-Next, we'll fit a very simple model using default settings for everything.
+
+#Next, we'll fit a very simple model using default settings for everything.
 
 #Train model on imbalanced dataPython
+
 #Separate input features (X) and target variable (y)
+
 y = df.balance
 X = df.drop('balance', axis=1)
  

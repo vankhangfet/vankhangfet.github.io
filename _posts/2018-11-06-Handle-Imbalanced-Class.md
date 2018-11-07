@@ -22,24 +22,7 @@ def disease_screen(patient_data):
     return 'No Disease.'
 ~~~~
 
-Thì model của bạn đã đạt đến độ chính xác 92%? 
+Thì model của bạn đã đạt đến độ chính xác 92%? Nhưng việc phát hiện bệnh sẽ quan trong hơn việc bỏ qua bệnh, do đó 92% trong trường hợp này sẽ không có ý nghĩa.
 
-Intuition: Disease Screening Example
-Let’s say your client is a leading research hospital, and they’ve asked you to train a model for detecting a disease based on biological inputs collected from patients.
-
-But here’s the catch… the disease is relatively rare; it occurs in only 8% of patients who are screened.
-
-Now, before you even start, do you see how the problem might break? Imagine if you didn’t bother training a model at all. Instead, what if you just wrote a single line of code that always predicts ‘No Disease?’
-
-A crappy, but accurate, solutionPython
-1
-2
-3
-def disease_screen(patient_data):
-    # Ignore patient_data
-    return 'No Disease.'
-Well, guess what? Your “solution” would have 92% accuracy!
-
-Unfortunately, that accuracy is misleading.
 
 Bài này mình lược dịch từ link sau: https://elitedatascience.com/imbalanced-classes

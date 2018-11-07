@@ -46,6 +46,7 @@ df.head()
 
 ### The Danger of Imbalanced Classes
 
+~~~~
 #Import algorithm and accuracy metricPython
 
 from sklearn.linear_model import LogisticRegression
@@ -70,6 +71,7 @@ pred_y_0 = clf_0.predict(X)
 #How's the accuracy?
 print( accuracy_score(pred_y_0, y) )
 # 0.9216
+~~~~
 
 Nêu như chúng ta training model train thì kết quả chính xác là 92%, tuy nhiên khi kiểm tra kết quả dự đoán thực tế thì 
 #Should we be excited?

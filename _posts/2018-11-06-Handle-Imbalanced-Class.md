@@ -32,10 +32,10 @@ Link [http://archive.ics.uci.edu/ml/datasets/balance+scale](http://archive.ics.u
 
 Chúng ta hãy xem view data:
 
+~~~~
 import pandas as pd
 import numpy as np
 
-~~~~
 # Read dataset
 df = pd.read_csv('balance-scale.data', 
                  names=['balance', 'var1', 'var2', 'var3', 'var4'])
@@ -43,5 +43,37 @@ df = pd.read_csv('balance-scale.data',
 # Display example observations
 df.head()
 ~~~~
+
+### The Danger of Imbalanced Classes
+
+#Import algorithm and accuracy metricPython
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+Next, we'll fit a very simple model using default settings for everything.
+
+#Train model on imbalanced dataPython
+#Separate input features (X) and target variable (y)
+y = df.balance
+X = df.drop('balance', axis=1)
+ 
+#Train model
+clf_0 = LogisticRegression().fit(X, y)
+ 
+#Predict on training set
+pred_y_0 = clf_0.predict(X)
+
+# How's the accuracy?
+print( accuracy_score(pred_y_0, y) )
+# 0.9216
+
+Nêu như chúng ta training model train thì kết quả chính xác là 92%, tuy nhiên khi kiểm tra kết quả dự đoán thực tế thì 
+# Should we be excited?
+print( np.unique( pred_y_0 ) )
+
+Kết quả dự đoán hoàn toàn sai. Chúng ta hãy thử áp dụng kỹ thuật đầu tiên
+
+### 1. Up-sample Minority Class
+
 
 Bài này mình lược dịch từ link sau: https://elitedatascience.com/imbalanced-classes

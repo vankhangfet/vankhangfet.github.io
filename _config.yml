@@ -14,7 +14,7 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: Software engineer
+title: Khang 
 
 # Short description of your site
 description: Site note lại những kiến thức và bài viết hay.
@@ -72,9 +72,9 @@ author:
 social-network-links:
   rss: true
   email: "vankhangfet@gmail.com"
-  facebook: 
-  github: https://github.com/vankhangfet
-  twitter: 
+  #facebook: 
+  github: vankhangfet
+  #twitter: 
 #  reddit: yourname
 #  google-plus: +DeanAttali
 #  linkedin: daattali
@@ -84,7 +84,7 @@ social-network-links:
 #  instagram: deanat78
 #  youtube: user/deanat78
 #  spotify: yourname
-#  telephone: +14159998888
+ telephone: +84983710870
 #  steam: deanat78
 #  twitch: yourname
 #  yelp: yourname

@@ -174,3 +174,30 @@ Nếu như traing mạng bằng các ảnh được generate thì ta có thể c
 gốc do đó ảnh sẽ không tự nhiên và vẫn sẽ có một tương quan nhất lớn nào đó, và dữ liệu đó không phải là dữ liệu mới. Do đó việc này cũng chưa thể tránh được hiện tượng overfitting.
 
 Nên để tăng độ chính xác chúng ta cần thêm kỹ thuật Drop-out.
+
+~~~~
+model = models.Sequential()
+model.add(layers.Conv2D(32, (3, 3), activation='relu',
+                        input_shape=(150, 150, 3)))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(128, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Conv2D(128, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D((2, 2)))
+model.add(layers.Flatten())
+model.add(layers.Dropout(0.5))
+model.add(layers.Dense(512, activation='relu'))
+model.add(layers.Dense(1, activation='sigmoid'))
+
+model.compile(loss='binary_crossentropy',
+              optimizer=optimizers.RMSprop(lr=1e-4),
+              metrics=['acc'])
+~~~~
+Sau khi train thì kết quả thu được như sau:
+Model đã tốt hơn, accuracy của test và validation khá giống nhau. Tuy nhiên nếu như muốn tăng độ chính xác cao hơn nữa thì rất khó khi ta build một mạng cnn từ đầu vì dữ liệu train là ít.
+Để tăng độ chính xác thì ta sẽ sử dụng pre-train, kỹ thuật pre-train sẽ được đề cập ở bài sau. Kết thúc ở đây các bạn có thể thấy rằng với small data chúng ta cũng có thể sử dụng deep learning. 
+
+Bài này mình có lược dịch từ link sau:
+http://nbviewer.jupyter.org/github/fchollet/deep-learning-with-python-notebooks/blob/master/5.2-using-convnets-with-small-datasets.ipynb

@@ -153,6 +153,8 @@ plt.show()
 
 Kết quả của đoạn code trên cho ta đồ thì dưới đây. Dựa vào đồ thì ta có thể biết model hoạt động tốt hay không tốt? Có bị overfitting hay không?
 
+![history](/img/history.jpg "history")
+
 Nhìn vào biểu đồ trên ta thấy rằng accuracy tăng theo thời gian và tiệm cận 100%, tuy nhiên validation accuracy chỉ dừng lại ở 70%.
 
 Như vậy model có vẻ như bị overffiting. Để tránh hiện tượng overfitting ta sẽ thử tăng cường data xem sao.
@@ -170,8 +172,7 @@ atagen = ImageDataGenerator(
       fill_mode='nearest')
 ~~~~
 
-Nếu như traing mạng bằng các ảnh được generate thì ta có thể chắc chắn rằng mạng sẽ không bao giờ học 2 anh giống nhau. Tuy nhiên vì dữ liệu được generate ra từ một ảnh
-gốc do đó ảnh sẽ không tự nhiên và vẫn sẽ có một tương quan nhất lớn nào đó, và dữ liệu đó không phải là dữ liệu mới. Do đó việc này cũng chưa thể tránh được hiện tượng overfitting.
+Nếu như traing mạng bằng các ảnh được generate thì ta có thể chắc chắn rằng mạng sẽ không bao giờ học 2 anh giống nhau. Tuy nhiên vì dữ liệu được generate ra từ một ảnh gốc do đó ảnh sẽ không tự nhiên và vẫn sẽ có một tương quan nhất lớn nào đó, và dữ liệu đó không phải là dữ liệu mới. Do đó việc này cũng chưa thể tránh được hiện tượng overfitting.
 
 Nên để tăng độ chính xác chúng ta cần thêm kỹ thuật Drop-out.
 
@@ -196,6 +197,9 @@ model.compile(loss='binary_crossentropy',
               metrics=['acc'])
 ~~~~
 Sau khi train thì kết quả thu được như sau:
+
+![history-1.jpg](/img/history-1.jpg "history-1.jpg") 
+
 Model đã tốt hơn, accuracy của test và validation khá giống nhau. Tuy nhiên nếu như muốn tăng độ chính xác cao hơn nữa thì rất khó khi ta build một mạng cnn từ đầu vì dữ liệu train là ít.
 Để tăng độ chính xác thì ta sẽ sử dụng pre-train, kỹ thuật pre-train sẽ được đề cập ở bài sau. Kết thúc ở đây các bạn có thể thấy rằng với small data chúng ta cũng có thể sử dụng deep learning. 
 

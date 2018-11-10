@@ -38,3 +38,6 @@ class RecExercise14
         }
     }
 ~~~~
+
+Khá là thú vị, hy vọng ví dụ này các bạn sẽ thấy đệ quy được sử dụng thế nào và học thêm một cách để reverse string.
+

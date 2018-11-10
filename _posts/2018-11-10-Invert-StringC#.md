@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get the reverse of a string
+title: Reverse string trong C# bằng đệ quy
 tags: [.Net]
 ---
 

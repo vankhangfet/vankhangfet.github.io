@@ -32,6 +32,21 @@ OK!, như vậy chúng ta đã đi qua 6 kỹ thuật để cải thiện model.
 
 ### Techniques in Keras
 
+Ở ví dụ này, chúng ta sẽ thực hiện chỉnh sủa hệ số dropout và limit weight với Keras và bài toán MNIST
+
+~~~~
+# dropout in input and hidden layers
+# weight constraint imposed on hidden layers
+# ensures the max norm of the weights does not exceed 5
+model = Sequential()
+model.add(Dropout(0.2, input_shape=(784,))) # dropout on the inputs
+# this helps mimic noise or missing data
+model.add(Dense(128, input_dim=784, kernel_initializer='normal', activation='relu', kernel_constraint=maxnorm(5)))
+model.add(Dropout(0.5))
+model.add(Dense(128, kernel_initializer='normal', activation='tanh', kernel_constraint=maxnorm(5)))
+model.add(Dropout(0.5))
+model.add(Dense(1, kernel_initializer='normal', activation='sigmoid'))
+~~~~
 
 
 

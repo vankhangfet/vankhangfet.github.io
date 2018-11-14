@@ -24,12 +24,12 @@ Step 1: Load model
 from keras.models import model_from_json
 from keras.utils.generic_utils import CustomObjectScope
 with CustomObjectScope({'relu6': keras.applications.mobilenet.relu6,'DepthwiseConv2D': keras.applications.mobilenet.DepthwiseConv2D}):
-    model = model_from_json(open('model_mobilenet.json').read())
+    model = model_from_json(open('model_js.json').read())
 ~~~~
 
 Step 2: Convert to JS 
 
 import tensorflowjs as tfjs
 
-tfjs.converters.save_keras_model(model, 'model_JS')
+tfjs.converters.save_keras_model(model, 'model_js')
 

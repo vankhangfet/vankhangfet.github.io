@@ -11,7 +11,15 @@ Kaggle là một platform để thực hiện và chia sẻ dữ liệu giữa c
 
 Khi tham gia và Kaggle các bạn sẽ gặp một cụm từ đó là Kaggle Kernels. Vậy Kaggle Kernels là gì? và chúng ta sẽ làm gì với Kagg Kernels?
 
+### 1. Kaggle Kernels 
 
+Kaggle Kernels là một free platform để chạy môi trường Jupyter notebooks trên trình duyệt. Điều này có nghĩa là bạn có thể save lại những cấu hình trong notebooks của bạn trên trình duyệt, miễn sao máy tính của bạn có kết nối internet. 
+
+Ngoài ra những xử lý trên notebooks của bạn được thực hiện trên server, do đó sẽ không ảnh hưởng tới hiệu năng của máy tính. Nếu như bạn chạy trên laptop thì việc này không tiêu tốn battery của bạn.
+
+### 2. Kaggle Kernels in Action. 
+
+Vậy chúng ta đã biết Kaggle Kernels là gì? Hãy bắt đầu code thôi, vì mình là software engineer, nên phải code hello world đã. 
 
 
 Bài viết mình có tham khảo link sau:

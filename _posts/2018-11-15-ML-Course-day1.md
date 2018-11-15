@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Machine learning day 1
+title: Machine learning day 1 - Làm quen với Pandas
 tags: [Machine learning]
 ---
  	

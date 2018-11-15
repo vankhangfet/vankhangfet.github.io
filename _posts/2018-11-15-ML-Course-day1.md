@@ -117,5 +117,5 @@ Các bạn chú ý, khi set "inplace = True" chúng ta sẽ trực tiếp tác �
 
 
 Như vậy là các bạn đã làm quen với một số lệnh cơ bản, chi tiết hơn các bạn tham khảo link sau:
-https://mlcourse.ai/notebooks/blob/master/jupyter_english/topic01_pandas_data_analysis/topic1_pandas_data_analysis.ipynb?flush_cache=true
+[https://mlcourse.ai](https://mlcourse.ai/notebooks/blob/master/jupyter_english/topic01_pandas_data_analysis/topic1_pandas_data_analysis.ipynb?flush_cache=true)
 

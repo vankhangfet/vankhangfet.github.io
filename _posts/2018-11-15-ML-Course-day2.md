@@ -20,7 +20,9 @@ Ngoài ra những xử lý trên notebooks của bạn được thực hiện tr
 ### 2. Kaggle Kernels in Action. 
 
 Vậy chúng ta đã biết Kaggle Kernels là gì? Hãy bắt đầu code thôi, vì mình là software engineer, nên phải code hello world đã. 
+Đầu tiên chúng ta phải tạo một acc trên Kaggle. Sau đó create kernels đầu tiên.
 
+![alt text](https://cdn-images-1.medium.com/max/1000/1*4CAxeDfReJem2kb4xdyxlQ.gif "Logo Title Text 1")
 
 Bài viết mình có tham khảo link sau:
 

@@ -59,7 +59,7 @@ Chúng ta sẽ thấy kết quả như sau:
 
 ![result](https://cdn-images-1.medium.com/max/1000/1*YYQlICEzYk5p8T8RhoS4nw.png "result")
 
-Vậy là chúng ta đã biết cách tạo một Kaggle kernerls và thực hành ML với các data từ cộng đồng rồi.
+Vậy là chúng ta đã biết cách tạo một Kaggle kernerls và thực hành ML với các data từ cộng đồng rồi. Hy vọng các bạn sẽ tìm thấy nhiều practice hay trên site này và đóng góp cho cộng đồng nhiều data hữu ích nữa.
 
 Bài viết mình có tham khảo link sau:
 

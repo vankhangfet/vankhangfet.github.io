@@ -24,6 +24,43 @@ Vậy chúng ta đã biết Kaggle Kernels là gì? Hãy bắt đầu code thôi
 
 ![alt text](https://cdn-images-1.medium.com/max/1000/1*4CAxeDfReJem2kb4xdyxlQ.gif "Logo Title Text 1")
 
+Kernels cung cấp cho các bạn tài nguyên để làm, nhưng cũng khá hạn chế. Cấu hình và tham số của kernels như hình dưới đây:
+
+![resource](https://cdn-images-1.medium.com/max/600/1*m5HugLX1_rci6b7sjNzb-A.png "resource")
+
+Các bạn có thể chạy một process tối đa là 60 phút.
+
+OK, sau khi có data và môi trường, chúng ta đã có thể viết code được rồi. Hãy thử chạy một đoạn đơn giản như sau xem sao:
+
+~~~~
+import numpy as np # linear algebra
+import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
+
+# Input data files are available in the "../input/" directory.
+# For example, running this (by clicking run or pressing Shift+Enter) will list the files in the input directory
+
+import os
+print(os.listdir("../input/")) 
+
+import tensorflow as tf 
+print(tf.__version__)
+
+data_train_file = "../input/fashion-mnist_train.csv"
+data_test_file = "../input/fashion-mnist_test.csv"
+
+df_train = pd.read_csv(data_train_file)
+
+df_test = pd.read_csv(data_test_file)
+
+df_train.head()
+~~~~
+
+Chúng ta sẽ thấy kết quả như sau:
+
+![result](https://cdn-images-1.medium.com/max/1000/1*YYQlICEzYk5p8T8RhoS4nw.png "result")
+
+Vậy là chúng ta đã biết cách tạo một Kaggle kernerls và thực hành ML với các data từ cộng đồng rồi.
+
 Bài viết mình có tham khảo link sau:
 
 [https://towardsdatascience.com/introduction-to-kaggle-kernels-2ad754ebf77](https://towardsdatascience.com/introduction-to-kaggle-kernels-2ad754ebf77)

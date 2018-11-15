@@ -29,6 +29,7 @@ Kết thúc câu lệnh trên chúng ta đã load được csv vào data frame. 
 ~~~~
 # Show data
 df.head()
+
 # Chúng ta sẽ có kết quả như sau: 
 
 0	KS	128	415	No	Yes	25	265.1	110	45.07	197.4	99	16.78	244.7	91	11.01	10.0	3	2.70	1	False
@@ -41,5 +42,35 @@ df.head()
 
 print(df.shapes)
 (3333,20)
+~~~~
 
+Tiếp đến, chúng ta sẽ xem dữ liệu có những colum như thế nào?
+
+~~~~
+print(df.columns)
+
+# Kết quả như sau:
+Index(['State', 'Account length', 'Area code', 'International plan',
+       'Voice mail plan', 'Number vmail messages', 'Total day minutes',
+       'Total day calls', 'Total day charge', 'Total eve minutes',
+       'Total eve calls', 'Total eve charge', 'Total night minutes',
+       'Total night calls', 'Total night charge', 'Total intl minutes',
+       'Total intl calls', 'Total intl charge', 'Customer service calls',
+       'Churn'],
+      dtype='object')
+~~~~
+Ngoài ra ta cũng có thể xem được thuộc tính của các features có kiểu dữ liệu là gì
+~~~~
+print(df.info())
+~~~~
+
+Trong Pandas cũng hỗ trỡ các thao tác như sorting, indexing và truy cập data. 
+~~~~
+# Sorting data
+df.sort_values(by=['Churn','Total day charge'], ascending=[True,False]).head()
+~~~~
+
+~~~~
+# Indexing data 
+df['Churn'].mean()
 ~~~~

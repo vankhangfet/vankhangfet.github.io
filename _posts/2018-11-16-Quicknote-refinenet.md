@@ -10,4 +10,13 @@ Vì bản tính tò mò, nên mình rất thích tìm hiểu về Deep learning.
 
 RefineNet: Multi-Path Refinement Networks for High-Resolution Semantic Segmentation.
 
+Thực sự để hiểu một bài báo một cách chi tiết với mình thấy khá khó, nên mình note lại một số ý chính sau:
+
+1. RefineNet khắc phục nhược điểm của mạng CNN, bằng cách lọc ra tất cả thông tin của bức ảnh trong quá trình down-sampling.
+2. RefineNet được thiết kế để tối ưu cho memory và chi phí tính toán. 
+
+Để hiểu hơn về RefineNet chúng ta hãy xem hình sau:
+
+
+
 

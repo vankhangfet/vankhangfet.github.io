@@ -21,6 +21,7 @@ Thực sự để hiểu một bài báo một cách chi tiết với mình th�
 
 Hình (a) là mạng CNN điển hình, giống như ResNet (a), thông tin bị mất đi sau mỗi lần tích chập. Để khắc phục điều này thể sử dụng Dilated Convolutions, tuy nhiên càng về sau thì số lượng ảnh lại càng nhiều nên. Điều này gây ra chi phí lớn về tính toán, dễ dàng gây ra thiếu hụt bộ nhớ, cho dù chúng ta sử dụng modern GPUs. Kiến trúc RefineNet là một kiến trúc giải quyết vấn đề này (c), thông tin sẽ được tìm ra tại mỗi stage của convolution và sau đó được tổng hợp lại để dự đoán trên ảnh high-resolution, mà không cần phải maintain một lượng rất lớn các feature map. Chi tiết hơn ta hay xem cấu trúc của một block RefineNet
 
+![refine_Net_Block](/img/RefineNetBlock.JPG "refine_Net_Block")
 
-
+Tạm thời mình dừng ở đây, mình sẽ quay lại khi có điều kiện tìm hiểu kỹ hơn về RefineNet.
 

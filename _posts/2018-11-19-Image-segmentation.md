@@ -17,7 +17,9 @@ Một mạng fully convolutional neural network (FCN) là một mạng CNN, vớ
 
 ![Image_Segmen1](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_folder_3/Fully_Convolutional_Network_Semantic.PNG "Image_Segmen1")
 
+Ý tưởng ở đây là khi chuyển từ mạng CNN sang FCN, chúng ta chọn layer cuối cùng đủ lớn khi đó chúng ta sẽ có thể scaled up nên kích thước của input image.
 
+![Image_Segmen2](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_folder_7/FCN.jpg "Image_Segmen2")
 
 
 

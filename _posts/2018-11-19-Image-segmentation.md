@@ -26,6 +26,15 @@ Một mạng fully convolutional neural network (FCN) là một mạng CNN, vớ
 
 ![Image_Segmen2](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_folder_7/AlexNet_2.png "Image_Segmen2")
 
+Hình dưới đây là số lượng tham số trong mạng Alexnet
+
+![Image_Segmen3](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_folder_7/AlexNet_1.jpg "Image_Segmen3")
+
+Trong mạng Alexnet, kích thước ảnh được cố định 224x224, vậy nên tác động của pooling sẽ làm giảm kích thước ảnh từ 224x224 thành các kích thước 55x55, 27x27, 13x13, sau đó đến cuối cùng là một vector ở FC layer
+
+![Image_Segmen4](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_folder_7/AlexNet_0.jpg "Image_Segmen4")
+
+
 
 
 Bài viết mình lược dịch từ [https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_segmentation.html](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_segmentation.html)

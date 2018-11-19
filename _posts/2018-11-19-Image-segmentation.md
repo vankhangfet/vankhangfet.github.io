@@ -34,6 +34,16 @@ Trong mạng Alexnet, kích thước ảnh được cố định 224x224, vậy 
 
 ![Image_Segmen4](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_folder_7/AlexNet_0.jpg "Image_Segmen4")
 
+OK! giờ thì các bạn đã hình dung lại được mạng Alexnet. Hãy xem những bước cần thiết để convert 
+
+Step 1: Start với mạng CNN cho bài toán classification
+
+![Image_Segmen5](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_folder_7/FCN_CONV_1.png "Image_Segmen5")
+
+Step 2: Bước này chúng ta convert all cả những FC layer bằng convolution layer 1x1 và không cần thay đổi trọng số (weights) tại đây.
+
+![Image_Segmen6](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_folder_7/FCN_CONV_2.png "Image_Segmen6")
+
 
 
 

@@ -21,6 +21,11 @@ Một mạng fully convolutional neural network (FCN) là một mạng CNN, vớ
 
 ![Image_Segmen2](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_folder_7/FCN.jpg "Image_Segmen2")
 
+### Conversion from normal CNN to FCN
+Ý tưởng là vậy, giờ chúng ta hãy xem cách convert một mạng CNN sang FCN. Ở ví dụ này chúng ta sẽ convert mạng Alexnet to FCN để sử dụng cho việc segmentation. Chúng ta hãy xem lại kiến trúc của mạng Alexnet 
+
+![Image_Segmen2](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_folder_7/AlexNet_2.png "Image_Segmen2")
+
 
 
 Bài viết mình lược dịch từ [https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_segmentation.html](https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_segmentation.html)

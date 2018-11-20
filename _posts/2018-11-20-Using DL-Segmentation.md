@@ -40,6 +40,11 @@ validation_generator = validation_fold.to_keras(
     processing_function=validation_process)
 ~~~~
 
+Và dưới đây là một số kết quả:
+
+![Result1](https://cdn-images-1.medium.com/max/800/1*nD5-fCILU7XGrXIDCSWr-A.png "Result1")
+
+
 
 Bài này mình lược dịch từ link sau:
 https://medium.com/@hanrelan/a-non-experts-guide-to-image-segmentation-using-deep-neural-nets-dda5022f6282

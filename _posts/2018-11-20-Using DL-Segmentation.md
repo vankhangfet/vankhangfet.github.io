@@ -13,9 +13,8 @@ Output image:
 
 ![Image_Segmen2](https://cdn-images-1.medium.com/max/800/1*d8LA_ZJbeGfIAECjAGy5_A.png "Image_Segmen2")
 
-
+Để thực hiện bài toán, chúng ta sẽ sử dụng Keras và U-net. U-net là một kiến trúc mạng cho bài toán image segmentation. Mạng này ban đầu được thiết kế cho bài toán trong biomedical, tuy nhiên nó cũng làm việc được trên những ảnh 2D thông thường. Các bạn sẽ thấy rằng mạng U-net này hoạt động tốt như thế nào với cả trường hợp dataset là không quá lớn.
 
 
 Bài này mình lược dịch từ link sau:
-[https://medium.com/@hanrelan/a-non-experts-guide-to-image-segmentation-using-deep-neural-nets-dda5022f6282]
-(https://medium.com/@hanrelan/a-non-experts-guide-to-image-segmentation-using-deep-neural-nets-dda5022f6282)
+https://medium.com/@hanrelan/a-non-experts-guide-to-image-segmentation-using-deep-neural-nets-dda5022f6282

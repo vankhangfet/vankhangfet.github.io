@@ -40,9 +40,36 @@ validation_generator = validation_fold.to_keras(
     processing_function=validation_process)
 ~~~~
 
+Sau đó là quá trình training
+
+~~~~
+callbacks = [EarlyStopping(monitor='val_loss',
+                           patience=8,
+                           verbose=1,
+                           min_delta=1e-4),
+             ReduceLROnPlateau(monitor='val_loss',
+                               factor=0.1,
+                               patience=4,
+                               verbose=1,
+                               epsilon=1e-4),
+             ModelCheckpoint(monitor='val_loss',
+                             filepath='weights/best_weights.hdf5',
+                             save_best_only=True,
+                             save_weights_only=True)]
+                             
+epochs=100
+model.fit_generator(generator=train_generator,
+                    steps_per_epoch=train_generator.steps_per_epoch(),
+                    epochs=epochs,
+                    callbacks=callbacks,
+                    validation_data=validation_generator,
+                    validation_steps=validation_generator.steps_per_epoch())
+~~~~
+
+
 Và dưới đây là một số kết quả:
 
-![Result1](https://cdn-images-1.medium.com/max/800/1*nD5-fCILU7XGrXIDCSWr-A.png "Result1")
+![Result1](https://cdn-images-1.medium.com/max/800/1*nD5-fCILU7XGrXIDCSWr-A.png "Result1"), mặc dù chỉ có training với 77 image và không sử dụng pre-train kết quả đạt được cũng khá ấn tượng. Muốn tăng kết quả hơn nữa, chúng ta cần tăng cường dữ liệu.
 
 
 

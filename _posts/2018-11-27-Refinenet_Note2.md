@@ -20,7 +20,9 @@ Về pre-trained model các bạn có thể download tại đây:
 
 OK! khi đã chuẩn bị môi trường và source code xong, chúng ta làm các bước sau:
 
-1. Build thư viện matconvnet. Các bạn tham khảo tại link sau [http://www.vlfeat.org/matconvnet/install/(http://www.vlfeat.org/matconvnet/install/)
+1. Build thư viện matconvnet. Các bạn tham khảo tại link sau 
+
+[http://www.vlfeat.org/matconvnet/install](http://www.vlfeat.org/matconvnet/install/)
 
 Việc build thư viện matconvnet này cũng không quá phức tạp, nếu như bạn đã đủ môi trường, nếu không chúng ta sẽ gặp rất nhiều bug mà không biết tại sao.
 

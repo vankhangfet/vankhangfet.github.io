@@ -20,7 +20,7 @@ Về pre-trained model các bạn có thể download tại đây:
 
 OK! khi đã chuẩn bị môi trường và source code xong, chúng ta làm các bước sau:
 
-1. Build thư viện matconvnet. Các bạn tham khảo tại link sau [http://www.vlfeat.org/matconvnet/install/(http://www.vlfeat.org/matconvnet/install/).
+1. Build thư viện matconvnet. Các bạn tham khảo tại link sau [http://www.vlfeat.org/matconvnet/install/(http://www.vlfeat.org/matconvnet/install/)
 
 Chúng ta load source code vào môi trườn Matlab. Sau đó thực hiện command sau:
  - cd 

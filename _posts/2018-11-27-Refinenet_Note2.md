@@ -10,3 +10,10 @@ Trong post trước[https://vankhangfet.github.io/2018-11-16-Quicknote-refinenet
 1. VS C++ 2015 
 2. MatLab 2018 
 3. Source code refine net:
+   [https://github.com/guosheng/refinenet](https://github.com/guosheng/refinenet)
+   
+Nếu như các bạn muốn tự mình training mạng này thì phải download thêm dataset từ 
+[http://host.robots.ox.ac.uk/pascal/VOC/voc2012/](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/), việc training khác tốn thời gian, nên mình sẽ dùng thử pre-trained model và xem kết quả của mạng RefineNet như thế nào? 
+
+Về pre-trained model các bạn có thể download tại đây:
+[]

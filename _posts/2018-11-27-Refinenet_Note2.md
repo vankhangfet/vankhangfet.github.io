@@ -42,8 +42,7 @@ Các bạn đợi một chút, cho đến khi quá trình build xong thư việc
 
 3. Bước cuối cùng là chạy script "demo_test_simple_city.m" và xem kết quả 
 
-![Segmentation]
-(https://camo.githubusercontent.com/8acf71017ce0d3cb059f01b8bfedcd6792db3f9e/687474703a2f2f696d672e796f75747562652e636f6d2f76692f4c3056367a6d47505f6f512f302e6a7067 "Segmentation")
+![Segmentation](https://camo.githubusercontent.com/8acf71017ce0d3cb059f01b8bfedcd6792db3f9e/687474703a2f2f696d672e796f75747562652e636f6d2f76692f4c3056367a6d47505f6f512f302e6a7067 "Segmentation")
 
 OK! như vậy đã. Vì quá trình từ học, nên post sau mình sẽ định tìm hiểu về dataset VOC2012, và cách thức training cho mạng này.
 

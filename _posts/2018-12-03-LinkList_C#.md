@@ -110,3 +110,15 @@ internal void DeleteNodebyKey(SingleLinkedList singlyList, int key)
     prev.next = temp.next;  
 }  
 ~~~~
+
+Như vậy là chúng ta đã biết một số thao tác với Linked List, tuy nhiên trong thực tế thì Linked List hay được sử dụng như thế nào?
+
+# 4. Linked List và một số ứng dụng
+
+Khi các bạn đã hiểu và cài đặt được kiểu dữ liệu thì Linked List có thể được làm những việc sau:
+
+- Cài đặt một Stack hoặc Queu 
+
+- Cài đặt thao tác Undo như trong Photoshop hoặc Word. 
+
+... Còn rất nhiều ứng dụng nữa, các bạn hãy thử xem sao nhé!

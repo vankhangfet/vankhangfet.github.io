@@ -29,3 +29,23 @@ Circula Linked List:
 ![Circula](https://csharpcorner-mindcrackerinc.netdna-ssl.com/article/linked-list-implementation-in-c-sharp/Images/LL3.png "Circula")
 
 
+# 3. Cài đặt một Linked List như thế nào? 
+
+Mình code C#, nên sẽ cài đặt bằng ngôn ngữ này. Theo mình ngôn ngữ chỉ là công cụ, khi đã hiểu bản chất thì việc cài đặt bằng ngôn ngữ khác cũng không phải là vấn đề quá khó.
+
+~~~~
+internal class Node
+{
+   public int Data;
+   public Node Next;
+   
+   public Node(int val)
+   {
+      Data = val;
+      Next = null;
+   }
+
+}
+~~~~
+
+

@@ -46,6 +46,67 @@ internal class Node
    }
 
 }
+
+internal SingleLinkedList
+{
+   public Node head;
+}
 ~~~~
 
+Với Linked List ta có các thao tác với các phần tử của Linked List như Insert, Delete, Search. 
 
+Insert phần tử vào head
+
+~~~~
+internal void InsertFront(SingleLinkedList singlyList, int new_data) {    
+    Node new_node = new Node(new_data);    
+    new_node.next = singlyList.head;    
+    singlyList.head = new_node;    
+}    
+~~~~
+
+Insert phần từ vào last 
+
+~~~~
+internal void InsertLast(DoubleLinkedList doubleLinkedList, int data) {  
+    DNode newNode = new DNode(data);  
+    if (doubleLinkedList.head == null) {  
+        newNode.prev = null;  
+        doubleLinkedList.head = newNode;  
+        return;  
+    }  
+    DNode lastNode = GetLastNode(doubleLinkedList);  
+    lastNode.next = newNode;  
+    newNode.prev = lastNode;  
+}  
+
+internal Node GetLastNode(SingleLinkedList singlyList) {  
+    Node temp = singlyList.head;  
+    while (temp.next != null) {  
+        temp = temp.next;  
+    }  
+    return temp;  
+}  
+~~~~
+
+Xóa một phần tử trong Linked List 
+
+~~~~
+internal void DeleteNodebyKey(SingleLinkedList singlyList, int key)  
+{  
+    Node temp = singlyList.head;  
+    Node prev = null;  
+    if (temp != null && temp.data == key) {  
+        singlyList.head = temp.next;  
+        return;  
+    }  
+    while (temp != null && temp.data != key) {  
+        prev = temp;  
+        temp = temp.next;  
+    }  
+    if (temp == null) {  
+        return;  
+    }  
+    prev.next = temp.next;  
+}  
+~~~~

@@ -32,7 +32,7 @@ CMSIS-NN gồm các function và support function như sau:
 
 ![CMSIS-NN-LIB](http://www.keil.com/pack/doc/CMSIS_Dev/NN/html/CMSIS-NN-OVERVIEW.PNG "CMSIS-NN-LIB")
 
-
+Bài viết này mình có tham khảo các tài liệu sau:
 
 https://petewarden.com/2016/05/03/how-to-quantize-neural-networks-with-tensorflow/comment-page-1/
 

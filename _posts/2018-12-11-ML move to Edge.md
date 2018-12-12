@@ -23,6 +23,10 @@ Vậy thì move to Edge như thế nào? Do mình có thời gian tìm hiểu v�
 Như các bạn đã biết thì sau quá trình training chúng ta sẽ có được model, model sẽ lưu dưới dạng HDF5. HDF5 là một định dạng cho phép chúng ta lưu một số lượng lớn định dạng kiểu số, và sau đó có thể dễ dàng truy cập thông qua Numpy. Khi training trên máy tính thì các phép tính được xử lý và tính toán trên các vi xử lý 32 or 64 bit. Do vậy kết quả lưu tại model cũng được lưu trữ và phục vụ cho mục đính tính toán với vi xử lý 32 or 64. Điều này dẫn tới việc kích thước của model rất lớn, ví dụ với mạng AlexNet thì model có dung lượng 200MB. Điều này gây trở ngại, và không thể triển khai được các model xuống dưới các vi xử lý với bộ nhớ nhỏ 8 bit hoặc 16 bit. 
 
 Ý tưởng để triển khai pre-trained model này xuống các bộ vi xử lý 8, 16 bit là chúng ta cần giảm kích thước và tham số tính toán. 
+Giảm kích thước bằng cách lượng tử hóa các weight trong pre-trained model. ARM có cung cấp một framework CMSIS-NN. 
+Framework này có các API cho các function cơ bản cho việc tính Convolution, Pooling, Activation function. 
+
+
 
 
 

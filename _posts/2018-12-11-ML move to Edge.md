@@ -28,7 +28,9 @@ Framework này có các API cho các function cơ bản cho việc tính Convolu
 
 ![CMSIS](https://developer.arm.com/-/media/developer/Block%20Diagrams/CMSIS%20Graphic_flow-05.png?revision=89271063-893f-4961-859e-0e8a8fa5f513&hash=50FB5155F57C0035C502B8818D66DC95782A1346&h=460&w=250&la=en "CMSIS-NN")
 
+CMSIS-NN gồm các function và support function như sau:
 
+![CMSIS-NN-LIB](http://www.keil.com/pack/doc/CMSIS_Dev/NN/html/CMSIS-NN-OVERVIEW.PNG "CMSIS-NN-LIB")
 
 
 

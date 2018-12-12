@@ -26,7 +26,7 @@ Như các bạn đã biết thì sau quá trình training chúng ta sẽ có đ�
 Giảm kích thước bằng cách lượng tử hóa các weight trong pre-trained model. ARM có cung cấp một framework CMSIS-NN. 
 Framework này có các API cho các function cơ bản cho việc tính Convolution, Pooling, Activation function. 
 
-
+![CMSIS](https://developer.arm.com/-/media/developer/Block%20Diagrams/CMSIS%20Graphic_flow-05.png?revision=89271063-893f-4961-859e-0e8a8fa5f513&hash=50FB5155F57C0035C502B8818D66DC95782A1346&h=460&w=250&la=en "CMSIS-NN")
 
 
 

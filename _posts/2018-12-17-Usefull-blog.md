@@ -14,3 +14,15 @@ Nếu bạn nào là Dev thì hẳn đã quen thuộc với stackoverflow, đây
 2. [https://towardsdatascience.com/](https://towardsdatascience.com/)
 
 3. Blog này viết về image processing và filter rất dễ hiểu. [http://songho.ca/](http://songho.ca/)
+
+4. [https://www.analyticsvidhya.com/](https://www.analyticsvidhya.com/) cho bạn nào thích tìm hiểu về data analytic
+
+5. Học đi đôi vơi hành, với mình nhiều khi phải thấy code chạy trước rồi mới hiểu sau được 
+   [https://paperswithcode.com/](https://paperswithcode.com/)
+   
+6. [https://www.kaggle.com/](https://www.kaggle.com/) Đây là một trong những website rất hay cho những ai học về ML.
+
+7.[https://www.pythonweekly.com/](https://www.pythonweekly.com/) làm về ML, tất nhiên là bạn phải hoặc nên làm quen với Python. Đây là 
+trang web có nhiều bài báo liên quan đến Python và ML/DL
+
+Tóm lại có rất nhiều nguồn tài liệu học tập và tham khảo. Trên đây chỉ là những site mình hay đọc và tham khảo. Các bạn cho thêm ý kiến nhé!

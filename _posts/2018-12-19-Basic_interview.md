@@ -13,3 +13,5 @@ Process có thế được coi là tiến trình, hay một application. Ví d�
 Có một điểm quan trọng đó là thread có thể thực thi được các tác vụ mà process có thể làm. Process có thể gồm nhiều thread, nên có thể coi
 thread là một phần rút gọn của process.
 
+Ngoài ra điểm khác biệt đó là thread trong cùng một process có thể share cùng một chỉ nhớ, nhưng process khác nhau thì không. Thread có thể đọc và ghi cùng một cấu trúc dữ liệu và biến và giao tiếp với nhau. Tuy nhiên để giao tiếp giữa các process được biết đến là IPC, có cơ chế phức tạp hơn.
+

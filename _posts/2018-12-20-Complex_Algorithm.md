@@ -6,5 +6,5 @@ tags: [Algorithm]
 
 Độ phức tạp thuật toán là một phần rất thú vị, nhưng hầu hết anh em dev sau một thời gian sẽ không còn nhớ hoặc quan tâm đến nó nữa. Lý do là vì công việc, khi không dùng đến nữa thì sẽ quên mất. Post này mình cũng ôn lại một số kiến thức cơ bản, chỉ note lại những điểm cần nhớ thôi. 
 
-# 1. Tính độ phức tạp thuật toán như thế nào?
+## 1. Tính độ phức tạp thuật toán như thế nào?
 Có một số quy tắc cơ bản cần nhớ như sau:

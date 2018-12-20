@@ -9,5 +9,8 @@ tags: [Algorithm]
 ## 1. Tính độ phức tạp thuật toán như thế nào?
 Có một số quy tắc cơ bản cần nhớ như sau:
 
-### Quy tắc bỏ hằng số: 
-    Nếu chương trình P có thời gian thực hiện T(n) = O(c1.f(n)), thì có thể coi chương trình có độ phức tạp O(f(n)).
+ 1.1 Quy tắc bỏ hằng số: 
+ Nếu chương trình P có thời gian thực hiện T(n) = O(c1.f(n)), thì có thể coi chương trình có độ phức tạp O(f(n)).
+ 
+ 1.2 Quy tắc cộng lấy max
+ 

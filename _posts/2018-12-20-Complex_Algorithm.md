@@ -30,3 +30,19 @@ Ngoài ra thì chúng ta có một số quy tắc tổng quát như sau:
 - Thời gian thực hiện cấu trúc IF là thời gian lớn nhất thực hiện lệnh sau THEN hoặc sau ELSE và thời gian kiểm tra điều kiện. Thường thời gian kiểm tra điều kiện là O(1).
 
 - Thời gian thực hiện vòng lặp là tổng (trên tất cả các lần lặp) thời gian thực hiện thân vòng lặp. Nếu thời gian thực hiện thân vòng lặp không đổi thì thời gian thực hiện vòng lặp là tích của số lần lặp với thời gian thực hiện thân vòng lặp.
+
+Bây giờ chúng ta xem độ phức tạp của thuật toán sắp xếp nổi bọt 
+~~~~
+rocedure Bubble (var a: array[1..n] of integer);
+var i,j,temp: integer;
+begin
+    for i:=1 to n-1 do                  {1}
+        for j:=n downto i+1 do              {2}
+            if a[j-1]>a[j] then          {3}
+            begin
+                temp:=a[j-1];           {4}
+                a[j-1]:=a[j];           {5}
+                a[j]:=temp;             {6}
+            end;
+end;
+~~~~

@@ -23,6 +23,8 @@ Acquire::https::proxy "https://username:password@host:port/";
 1.2 Edit the file /etc/environment
 And then add the following lines after PATH="something here"
 
+~~~~
 http_proxy=http://username:password@host:port/
 ftp_proxy=ftp://username:password@host:port/
 https_proxy=https://username:password@host:port/
+~~~~

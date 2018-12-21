@@ -75,4 +75,25 @@ sẽ được tính như thế nào?
 
 ## 2. Độ phức tạp của chương trình, có gọi trương chình con không đệ quy
 
+Để tính toán độ phức tạp của chương trình, ta cần tính toán độ phức tạp của các chương trình con trước. Sau đó tiến hành tính toán độ phức tạp theo các nguyên tắc ở trên.
+
+Chúng ta quay lại với bài toán sắp xếp, ở đây ta implment thêm hàm Swap().
+
+~~~~
+procedure Swap (var x, y: integer);
+var temp: integer;
+begin
+    temp := x;
+    x := y;
+    y := temp;
+end;
+procedure Bubble (var a: array[1..n] of integer);
+var i,j :integer;
+begin
+    for i:=1 to n-1 do                              {1}
+        for j:=n downto i+1 do                      {2}
+            if a[j-1]>a[j] then
+                Swap(a[j-1], a[j]);                 {3}
+end;
+~~~~
 

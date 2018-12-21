@@ -10,7 +10,7 @@ việc dùng nhiều câu lệnh hơn. Trước khi setup môi trường ngon l�
 ## 1. Proxy setting cho terminal 
 Các bạn thực hiện step dưới đây:
 
-1.1 For apt,software center etc
+### 1.1 For apt,software center etc
 Edit the file /etc/apt/apt.conf
 
 And then replace all the existing text by the following lines
@@ -20,7 +20,7 @@ Acquire::ftp::proxy "ftp://username:password@host:port/";
 Acquire::https::proxy "https://username:password@host:port/";
 ~~~~
 
-1.2 Edit the file /etc/environment
+### 1.2 Edit the file /etc/environment
 And then add the following lines after PATH="something here"
 
 ~~~~

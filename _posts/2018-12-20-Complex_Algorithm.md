@@ -33,7 +33,7 @@ Ngoài ra thì chúng ta có một số quy tắc tổng quát như sau:
 
 Bây giờ chúng ta xem độ phức tạp của thuật toán sắp xếp nổi bọt 
 ~~~~
-rocedure Bubble (var a: array[1..n] of integer);
+procedure Bubble (var a: array[1..n] of integer);
 var i,j,temp: integer;
 begin
     for i:=1 to n-1 do                  {1}
@@ -46,3 +46,12 @@ begin
             end;
 end;
 ~~~~
+
+Để tính độ phức tạp thuật toán trên, ta sẽ tính theo thứ tự từ trong ra ngoài. Dễ thấy rằng các phép gán tốn O(1), và phép so sánh tốn 
+O(1), nên đoạn lệnh {3} -> {6}, sẽ lấy theo công thức cộng (max) tốn O(1). Tuy nhiên các phép tính này được thực hiện n-i lần trong vòng 
+for {2}, nên trong vòng for {2} sẽ có độ phức tạp là O((n-i)* 1) = O(n-i). Áp dụng tiếp quy tắc lấy max thì vòng for {2} sẽ có độ phức tạp O(n-1). Cuối cùng ta xét đến vòng lặp for {1} được thực hiện n lần, như vậy độ phức tạp thuật toán này sẽ là O(n.(n-1)) = O(n^2). 
+
+
+
+
+

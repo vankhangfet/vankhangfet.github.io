@@ -8,7 +8,7 @@ Dạo gần đây mình phải sử dụng Ubuntu để làm việc, việc chuy
 việc dùng nhiều câu lệnh hơn. Trước khi setup môi trường ngon lành, mình gặp phải một số vấn đề sau:
 
 ## 1. Proxy setting cho terminal 
-Các bạn thực hiện step dưới đây:
+Mặc dù đã config proxy cho system, nhưng software center hoặc termial vẫn bị lỗi thì các bạn thực hiện step dưới đây:
 
 ### 1.1 For apt,software center etc
 Edit the file /etc/apt/apt.conf

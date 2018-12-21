@@ -68,8 +68,11 @@ END;
 
 Dễ thấy {1},{2} và {5} sẽ có độ phức tạp O(1), nên độ phức tạp của chương trình sẽ là độ phức tạp của lệnh lồng {3}. Trong trường hợp này vòng lặp sẽ chạy n lần trong trường hợp xấu nhất, nên độ phức tạp của {3} sẽ là O(n). 
 
-Chương trình search ở trên sẽ có độ phức tạp O(n).
+Chương trình search ở trên sẽ có độ phức tạp O(n). 
 
+Như vậy là chúng ta đã xem xét độ phức tạp của một chương trình, vậy với chương trình phức tạp, có gọi chương trình con thì độ phức tạp
+sẽ được tính như thế nào?
 
+## 2. Độ phức tạp của chương trình, có gọi trương chình con không đệ quy
 
 

@@ -51,6 +51,24 @@ end;
 O(1), nên đoạn lệnh {3} -> {6}, sẽ lấy theo công thức cộng (max) tốn O(1). Tuy nhiên các phép tính này được thực hiện n-i lần trong vòng 
 for {2}, nên trong vòng for {2} sẽ có độ phức tạp là O((n-i)* 1) = O(n-i). Áp dụng tiếp quy tắc lấy max thì vòng for {2} sẽ có độ phức tạp O(n-1). Cuối cùng ta xét đến vòng lặp for {1} được thực hiện n lần, như vậy độ phức tạp thuật toán này sẽ là O(n.(n-1)) = O(n^2). 
 
+Note: với vòng lặp không biết trước số lần lặp thì độ phức tạp phải tính trên trường hợp xấu nhất. Chúng ta xem xét ví dụ tìm kiếm sau:
+
+~~~~
+FUNCTION Search(a:ARRAY[1..n] OF Integer;x:Integer):Boolean;
+VAR i:Integer;
+    Found:Boolean;
+BEGIN
+    i:=1;                                           {1}
+    Found:=FALSE;                                   {2}
+    WHILE(i<=n) AND (not Found) DO                   {3}
+        IF A[i]=X THEN Found:=TRUE ELSE i:=i+1;     {4}
+    Search:=Found;                                  {5}
+END;
+~~~~
+
+Dễ thấy {1},{2} và {5} sẽ có độ phức tạp O(1), nên độ phức tạp của chương trình sẽ là độ phức tạp của lệnh lồng {3}. Trong trường hợp này vòng lặp sẽ chạy n lần trong trường hợp xấu nhất, nên độ phức tạp của {3} sẽ là O(n). 
+
+Chương trình search ở trên sẽ có độ phức tạp O(n).
 
 
 

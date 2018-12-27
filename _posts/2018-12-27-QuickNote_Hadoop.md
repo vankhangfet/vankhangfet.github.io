@@ -38,3 +38,16 @@ Ngoài ra khi nhắc đến dữ liệu lớn thì đó là những dữ liệu 
 - Mỗi block được tạo ra các bản sao và lưu trên 3 nodes khác nhau để đảm bảo khả năng recovery, sửa lỗi.
 
 2.2 Map - Reduce 
+
+Map-Reduce là một cách xử lý dữ liệu hiệu quả, ý tưởng đó là khi dữ liệu được chia thành nhiều phần nhỏ cho các Mapper và Reduce để chạy
+trên các node. Việc xử lý dữ liệu sẽ có 2 phase chính Map -> Reduce.
+
+Hãy xem ví dụ sau để hình dung về Map - Reduce. 
+
+
+
+
+
+
+
+

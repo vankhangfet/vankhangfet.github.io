@@ -46,6 +46,13 @@ Hãy xem ví dụ sau để hình dung về Map - Reduce. Mình có đọc trên
 
 Giả sử chúng ta có 99 bọc tiền gồm các loại tiền VND, USD, JPY nhiệm vụ của bạn là tính tổng mỗi loại tiền là bao nhiêu? Thời hạn có thời gian rất ngắn. Nếu tự mình đếm thì sẽ rất khó, bạn nảy ra ý tưởng nhờ 33 bạn để mở bao tải tiền để phân loại thành 3 cột. 1 Cột là USD, 1 cột là VND, 1 cột là JPY. Tiếp theo bạn nhờ 3 bạn để đếm tổng số ở mỗi cột. Như vậy để biết có bao nhiều tiền, chỉ cần hỏi 3 bạn đó là xong.
 
+Trong Hadoop thì việc này được hiểu như sau:
+
+- 99 bao tải tiền : Big data 
+- Mỗi bao tải : block dữ liệu
+- Nhóm 33 người: Mapper 
+- Nhóm 3 người: Reducer 
+
 
 
 

@@ -53,6 +53,8 @@ Trong Hadoop thì việc này được hiểu như sau:
 - Nhóm 33 người: Mapper 
 - Nhóm 3 người: Reducer 
 
+Chỉ là một ví dụ nhỏ, nhưng các bạn đã hiểu được Map và Reduce đúng không? Đó là một ý tưởng rất quan trọng khi thao tác với số lượng lớn. Một số bài toán cụ thể dùng Map - Reduce như đếm tổng số lần IP truy cập vào website, dữ liệu đầu ra được lấy từ dữ liệu đầu ra của Mapper. Kết quả này sau đó có thể được lưu trữ vào cơ sở dữ liệu, để sử dụng cho các bussinees khác nhau.
+
 
 
 

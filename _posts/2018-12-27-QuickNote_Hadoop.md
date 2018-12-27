@@ -42,7 +42,11 @@ Ngoài ra khi nhắc đến dữ liệu lớn thì đó là những dữ liệu 
 Map-Reduce là một cách xử lý dữ liệu hiệu quả, ý tưởng đó là khi dữ liệu được chia thành nhiều phần nhỏ cho các Mapper và Reduce để chạy
 trên các node. Việc xử lý dữ liệu sẽ có 2 phase chính Map -> Reduce.
 
-Hãy xem ví dụ sau để hình dung về Map - Reduce. 
+Hãy xem ví dụ sau để hình dung về Map - Reduce. Mình có đọc trên blog của một bạn, lấy ví dụ về đếm tiền rất hay như sau:
+
+Giả sử chúng ta có 99 bọc tiền gồm các loại tiền VND, USD, JPY nhiệm vụ của bạn là tính tổng mỗi loại tiền là bao nhiêu? Thời hạn có thời gian rất ngắn. Nếu tự mình đếm thì sẽ rất khó, bạn nảy ra ý tưởng nhờ 33 bạn để mở bao tải tiền để phân loại thành 3 cột. 1 Cột là USD, 1 cột là VND, 1 cột là JPY. Tiếp theo bạn nhờ 3 bạn để đếm tổng số ở mỗi cột. Như vậy để biết có bao nhiều tiền, chỉ cần hỏi 3 bạn đó là xong.
+
+
 
 
 

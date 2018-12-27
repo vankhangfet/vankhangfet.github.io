@@ -31,4 +31,10 @@ Ngoài ra khi nhắc đến dữ liệu lớn thì đó là những dữ liệu 
 
 2.1 HDFS (Hadoop Distributed File System)
 
+- Một file được chia thành mỗi block 64Mb. Các block này được lưu trữ trên các node khác nhau trong cluster. Trên mỗi node có một phần mềm để quản lý thông tin về các khối dữ liệu gọi là Data Node. 
+
+- Các khối được lưu trữ nằm rải rác trong các node, thông tin "metadata" lưu trữ trên một máy gọi là Name Node.
+
+- Mỗi block được tạo ra các bản sao và lưu trên 3 nodes khác nhau để đảm bảo khả năng recovery, sửa lỗi.
+
 2.2 Map - Reduce 

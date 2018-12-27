@@ -24,3 +24,11 @@ Tuy nhiên gần đây, chúng ta còn quan tâm tới 3 đặc tính nữa củ
 6. Viability: outcome prediction. 
 
 Ngoài ra khi nhắc đến dữ liệu lớn thì đó là những dữ liệu không thể xử lý, hay lưu trữ bằng các hệ thống thông thường. Đó là lý do mà chúng ta phải sử dụng Hadoop để lưu trữ và xử lý dữ liệu.
+
+## 2. Hadoop 
+
+Ý tưởng của Hadoop là chia nhỏ dữ liệu, sau đó lưu trữ trên nhiều node khác nhau (máy tính khác nhau). Cấu trúc của Hadoop cũng dễ dàng đáp ứng cho việc truy vấn, lưu trữ dữ liệu. Thành phần chính trong Hadoop đó là HDFS và Map-Reduce.
+
+2.1 HDFS (Hadoop Distributed File System)
+
+2.2 Map - Reduce 

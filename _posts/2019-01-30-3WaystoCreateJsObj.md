@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  3 cách việt class trong JavaScript
+title:  3 cách để tạo class trong JavaScript
 tags: [JS]
 ---
 
@@ -64,3 +64,26 @@ Apple.prototype.getInfo = function {
 }
 
 ~~~
+
+Như vậy là các bạn đã biết cách tạo class sử dụng 3 cách trên. Vậy muốn kế thừa class thì ta làm thế nào? Giả sử chúng ta có class Hero và Mage. Class Mage sẽ kế thừa class Hero
+
+~~~~
+function Hero(name, level) {
+    this.name = name;
+    this.level = level;
+}
+
+// Adding a method to the constructor
+Hero.prototype.greet = function() {
+    return this.name ;
+}
+
+// Creating a new constructor from the parent
+function Mage(name, level, spell) {
+    // Chain constructor with call
+    Hero.call(this, name, level);
+    this.spell = spell;
+}
+~~~~
+Khá đơn giản phải không? Hy vọng post này sẽ giúp bạn dễ dàng làm việc hơn với Js!
+

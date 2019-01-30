@@ -47,3 +47,20 @@ function Apple(type)
    }
 }
 ~~~~
+
+Solution 3: 
+
+Add method vào class thông qua prototype.
+
+~~~~
+function Apple(type)
+{
+   this.type = type;
+   this.color = color;
+}
+
+Apple.prototype.getInfo = function {
+  return this.type + "" + this.color;
+}
+
+~~~

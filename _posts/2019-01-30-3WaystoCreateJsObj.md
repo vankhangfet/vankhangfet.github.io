@@ -22,9 +22,28 @@ function getAppleInfor()
 {
    return this.color + "" + this.type;
 }
+
+// How to use
+
+var apple = new Apple("MAC");
+apple.color = "Black";
+alert(apple.getInfo);
 ~~~~
 
 Tuy nhiên mình không khuyến khích làm cách này, vì nó khá khó bảo trì và quản lý scope của các biến. 
 
 Solution 2:
 
+Chúng ta cần cải tiến một chút, hãy đưa function vào trong class Apple này.
+
+~~~~
+function Apple(type)
+{
+   this.type = type;
+   this.color = color;
+   this.getInfo = function()
+   {
+     return this.type + " " + this.color;
+   }
+}
+~~~~

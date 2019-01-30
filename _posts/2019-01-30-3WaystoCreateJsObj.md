@@ -13,7 +13,7 @@ Solution 1:
 function Apple(type)
 {
     this.type = type;
-    this.color = color;
+    this.color = "red";
     this.getInfo = getAppleInfor;
 
 }
@@ -40,7 +40,7 @@ Chúng ta cần cải tiến một chút, hãy đưa function vào trong class A
 function Apple(type)
 {
    this.type = type;
-   this.color = color;
+   this.color = "red";
    this.getInfo = function()
    {
      return this.type + " " + this.color;
@@ -56,7 +56,7 @@ Add method vào class thông qua prototype.
 function Apple(type)
 {
    this.type = type;
-   this.color = color;
+   this.color = "red";
 }
 
 Apple.prototype.getInfo = function {

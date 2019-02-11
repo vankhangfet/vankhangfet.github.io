@@ -9,7 +9,35 @@ rất nhiều cải tiến, ngoài việc cung cấp cách thức lập trình h
 
 Trong JavaScript thì async function và callback là những khái niệm rất quen thuộc, nếu như có nhiều callback lồng vào nhau (nested callback) thì việc xảy ra callback hell rất dễ xảy ra. Hãy thử tưởng tưởng chúng ta phải implement một task vụ sau:
 
-1. cleanRom();
+1. cleanRoom();
 2. removeGrab();
 3. getReward();
+
+1->2->3 kết quả của 1 sẽ là input của 2, kết quả hoàn thành task 2 sẽ là input task3. 1,2,3 đều là async function.
+
+Nếu như implement theo cách thông thường dùng callback thì đoạn code sẽ như sau:
+
+~~~~
+
+function cleanRoom(callback)
+{
+   // Do something
+   var result = Done();
+   callback(result);
+
+}
+
+function removeGrab(msg,callback)
+{
+   // Do something
+   var result = Done();
+   callback(result)
+}
+
+function getReward()
+{
+
+}
+~~~~
+
 

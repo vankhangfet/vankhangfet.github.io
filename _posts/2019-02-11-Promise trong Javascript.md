@@ -34,10 +34,19 @@ function removeGrab(msg,callback)
    callback(result)
 }
 
-function getReward()
+function getReward(msg)
 {
 
 }
+
+/* Implement task */
+
+function cleanRoom(function(result1){
+                     removeGrab(result1,function(result2){
+                                        getReward(result2)
+   });
+});
 ~~~~
+Đoạn code trền nhìn khá rổi mắt đúng không? Mặc dù chúng ta đã viết nhỏ các function ra rồi. Hãy thử implement bằng cách sử dụng promise xem sao.
 
 

@@ -51,6 +51,54 @@ function cleanRoom(function(result1){
 Các bạn có thể vào link sau: 
 [https://jsfiddle.net/vankhangfet/b30f26y7/](https://jsfiddle.net/vankhangfet/b30f26y7/)
 
-Đoạn code trền nhìn khá rổi mắt đúng không? Mặc dù chúng ta đã viết nhỏ các function ra rồi. Hãy thử implement bằng cách sử dụng promise xem sao.
+Đoạn code trền nhìn khá rổi mắt đúng không? Mặc dù chúng ta đã viết nhỏ các function ra rồi. Hãy thử implement bằng cách sử dụng promise xem sao. Khởi tạo một Promise như sau:
+
+~~~~
+let promise = new Promise(function(resolve,reject){
+});
+~~~~
+
+Ở đây có 2 callback function là resolve và reject. Khi task complete ta gọi hàm resolve, khi fail gọi reject. Về promise thì có rất nhiều bài viết rồi, mình sẽ không giải thích quá nhiều nữa. OK! code thôi. Chúng ta cần modify mỗi function một chút.
+
+~~~~
+function cleanRoom()
+{ 
+   var msg = "Clean OK";
+   return new Promise(function(resolve,reject){
+       resolve(msg);
+   });
+}
+
+function removeGrab(msg){
+   alert(msg);
+   var msg2 = "remove OK!";
+   return new Promise(function(resolve,reject){
+       resolve(msg2)
+   });
+}
+
+function getReward(msg)
+{ 
+ alert(msg);
+  alert("Get reward");
+}
+
+cleanRoom.then(function(msg1){
+   removeGrab(msg1);
+}).then(function(msg2){
+
+   getReward(msg2);
+});
+
+~~~~
+
+
+
+
+
+
+
+
+
 
 

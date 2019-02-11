@@ -61,7 +61,7 @@ let promise = new Promise(function(resolve,reject){
 Ở đây có 2 callback function là resolve và reject. Khi task complete ta gọi hàm resolve, khi fail gọi reject. Về promise thì có rất nhiều bài viết rồi, mình sẽ không giải thích quá nhiều nữa. OK! code thôi. Chúng ta cần modify mỗi function một chút.
 
 ~~~~
-function cleanRoom()
+let cleanRoom = function()
 { 
    var msg = "Clean OK";
    return new Promise(function(resolve,reject){
@@ -69,7 +69,7 @@ function cleanRoom()
    });
 }
 
-function removeGrab(msg){
+let  removeGrab = function(msg){
    alert(msg);
    var msg2 = "remove OK!";
    return new Promise(function(resolve,reject){
@@ -77,19 +77,17 @@ function removeGrab(msg){
    });
 }
 
-function getReward(msg)
+let  getReward = function(msg)
 { 
  alert(msg);
   alert("Get reward");
 }
 
-cleanRoom.then(function(msg1){
-   removeGrab(msg1);
+cleanRoom().then(function(msg1){
+ return  removeGrab(msg1);
 }).then(function(msg2){
-
    getReward(msg2);
 });
-
 ~~~~
 
 

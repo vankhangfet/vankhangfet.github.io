@@ -47,6 +47,10 @@ function cleanRoom(function(result1){
    });
 });
 ~~~~
+
+Các bạn có thể vào link sau: 
+[https://jsfiddle.net/vankhangfet/b30f26y7/](https://jsfiddle.net/vankhangfet/b30f26y7/)
+
 Đoạn code trền nhìn khá rổi mắt đúng không? Mặc dù chúng ta đã viết nhỏ các function ra rồi. Hãy thử implement bằng cách sử dụng promise xem sao.
 
 

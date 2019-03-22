@@ -9,4 +9,13 @@ Khi làm việc với TypeScript và Node JS thì VS code là một trong nhữn
 là một hoạt động rất quen thuộc, mình cũng mất chút thời gian để setup cho việc debug. Bài này vừa để note lại cũng như giúp các bạn debug 
 nhanh hơn.
 
+Trước khi setup debug, ta hãy xem qua cách thức khởi tạo project. Bạn phải cài package npm trước. Sau đó là install TypeSciprt sử dụng 
+command dưới đây:
+~~~~
+npm init --yes
+npm install typescript --save-dev
+~~~~
+
+
+
 Link tham khảo: https://medium.com/@PhilippKief/how-to-debug-typescript-with-vs-code-9cec93b4ae56

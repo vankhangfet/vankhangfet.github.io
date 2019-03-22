@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hello world
-tags: [JS]
+tags: [Others]
 ---
 
-Post này mình note lại cách để debug TypeScript trong Node JS bằng cách sử dụng VS Code
+Đây là post đầu tiên. Mọi thứ nên bắt đầu từ step cơ bản nhất :).

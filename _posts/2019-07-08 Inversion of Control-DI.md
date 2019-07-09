@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Inversion of Control, DI là gì?
-tags: [Design Patterns]
+tags: [.Net]
 ---
 Mình nhận thấy có khá nhiều bạn gặp khó khăn trong việc hiểu và implment các khái niệm như DI, IoC. Post này mình sẽ tìm hiểu làm thế nào để triển khai IoC. Bài này mình dịch và tham khảo site sau: https://www.tutorialsteacher.com/ioc/inversion-of-control. Cá nhân mình thấy bài viết khá dễ hiểu và có tính thực hành cao. Để triển khai IoC, chúng ta folow theo step sau:
 

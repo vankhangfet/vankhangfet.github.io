@@ -30,6 +30,10 @@ HTML:
 <div id="root"></div>
 ~~~~
 
-Chỉ với đoạn code đơn giản như trên, thẻ div sẽ hiển thị câu "Hello, world!".
+Chỉ với đoạn code đơn giản như trên, thẻ div sẽ hiển thị câu "Hello, world!". Chúng ta sẽ xem chi tiết xem Component là gì?
+![component](https://cdn-images-1.medium.com/max/800/1*N2KU7pOcwZwKeOi3B-YBLQ.png "component")
+
+
+
 
 

@@ -40,16 +40,17 @@ function, handler, state và props. Với Component, chúng ta sẽ phải làm 
 Để cho dễ hiểu State và Props ta xem ví dụ sau: Chúng ta muốn tạo ra một component là Label, với thuộc tính là text có thể thay đổi
 được. Khi click button thì text hiển thị số lần click ( 1 click, 2 click,...). Ở ví dụ dưới chúng ta sẽ biết được cách truyền value giữa các Component như thế nào?
 
-1. Parent to Child 
+1. Parent to Child (using props)
    App
       └── Parent
           ├── Child1
           └── Child2
-2. Child to Parent 
+2. Child to Parent (using callback)
    
-3. Between Siblings
+3. Between Siblings (using redux)
 
-Ở đây mình sẽ demo Button -> Content -> Label
+Ở đây mình sẽ demo Button -> Content -> Label. Mình sẽ viết về Redux sau. 
+
 
 ~~~~
 class Button extends React.Component {

@@ -34,10 +34,21 @@ Chỉ với đoạn code đơn giản như trên, thẻ div sẽ hiển thị c�
 ![component](https://cdn-images-1.medium.com/max/800/1*N2KU7pOcwZwKeOi3B-YBLQ.png "component")
 Đây là một ví dụ về class component. Mọi class Component đều kế thừa từ React.Component. Bản thân component là có các thành phần như 
 function, handler, state và props. Với Component, chúng ta sẽ phải làm quen với State và Props.
+
 ![state&Props](https://i.stack.imgur.com/wqvF2.png "State & Props")
 
 Để cho dễ hiểu State và Props ta xem ví dụ sau: Chúng ta muốn tạo ra một component là Label, với thuộc tính là text có thể thay đổi
-được. Khi click button thì text hiển thị số lần click ( 1 click, 2 click,...). 
+được. Khi click button thì text hiển thị số lần click ( 1 click, 2 click,...). Ở ví dụ dưới chúng ta sẽ biết được cách truyền value giữa các 
+Component như thế nào?
+
+1. Parent to Child 
+   App
+      └── Parent
+          ├── Child1
+          └── Child2
+2. Child to Parent 
+   
+3. Between Siblings
 
 ~~~~
 class Button extends React.Component {

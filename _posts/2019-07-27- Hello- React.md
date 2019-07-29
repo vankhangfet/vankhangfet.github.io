@@ -38,8 +38,7 @@ function, handler, state và props. Với Component, chúng ta sẽ phải làm 
 ![state&Props](https://i.stack.imgur.com/wqvF2.png "State & Props")
 
 Để cho dễ hiểu State và Props ta xem ví dụ sau: Chúng ta muốn tạo ra một component là Label, với thuộc tính là text có thể thay đổi
-được. Khi click button thì text hiển thị số lần click ( 1 click, 2 click,...). Ở ví dụ dưới chúng ta sẽ biết được cách truyền value giữa các 
-Component như thế nào?
+được. Khi click button thì text hiển thị số lần click ( 1 click, 2 click,...). Ở ví dụ dưới chúng ta sẽ biết được cách truyền value giữa các Component như thế nào?
 
 1. Parent to Child 
    App
@@ -49,6 +48,8 @@ Component như thế nào?
 2. Child to Parent 
    
 3. Between Siblings
+
+Ở đây mình sẽ demo Button -> Content -> Label
 
 ~~~~
 class Button extends React.Component {

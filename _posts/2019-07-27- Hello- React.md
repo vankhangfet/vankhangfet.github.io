@@ -53,47 +53,81 @@ function, handler, state và props. Với Component, chúng ta sẽ phải làm 
 
 
 ~~~~
-class Button extends React.Component {
-  constructor()
-  { 
-    super();
-    this.state = { counter: 1};
-    this.onClick = this.onClick.bind(this);
-  }
-  
-  onClick()
-  {  
-     this.setState({counter: this.state.counter +1 });
-     alert(this.state.counter);
-  }
-  
-  render() {
-    return (
-      <button onClick={this.onClick}>42</button>
-    );
-  }
-}
+class App extends React.Component {
+   constructor()
+   {
+	   super();
+	   this.state = {
+          message: "This is parrent",
+          value: 0 
+		  
+	   }
+	   
+	   this.callbackFunction = this.callbackFunction.bind(this);
+   }   
+   
+   callbackFunction(childData)
+   {
+      this.setState({value:childData});
 
-class Label extends React.Component {
-  
-  render(){
-   return (
-    <div>Click?</div>
-   );
-  }
-}
-       
-class Content extends React.Component{
-   render(){
-     return(
+   }
+	
+   render() {
+      return (
          <div>
-         <Button /> <Label />
+          <p> Hello React </p>
+          <Button parrentCallBack ={this.callbackFunction}></Button>
+           <Label dataFromParent = {this.state.value}> </Label>
          </div>
-     );
-   }          
-}       
+      );
+   }
+}
 
-ReactDOM.render(<Content />, mountNode);
+class Label extends React.Component
+{
+
+  constructor()
+  {
+    super();
+
+  }
+  
+  render()
+  {
+
+     return (
+        <div>Click: {this.props.dataFromParent}</div>
+     );
+  }
+}
+
+
+class Button extends React.Component
+{
+
+   constructor()
+   {  
+      super();
+      this.state = {counter: 1};
+      this.onClick = this.onClick.bind(this);
+
+   }
+
+   onClick()
+   {
+      this.setState({counter: this.state.counter +1});
+      this.props.parrentCallBack(this.state.counter);
+
+   }
+   
+   render()
+   {
+      return (
+          <button onClick={this.onClick}>Increase</button> 
+      );
+   }
+
+}
 ~~~~
 
 

@@ -130,7 +130,10 @@ class Button extends React.Component
 }
 ~~~~
 
+Để làm việc dễ hơn thì Debug là một phần rất quan trọng, hãy dùng React Extension sau: 
+https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
 
+OK, run code. Mình sẽ có kết quả như dưới. Mỗi khi click button thì giá trị sẽ được update và hiển thị lên text.
 
 
 

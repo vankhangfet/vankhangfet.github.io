@@ -135,6 +135,5 @@ https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopl
 
 OK, run code. Mình sẽ có kết quả như dưới. Mỗi khi click button thì giá trị sẽ được update và hiển thị lên text.
 
-
-
+![state&Props_1](https://github.com/vankhangfet/vankhangfet.github.io/blob/master/img/React_sample.JPG "State & Props")
 

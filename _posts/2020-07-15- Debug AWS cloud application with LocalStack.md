@@ -20,7 +20,9 @@ Chúng ta hãy thử sử dụng LocalStack qua ví dụ sau: Kịch bản là x
  --> git clone https://github.com/localstack/localstack
      TMPDIR=/private$TMPDIR docker-compose up
  2. Build source code Spring Boot
-
+  Việc build soure code cũng khá đơn giản, chúng ta build với Maven và sử dụng IntelliJ IDEA  
+  [https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/)
+  
  3. Create queue trên LocalStack 
  ~~~~
   aws --endpoint-url=http://localhost:4576 sqs create-queue --queue-name test_queue
@@ -31,4 +33,7 @@ Chúng ta hãy thử sử dụng LocalStack qua ví dụ sau: Kịch bản là x
  ~~~~
  5. Check debug log. 
  
+ ![debug_log]( https://github.com/vankhangfet/vankhangfet.github.io/blob/master/img/SQS_Sample1.JPG "Debug log")
+ 
+
  Chúng ta đã thấy debug log hiển thị message nhận được từ SQS. Ok vậy là có thể tin tưởng ứng dụng sẽ chạy trên AWS cloud rồi.

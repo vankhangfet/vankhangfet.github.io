@@ -10,8 +10,34 @@ tags: [Others]
 
 2. VS code 
 
-3. Một số note khi viết API spec
+3. Một số note khi viết API spec. Chúng ta có một số thẻ như sau. Ví dụ dưới đây là một ví dụ API method Post có header / cookie và request body 
+~~~~
+ parameters:
+   - name: Accept 
+     in: header  (cookie/path)
+     required: true
+     description: application/json
+     schema: 
+      type: string
+ ~~~~  
+ 
+ ~~~~
+ requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object 
+              required:
+                - f_token
+                - os_type
+              properties:
+                f_token:
+                  type: string
+                os_type:
+                  type: string
 
+ ~~~~
 
 4. Genrate tài liệu với Redoc cli 
    Chúng ta sẽ cần cài đặt redoc cli, cách cài đặt rất đơn giản với command sau: 
@@ -19,5 +45,8 @@ tags: [Others]
    npm install redoc-cli
    ~~~~
    Sau khi cài đặt thành công thì việc còn lại sẽ là viết spec mô tả dưới format JSON hoặc yml.
-   
+   Để Generate doc thì chúng ta dùng câu lệnh sau: 
+   ~~~~
+   npx redoc-cli bundle .\my_OpenAPI.yml --output index.html
+   ~~~~
    

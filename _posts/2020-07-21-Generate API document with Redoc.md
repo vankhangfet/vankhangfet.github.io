@@ -47,10 +47,10 @@ tags: [Others]
    npm install redoc-cli
    ~~~~
    Sau khi cài đặt thành công thì việc còn lại sẽ là viết spec mô tả dưới format JSON hoặc yml.
-   Để Generate doc thì chúng ta dùng câu lệnh sau: 
+   Để Generate doc thì chúng ta dùng câu lệnh sau:
    ~~~~
    npx redoc-cli bundle .\my_OpenAPI.yml --output index.html
    ~~~~
-   Kết quả document sẽ như sau:
+   Kết quả document sẽ như sau, nhìn khá là rõ ràng đúng không?
    ![redoc-document](https://raw.githubusercontent.com/Redocly/redoc/master/demo/redoc-demo.png "Redoc-document")
 

@@ -8,7 +8,9 @@ tags: [Others]
 1. Open API 
    Open API rất trực quan để mô tả API, các bạn có thể xem ví dụ mẫu ở link sau: [ https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/link-example.yaml]( https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/link-example.yaml)
 
-2. VS code 
+2. VS code + Redoc
+  Nếu bạn nào chưa biết Redoc là gì thì xem link sau: [https://github.com/Redocly/redoc](https://github.com/Redocly/redoc)
+   
 
 3. Một số note khi viết API spec. Chúng ta có một số thẻ như sau. Ví dụ dưới đây là một ví dụ API method Post có header / cookie và request body 
 ~~~~

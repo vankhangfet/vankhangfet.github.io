@@ -51,4 +51,5 @@ tags: [Others]
    ~~~~
    npx redoc-cli bundle .\my_OpenAPI.yml --output index.html
    ~~~~
-   
+   Kết quả document sẽ như sau:
+   https://raw.githubusercontent.com/Redocly/redoc/master/demo/redoc-demo.png

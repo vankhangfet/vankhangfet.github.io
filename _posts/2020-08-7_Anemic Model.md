@@ -18,3 +18,17 @@ which is to combine data and process together."
 
 Martin Fowler, Anemic Domain Model, 2003
 ~~~~
+
+Với Anemic model, thì client phải mô tả nhiệm vụ và cách sử dụng Domain object. Nhưng theo thiết kế việc này sẽ được đảm nhiệm, hay implement 
+trong những class khác, hay còn gọi là Services.
+
+2. Làm thế nào để hạn chế việc tạo ra những Anemic model 
+
+- Cài đặt thuộc tính Private Setter.
+
+- Entities phải self validate.
+
+- Tránh việc tạo ra constructor mà không có tham số đầu vào.
+
+- Thận trọng khi sử dụng những framwork ORM vì ORM sẽ tự động tạo ra những Domain Object và những Domain Object này sẽ có public setter --> Điều này có thể gây ra việc
+tạo ra Anemic model

@@ -101,6 +101,117 @@ public class MessageSender
 }
 
 ~~~~
+Và sử dụng SMS sensder như sau: 
+~~~
+class Program
+{   
+   void Main(string[] args)
+   {
+      IConfirmationMessageSender confirmationMessage = new SMSMessageSender();
+      MessageSender messageSender = new MessageSender(confirmationMessage); 
+      messageSender.SendMessage("Some text","123456789");
+      Console.ReadKey(); 
+   } 
+}
+~~~
+Với việc tổ chức code lại như trên chúng ta đã giải quyết được issue như: 
+
+1. Extension: Nếu như cần thay đổi cách thức để gửi message, chúng ta có thể dễ dang thay đổi hay mở rộng. Và quan trọng là việc thay đổi không vi phạm nguyên tắc 
+Open-Close principle. 
+
+2. Testability: chương trình cho phép ta có thể test class MessageSender với bất cứ kiểu communication nào (EmailSender, SMSSender, etc.)
+
+3. Tight coupling: sự phụ thuộc giữa MessageSender và EmailMessageSender class đã được giải quyết.
+
+Tuy nhiên chúng ta có thể làm cho việc triển khai dễ dàng hơn bằng cách sử dụng Ninject Framework. Ở đây chúng ta sẽ không đi quá chi tiết vào Ninject mà chỉ 
+xem xét cách ứng dụng Framework này như thế nào: 
+
+Step1: chúng ta sẽ định nghĩa một Binding class như sau: 
+~~~~
+using Ninject;
+using Ninject.Modules;
+public class Bindings: NinjectModule
+{   
+   public override void Load()
+   { 
+     Bind<IConfirmationMessageSender>().To<SMSMessageSender>(); 
+   } 
+}
+~~~~
+Ý tưởng ở đây là khai báo để Ninject biết mapping giữa interface và một implementation cụ thể. Nếu như muốn thay đổi cách thức gửi message chúng ta chỉ cần thay đổi 
+mapping, mà gần như không phải thay đổi code trong hệ thống. Great!!!!!!!!!!!!!!!
+
+Step2: Chúng ta sẽ khởi tạo kernerl entity để mapping giữa interface và implementation. 
+~~~~
+IKernel kernel = new StandardKernel();
+kernel.Load(Assembly.GetExecutingAssembly());
+~~~~
+
+Và việc cuối cùng là chúng ta sử dụng để implement như sau: 
+~~~~
+IConfirmationMessageSender confirmationMessage = new kernel.Get<IConfirmationMessageSender>(); 
+MessageSender messageSender = new MessageSender(confirmationMessage); 
+messageSender.SendMessage("Some text","123456789");
+~~~~
+
+Final code sẽ như sau: 
+
+~~~~
+using Ninject;
+using Ninject.Modules;
+public interface IConfirmationMessageSender
+{
+   void Send(string message, string recipient);
+}
+public class EmailMessageSender: IConfirmationMessageSender
+{   
+   public void Send(string message, string recipient)
+   { 
+     Console.WriteLine("Email recipient={0} : data={1}", recipient,message);
+   }
+}
+public class SMSMessageSender: IConfirmationMessageSender
+{   
+   public void Send(string message, string recipient)
+   { 
+     Console.WriteLine("SMS recipient={0} : data={1}", recipient,message);
+   }
+}
+public class MessageSender
+{
+ IConfirmationMessageSender _messageSender = null;
+
+ public MessageSender(IConfirmationMessageSender messageSender)
+ {
+   _messageSender = messageSender;
+ }
+
+ public void SendMessage(string message, string email) 
+ { 
+   _messageSender.Send(message,email); 
+ } 
+}
+
+public class Bindings: NinjectModule
+{   
+   public override void Load()
+   { 
+     Bind<IConfirmationMessageSender>().To<SMSMessageSender>(); 
+   } 
+}
+class Program
+{   
+   void Main(string[] args)
+   {
+      IKernel kernel = new StandardKernel();
+      kernel.Load(Assembly.GetExecutingAssembly());
+      IConfirmationMessageSender confirmationMessage = kernel.Get<IConfirmationMessageSender>(); 
+      MessageSender messageSender = new MessageSender(confirmationMessage); 
+      messageSender.SendMessage("Some text","123456789");
+      Console.ReadKey();
+   } 
+}
+~~~~
 
 
 

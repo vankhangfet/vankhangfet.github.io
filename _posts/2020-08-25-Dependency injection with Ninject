@@ -3,3 +3,23 @@ layout: post
 title: Dependency with Ninject 
 tags: [Design Pattern]
 ---
+Như các bạn đã biết thì Dependency Injection là một mẫu thiết kế để giảm sự phụ thuộc của các module. Có rất nhiều thư viện hỗ trợ chúng ta triển khai việc này. 
+Ninject là một thư viện khá hay, và dễ sử dụng. Hãy cùng xem ví dụ sau và các áp dụng Ninject như thế nào?
+
+Chúng ta bắt đầu với ví dụ send email: 
+
+~~~~
+public interface IConfirmationMessageSender
+{
+   void Send(string message, string email);
+}
+
+
+public class EmailMessageSender: IConfirmationMessageSender
+{   
+   public void Send(string message, string email)
+   { 
+     Console.WriteLine("Email recipient={0} : data={1}", email,message);
+   }
+}
+~~~~

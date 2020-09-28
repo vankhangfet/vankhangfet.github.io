@@ -33,5 +33,5 @@ Tuy nhiên để tiếp hay xây dựng hệ thống theo Ms chúng ta cần ti�
 ngoài ra chúng ta cần xác định giao thức hay cách các service có thể giao tiếp được với nhau. Service có thế giao tiếp với nhau bằng cách sử dụng phương 
 thức đồng bộ (synchronous) như HTTP/REST hay bất đồng bộ như AMQP. Các service có sử dụng riêng database để tránh việc phụ thuộc lẫn nhau.
 
-[https://microservices.io/i/Microservice_Architecture.png](https://microservices.io/i/Microservice_Architecture.png) 
+[Microservice_Architecture.png](https://microservices.io/i/Microservice_Architecture.png) 
 

@@ -20,4 +20,15 @@ Khi sử dụng kiến trúc Ms chúng ta sẽ thấy lợi ích sử dụng:
 
 Đó là những lợi ích nhìn thấy khá rõ ràng khi apply kiến trúc Microservice. 
 
-Tuy nhiên để tiếp 
+Tuy nhiên để tiếp hay xây dựng hệ thống theo Ms chúng ta cần tiếp cận như sau: 
+
+1. Ứng dụng hay service phải có khả năng test (testable), bảo trì dễ dàng. Điều này cho phép chúng ta đẩy nhanh quá trinh phát triển, cũng như triển khai.
+
+2. Các service phải có tính độc lập cao: điều này cho phép chúng ta phát triển các service một cách độc lập, không phụ thuộc lẫn nhau.
+
+3. Services sẽ độc lập nhau trong quá trình deploy. Nghĩa là các service có thể deploy mà không cần phụ thuộc đền các service khác.
+
+4. Việc phát triển các service nên được phụ trách bởi các team nhỏ, tránh việc dùng quá nhiều members chỉ để phát triển một service.
+
+ngoài ra chúng ta cần xác định giao thức hay cách các service có thể giao tiếp được với nhau.
+

@@ -97,5 +97,6 @@ KeyIdentifier [
 ***
 ~~~~
 
+3. Sever Key Exchange Message 
+Message này được server gửi tới client. Server sẽ gửi thông tin cần thiết để client có thể tạo ra "pre-master" screst. Thông báo này sẽ không được gửi nếu thuật toán trao đổi khóa RSA  hoặc bất kỳ thuật toán trao đổi khóa nào khác được sử dụng mà không yêu cầu thông tin từ máy chủ để tạo ra "pre-master" scerest.
 
-~~~~

@@ -46,6 +46,7 @@ Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
 Compression Method: 0
 Extension renegotiation_info, renegotiated_connection: <empty>
 ***
+~~~~
 Server sẽ lựa chọn TLS version lower mà được suggest bởi client trong "Client Hello". Server cũng gửi lại thông tin "Cipher" được selecte từ danh sách "Cipher" mà client gửi lên.
 
 Trong quá trình "Server Hello", server cũng gửi certificate của server cùng với "certificate chain". "Certificate chain" sẽ được validate trong client trust store. 
@@ -99,4 +100,30 @@ KeyIdentifier [
 
 3. Sever Key Exchange Message 
 Message này được server gửi tới client. Server sẽ gửi thông tin cần thiết để client có thể tạo ra "pre-master" screst. Thông báo này sẽ không được gửi nếu thuật toán trao đổi khóa RSA  hoặc bất kỳ thuật toán trao đổi khóa nào khác được sử dụng mà không yêu cầu thông tin từ máy chủ để tạo ra "pre-master" scerest.
+
+Ví dụ với "Elliptic Curve Diffie Hellman(ECDH)[5] key exchange", thông tin detail trên server được gửi tới client như sau: 
+
+~~~
+*** ECDH ServerKeyExchange
+Signature Algorithm SHA256withRSA
+Server key: Sun EC public key, 256 bits
+  public x coord: 49880139518100326927648337356136531406906846853753693344570844017045565963249
+  public y coord: 95714017526253024568876509155195989984116809887282783483716821451591048546410
+  parameters: secp256r1 [NIST P-256, X9.62 prime256v1] (1.2.840.10045.3.1.7)
+~~~
+
+4. Certificate Request 
+Với one-way SSL thì việc xác thực client được bỏ qua. Trong bước này server yêu cầu certificate từ client, thuật toán mã hóa chữ ký và thông tin tổ chức phát hành chứng chỉ
+(certificate signature algorithms and certificate authorities [6] supported by the server.) được máy chủ hỗ trợ. Có thể có những trường hợp mà danh sách tổ chức phát hành chứng chỉ có thể trống. Trong các tình huống như vậy, client có thể chọn gửi hoặc tránh gửi chứng chỉ client (tùy thuộc vào việc triển khai máy khách)
+
+~~~~
+** CertificateRequest
+Cert Types: RSA, DSS, ECDSA
+Supported Signature Algorithms: SHA512withECDSA, SHA512withRSA, SHA384withECDSA, SHA384withRSA, SHA256withECDSA, SHA256withRSA, SHA256withDSA, SHA224withECDSA, SHA224withRSA, SHA224withDSA, SHA1withECDSA, SHA1withRSA, SHA1withDSA
+Cert Authorities:
+<CN=server, OU=ID, O=IBM, L=Hursley, ST=Hants, C=GB>
+<CN=client, OU=ID, O=IBM, L=Hursley, ST=Hants, C=GB>
+*** ServerHelloDone
+~~~~
+
 

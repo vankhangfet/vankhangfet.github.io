@@ -196,5 +196,6 @@ Sau khi quá trình authenticate và tạo ra pre-master secrest/ master secrest
 
 
 
-
-
+Link tham khảo: 
+1. https://ssl.vn/tim-hieu-ve-cac-thuat-toan-trong-ma-hoa-ssltls.html
+2. https://medium.com/@kasunpdh/ssl-handshake-explained-4dabb87cdce

@@ -16,5 +16,7 @@ Có 2 kiểu trong quá trình bắt tay (SSL handshakes) đó là:
 2. Two-way SSL (Mutual SSL) --> Quá trình này thì server và client sẽ xác thực danh tính lẫn nhau. 
 
 Với https, thì one-way SSL được sử dụng, lúc này client sẽ validate danh tính (identity) của server. Two-way SSL được sử dụng trong quá trình giao tiếp 
-server -> server khi cả 2 cần xác thực lẫn nhau.
+server -> server khi cả 2 cần xác thực lẫn nhau. Quá trình bắt tay gồm các steps như sau: 
+
+![handshake-process](/img/ssl-tls-handshake-process.png "handshake-process")
 

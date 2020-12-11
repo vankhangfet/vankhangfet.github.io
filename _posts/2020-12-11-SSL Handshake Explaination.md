@@ -20,7 +20,7 @@ server -> server khi cả 2 cần xác thực lẫn nhau. Quá trình bắt tay 
 
 ![handshake-process](/img/ssl-tls-handshake-process.png "handshake-process")
 
-1. Client Hello
+#### 1. Client Hello
 
 Client send thông tin được yêu cầu bởi server để thiết lập HTTPS connection. 
 
@@ -36,7 +36,7 @@ Session ID: 239, 10, 92, 143, 185, {}
 Chúng ta có thể thấy client hello với TLS v1.2. Danh sách "Cipher" được support bởi client cũng được gửi kèm. Nếu như server không hỗ trợ những "Cipher"
 này thì server sẽ ignore. Trong trường hợp này server gửi failuer alert và đóng kết nối (close connection)
 
-2. Server Hello
+#### 2. Server Hello
 Server sẽ response client với configuration được select từ "Client hello" để thực hiện quá trình bắt tay 
 ~~~~
 *** ServerHello, TLSv1.2
@@ -98,7 +98,8 @@ KeyIdentifier [
 ***
 ~~~~
 
-3. Sever Key Exchange Message 
+#### 3. Sever Key Exchange Message 
+
 Message này được server gửi tới client. Server sẽ gửi thông tin cần thiết để client có thể tạo ra "pre-master" screst. Thông báo này sẽ không được gửi nếu thuật toán trao đổi khóa RSA  hoặc bất kỳ thuật toán trao đổi khóa nào khác được sử dụng mà không yêu cầu thông tin từ máy chủ để tạo ra "pre-master" scerest.
 
 Ví dụ với "Elliptic Curve Diffie Hellman(ECDH)[5] key exchange", thông tin detail trên server được gửi tới client như sau: 
@@ -112,7 +113,8 @@ Server key: Sun EC public key, 256 bits
   parameters: secp256r1 [NIST P-256, X9.62 prime256v1] (1.2.840.10045.3.1.7)
 ~~~
 
-4. Certificate Request 
+#### 4. Certificate Request 
+
 Với one-way SSL thì việc xác thực client được bỏ qua. Trong bước này server yêu cầu certificate từ client, thuật toán mã hóa chữ ký và thông tin tổ chức phát hành chứng chỉ
 (certificate signature algorithms and certificate authorities [6] supported by the server.) được máy chủ hỗ trợ. Có thể có những trường hợp mà danh sách tổ chức phát hành chứng chỉ có thể trống. Trong các tình huống như vậy, client có thể chọn gửi hoặc tránh gửi chứng chỉ client (tùy thuộc vào việc triển khai máy khách)
 
@@ -125,5 +127,74 @@ Cert Authorities:
 <CN=client, OU=ID, O=IBM, L=Hursley, ST=Hants, C=GB>
 *** ServerHelloDone
 ~~~~
+
+Sau đó server gửi "Server Hello Done message" để thông báo kết thúc "Server Hello". Sau khi gửi message này, server đợi client response.
+
+#### 5. Client certificate 
+
+Client gửi thông tin certificate chain tới server. Certificate cần phải phù hợp với thuật toán trao đổi (cipher suite key exchange)
+
+~~~~
+*** Certificate chain
+chain [0] = [
+[
+ Version: V3
+ Subject: CN=client, OU=ID, O=IBM, L=Hursley, ST=Hants, C=GB
+ Signature Algorithm: SHA256withRSA, OID = 1.2.840.113549.1.1.11
+Key: Sun RSA public key, 2048 bits
+ modulus: 18119263742031194496605769187455443270597945138184373600190568567529223307881832206636149174898170318962976721473838161099154403131753987226572202408028529227618229923799372008493985299840890900724464000772003100272063510307951510774059438949182596756535864573609939013131649003265478713069926095732605709196278782011601814469262789931086208205589428797070602798907978049568830083601427658925256219608088802036407715832882313969434745397608912908804797572648755351812363722460094682723499117056761800745131355458387860695343833158680929499842492998494287303389968052301777591093565784473811706286599357517891252515661
+ public exponent: 65537
+ Validity: [From: Sat Jul 28 08:15:17 IST 2018,
+ To: Sun Jul 28 08:15:17 IST 2019]
+ Issuer: CN=client, OU=ID, O=IBM, L=Hursley, ST=Hants, C=GB
+ SerialNumber: [ 7ef725fc]
+Certificate Extensions: 1
+[1]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 97 E7 01 68 93 84 EE 2D 7D 90 5E 67 F7 55 44 86 …h…-..^g.UD.
+0010: 1D 7C 1B F6 ….
+]
+]
+]
+ Algorithm: [SHA256withRSA]
+ Signature:
+0000: 24 7C 86 49 7A 51 4C 30 98 A7 A4 C4 98 7D D3 3C $..IzQL0…….<
+0010: 73 6D CC D8 4B 54 BA 7F F2 CE B4 C2 B5 56 CF 7C sm..KT…….V..
+0020: A8 8A 7E DD C4 F1 BE 95 A3 87 A3 2C A8 14 43 C5 ………..,..C.
+0030: A3 85 64 FE D2 42 BA 3D 67 18 3B FB 09 9A 14 69 ..d..B.=g.;….i
+0040: D6 ED 96 74 8F 45 89 8A 86 A8 41 39 BF 54 70 E4 …t.E….A9.Tp.
+0050: D2 AA 9F E7 86 25 09 1A B3 62 2A 91 49 FF 9D 53 …..%…b*.I..S
+0060: 2B C2 DA 07 92 21 BB 41 7C 7C E8 A3 31 4B BE 5F +….!.A….1K._
+0070: 1B 6A 6E 05 F1 90 B8 26 5D F1 16 1C AA 2F 58 45 .jn….&]…./XE
+0080: AD 31 0E 21 29 C3 C9 C6 05 49 55 16 70 73 3A B2 .1.!)….IU.ps:.
+0090: B6 4F 5F 88 77 E2 10 03 DF 89 B8 FE D5 6D E8 98 .O_.w……..m..
+00A0: C9 26 7D 1F 28 1C 15 04 B5 84 2F 47 97 C5 B7 3C .&..(…../G…<
+00B0: B8 04 55 1B C9 54 64 55 B6 77 FC A7 E1 3B AC 7B ..U..TdU.w…;..
+00C0: 92 D4 C1 AE 80 34 2B 54 FB B2 B3 78 33 86 FD 10 …..4+T…x3…
+00D0: 06 BC E8 60 EE 8F 24 74 26 8C 43 E4 49 43 55 35 …`..$t&.C.ICU5
+00E0: 16 F0 F8 C5 7D 79 25 FE 67 7E FF 27 06 22 01 BA …..y%.g..'."..
+00F0: F7 DE F2 0C CF 71 A8 7B 49 20 26 C9 B4 20 3E F7 …..q..I &.. >.
+]
+~~~~
+
+#### 6. Client Key Exchange Message 
+
+Message này được gửi bởi client trong Client Certificate message. Trong trường hợp one-way thì client key exchange được gửi sau khi client nhận 
+bản tin "ServerHelloDone"
+
+Trong quá trình bản tin được mã hóa, bản được được mã hóa sử dụng "symmetric encryption". Có 2 loại "Client Exchange Key" được mô tả trong TLS v1.2 (RSA và Diffie-Hellman)
+
+Nếu RSA được sử dụng thì client sẽ generate 48 byte pre-master secret. Client mã hóa pre-master key bằng cách public key và gửi lên server. Và chỉ có server mới có khả năng 
+giải mã và lấy được thông tin "pre-master"
+
+Trường hợp sử dụng Diffie-Hellman, thông tin về Diffie-Hellman parameters  sẽ được sử dụng để tạo ra symmetric key.
+
+#### 7. Finished 
+
+Sau khi quá trình authenticate và tạo ra pre-master secrest/ master secrest một thông báo thông số kỹ thuật mật mã thay đổi sẽ được gửi bởi cả máy khách và máy chủ cho biết rằng phần còn lại của thông tin liên lạc sẽ được mã hóa.
+
+
+
 
 

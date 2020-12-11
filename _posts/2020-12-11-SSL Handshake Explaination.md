@@ -34,7 +34,9 @@ Session ID: 239, 10, 92, 143, 185, {}
 ~~~~
 
 Chúng ta có thể thấy client hello với TLS v1.2. Danh sách "Cipher" được support bởi client cũng được gửi kèm. Nếu như server không hỗ trợ những "Cipher"
-này thì server sẽ ignore. Trong trường hợp này server gửi failuer alert và đóng kết nối (close connection)
+này thì server sẽ ignore. Trong trường hợp này server gửi failuer alert và đóng kết nối (close connection). Ở đây chúng ta gặp một thuật ngữ đó là "Cipher suites"
+
+Cipher là thuật toán, cụ thể hơn đó là các bước để thực hiện mã hóa, giải mã, hash hoặc ký. 
 
 #### 2. Server Hello
 Server sẽ response client với configuration được select từ "Client hello" để thực hiện quá trình bắt tay 

@@ -65,5 +65,19 @@ OPTIONS /order/1234 HTTP 1.1 Host: starbucks.example.org
 Response:
 200 OK Allow: GET, PUT
 ~~~~
+Chúng ta có thể thấy là việc update order vẫn là hợp lệ và được hồ trợ bởi method "PUT", tất nhiên việc lấy thông tin order được hỗ trợ bởi method "GET". 
+Nếu chúng ta thử thay đổi order với "PUT" thì response sẽ như sau: 
+~~~~
+Request: 
+PUT /order/1234 HTTP 1.1 Host: starbucks.example.com Expect: 100-Continue
+Response:
+100 Continue
+~~~~
+Trong trường hợp, nếu như không thể thay đổi được order thì response sẽ là "417 Expectation Failed". Giả sử chúng ta thay đổi order như sau với "PUT"
+![Ordering coffee4](https://res.infoq.com/articles/webber-rest-workflow/en/resources/code3.jpg)
+
+Khi order được thay đổi, service sẽ response thông tin của order (new resource) như sau:
+![Ordering coffee5](https://res.infoq.com/articles/webber-rest-workflow/en/resources/code4.jpg)
+
 
 

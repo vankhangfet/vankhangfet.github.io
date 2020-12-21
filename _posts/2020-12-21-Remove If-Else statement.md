@@ -89,3 +89,20 @@ public class AddCommand implements Command {
     }
 }
 ~~~~
+Tiếp đó là class để thực hiện command này 
+~~~~
+public int calculate(Command command) {
+    return command.execute();
+}
+~~~~
+
+Ví dụ với việc thực hiện "Add command", ta dễ dàng thực hiện như sau: 
+~~~~
+public void whenCalculateUsingCommand_thenReturnCorrectResult() {
+    Calculator calculator = new Calculator();
+    int result = calculator.calculate(new AddCommand(3, 7));
+    assertEquals(10, result);
+}
+~~~~
+
+Great!!!!! Hy vọng là những cách trên có thể giúp bạn viết code đẹp hơn, dễ bảo trì hơn.

@@ -41,3 +41,51 @@ public class Addition implements Operation {
     }
 }
 ~~~~
+Tiếp đó chúng ta cần một Factory class như 
+~~~~
+public class OperatorFactory {
+    static Dictionary<String, Operation> operationMap = new Dictionary<>();
+    static {
+        operationMap.put("add", new Addition());
+        operationMap.put("divide", new Division());
+        // more operators
+    }
+
+    public static Optional<Operation> getOperation(String operator) {
+        return Optional.ofNullable(operationMap.get(operator));
+    }
+}
+~~~~
+
+Ví dụ muốn thực hiện toán tử "Addition", chúng ta có thể viết lại đoạn như dưới đây:
+~~~~
+public int calculateUsingFactory(int a, int b, String operator) {
+    Operation targetOperation = OperatorFactory
+      .getOperation(operator)
+    return targetOperation.apply(a, b);
+}
+~~~~
+Bây giờ code đã trở nên rất rõ ràng. Ngoài cách trên chúng ta có thể sử dụng "Command Pattern". Cách triển khai "Command Pattern" như sau: 
+
+Trước tiên, chúng ta cần một interface "Command" 
+~~~~
+public interface Command {
+    Integer execute();
+}
+~~~~
+
+Sau đó là implement các operator 
+~~~~
+public class AddCommand implements Command {
+    // Instance variables
+
+    public AddCommand(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    public Integer execute() {
+        return a + b;
+    }
+}
+~~~~

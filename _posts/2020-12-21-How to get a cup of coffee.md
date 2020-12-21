@@ -27,3 +27,10 @@ Với customer, thì customer sẽ cần order đồ uống "Coffee"
 "http://starbucks.example.org/order."
 
 ![Ordering coffee](https://res.infoq.com/articles/webber-rest-workflow/en/resources/image4.jpg)
+
+Giả sử customer thực hiện một order như sau: 
+
+![Ordering coffee1](https://res.infoq.com/articles/webber-rest-workflow/en/resources/code1.jpg)
+
+Khi thực hiện order này thì "Starbucks service" sẽ thực hiện tạo một resource và response lại customer thông tin order này trong response. Ngoài ra service có thể response cho 
+người dùng thông tin cần thiết cho việc thực hiện thanh toán. 

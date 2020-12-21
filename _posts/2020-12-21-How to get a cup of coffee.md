@@ -79,5 +79,6 @@ Trong trường hợp, nếu như không thể thay đổi được order thì r
 Khi order được thay đổi, service sẽ response thông tin của order (new resource) như sau:
 ![Ordering coffee5](https://res.infoq.com/articles/webber-rest-workflow/en/resources/code4.jpg)
 
-
+Tuy nhiên bạn nên chú ý rằng việc kiểm tra khả năng thay đổi bằng "OPTION" không đảm bảo lúc nào việc thay đổi cũng có thể được chập nhận. Do đó chúng ta có thể sử dụng 
+HTTP status trong tình huống không cho phép thay đổi với status code "405" , "409"
 

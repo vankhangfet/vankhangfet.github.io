@@ -18,4 +18,7 @@ state machine.
 
 ![Barista's state machine](https://res.infoq.com/articles/webber-rest-workflow/en/resources/image2.jpg)
 
-Người pha chế sẽ nhận order, thực hiện pha chế. 
+Người pha chế sẽ nhận order, thực hiện pha chế. Ok!, với 2 state machine cơ bản như vậy, chúng ta đã hiểu được flow làm việc của hệ thống, giờ là lúc thiết kế API. 
+
+Với customer, thì customer sẽ cần order đồ uống "Coffee" 
+![Customer order](https://res.infoq.com/articles/webber-rest-workflow/en/resources/image3.jpg)

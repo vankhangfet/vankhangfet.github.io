@@ -22,3 +22,8 @@ Người pha chế sẽ nhận order, thực hiện pha chế. Ok!, với 2 stat
 
 Với customer, thì customer sẽ cần order đồ uống "Coffee" 
 ![Customer order](https://res.infoq.com/articles/webber-rest-workflow/en/resources/image3.jpg)
+
+Để thực hiện order này, đơn giản là chúng ta sẽ thực hiện một "POST" request, và endpoint cho việc order này sẽ như sau: 
+"http://starbucks.example.org/order."
+
+![Ordering coffee](https://res.infoq.com/articles/webber-rest-workflow/en/resources/image4.jpg)

@@ -22,3 +22,22 @@ public int calculate(int a, int b, String operator) {
     return result;
 }
 ~~~~
+
+Nếu như chúng ta phải thêm nhiều toán tử khác thì if-else sẽ ngày càng nhiều, code trở lên khó đọc hơn. Vậy có cách nào để khắc phục điều này?
+Chúng ta sẽ xây dựng một Interface như sau: 
+
+~~~~
+public interface Operation {
+    int apply(int a, int b);
+}
+~~~~
+
+Sau đó triển khai các operator từ interface này. Ví dụ với operator "Addition"
+
+~~~~
+public class Addition implements Operation {
+    public int apply(int a, int b) {
+        return a + b;
+    }
+}
+~~~~

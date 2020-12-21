@@ -13,4 +13,9 @@ state machine.
 
 ![Customer state machine](https://res.infoq.com/articles/webber-rest-workflow/en/resources/image1.jpg)
 
-Đây là một flow rất phổ biến, customer có thể order, thay đổi order và thực hiện thanh toán.
+Đây là một flow rất phổ biến, customer có thể order, thay đổi order và thực hiện thanh toán. Tiếp đến là flow của người pha chế 
+
+
+![Barista's state machine](https://res.infoq.com/articles/webber-rest-workflow/en/resources/image2.jpg)
+
+Người pha chế sẽ nhận order, thực hiện pha chế. 

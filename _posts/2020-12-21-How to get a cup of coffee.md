@@ -52,5 +52,18 @@ We've already seen that the 201 Created status code indicates the successful cre
 500 Internal Server Error - The ultimate lazy response. The server's gone wrong and it's not telling why. Cross your fingers…
 ~~~~
 
+Tuy nhiên trong thực tế không phải lúc nào customer cũng chỉ có một order, và họ cũng có thể thay đổi order 
+
+
+![Ordering coffee3](https://res.infoq.com/articles/webber-rest-workflow/en/resources/image5.jpg)
+
+Tuy nhiên để chắc chắn rằng chúng ta có thể thay đổi order thì thật may mắn là HTTP hỗ trợ method "OPTIONS" để làm việc này
+
+~~~~
+Request:
+OPTIONS /order/1234 HTTP 1.1 Host: starbucks.example.org
+Response:
+200 OK Allow: GET, PUT
+~~~~
 
 

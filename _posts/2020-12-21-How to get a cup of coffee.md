@@ -9,5 +9,8 @@ Rest full - API đã rất quen thuộc với các bạn làm backend. Tuy nhiê
 vị trong bài viết tiếng anh.
 
 Trong bài này có đề cập đến vấn đề thiết kế API, phục vụ cho việc khách hàng order coffee. Thử tượng tượng chúng ta sẽ thiết kế API cho Starbucks. Hãy bắt đầu với work flow và
-state machine 
+state machine.
+
 ![Customer state machine](https://res.infoq.com/articles/webber-rest-workflow/en/resources/image1.jpg)
+
+Đây là một flow rất phổ biến, customer có thể order, thay đổi order và thực hiện thanh toán.

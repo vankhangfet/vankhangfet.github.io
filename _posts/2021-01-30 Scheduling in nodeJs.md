@@ -21,3 +21,7 @@ Process NextTick
 Set Timeout
 Set Immediate
 ~~~~
+
+Để giải thích được kết quả của log trên, chúng ta hãy xem thứ tự của Event Loop:
+
+![Event loop order](/img/event-loop-order.png "Event loop order")

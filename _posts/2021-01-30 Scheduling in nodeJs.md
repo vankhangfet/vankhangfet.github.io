@@ -22,6 +22,17 @@ Set Timeout
 Set Immediate
 ~~~~
 
-Để giải thích được kết quả của log trên, chúng ta hãy xem thứ tự của Event Loop:
+Chúng ta hãy xem thứ tự của Event Loop sau:
 
 ![Event loop order](/img/event-loop-order.png "Event loop order")
+
+setTimeout - sẽ được schedule trong timers, và thực thi ngay lúc đầu trong quá poll phase
+
+setImmeidate - được thi trong check phase khi poll phase không tác vụ. Poll phase là phase mà 99% callback trong node js được thực thi. Hay nói cách khác thì setImmediate được dealy cho tới khi event queue là empty. 
+
+process.nextTick - callback được enqueue từ nextTickQueue. Queue này sẽ được hủy đi khi block code hiện tại được kết thúc. 
+
+OK! giờ chúng ta hãy thử dùng các định nghĩa trên để giải thích kết quả log
+
+
+

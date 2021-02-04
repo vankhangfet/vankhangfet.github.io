@@ -45,4 +45,14 @@ OK! giờ chúng ta hãy thử dùng các định nghĩa trên để giải thí
 
 5. Event lopp chuyển qua poll phase. Timer callback sẽ được thực dequeue và thực hiện.
 
+6. Poll queue là empty, khi có cài đặt callback trong setImmediate thì evet lopp sẽ chuyển qua check phase. 
+
+7. Call back trong setImmediate được thực hiện
+
+8. Event loop được restart. Nếu như không có timer hoặc I/O process nào đang pending thì kết thúc process.
+
+Vậy các sheduling function được sử dụng trong những trường hợp nào?
+
+- setTimeout : được dùng để schedule cho một function sẽ được thực thi sau khi delay milliseconds
+
 

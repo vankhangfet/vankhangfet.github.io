@@ -24,3 +24,22 @@ void ChangeCustomerLocale(CustomerId, NewLocale)
 void CreateCustomer(Customer)
 void EditCustomerDetails(CustomerDetails)
 ~~~~
+
+Khi apply CQRS, chúng ta sẽ có 2 services sau:
+
+~~~~
+CustomerWriteService
+
+void MakeCustomerPreferred(CustomerId)
+void ChangeCustomerLocale(CustomerId, NewLocale)
+void CreateCustomer(Customer)
+void EditCustomerDetails(CustomerDetails)
+~~~~
+
+~~~~
+CustomerReadService
+
+Customer GetCustomer(CustomerId)
+CustomerSet GetCustomersWithName(Name)
+CustomerSet GetPreferredCustomers()
+~~~~

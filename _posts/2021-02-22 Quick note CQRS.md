@@ -43,3 +43,10 @@ Customer GetCustomer(CustomerId)
 CustomerSet GetCustomersWithName(Name)
 CustomerSet GetPreferredCustomers()
 ~~~~
+
+Cách tiếp cận đơn giản là như vậy. Việc chia tách service này mang đến cho kiến trúc, ứng dụng của chúng ta rất nhiều điều thú vụ và khả năng mở rộng service.
+Ví dụ chúng ta có thể mở rộng service query một cách dễ dàng.
+
+
+
+

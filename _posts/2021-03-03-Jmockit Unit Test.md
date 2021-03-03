@@ -17,6 +17,46 @@ Theo kinh nghiệm thì chúng ta có thể tóm tắt @Mocked và @Injectable n
 
 - @Mocked được dùng khi bạn không thể PASS instance mà mark @Mocked vào trong class bạn muốn test. 
 
+Chúng ta xem xét ví dụ sau. Chúng ta có một class đó là "Team"
+~~~~
+public class Team {
+    public Team(Leader leader) {
+        //...
+    }
+    
+    public boolean hasADiscussion() {
+        System.out.println(leader.getName());
+        Discussion d = new Discussion();
+        return d.started();
+    }
+}
+~~~~
+
+Ở class này, chúng ta có thể inject/pass một instance Leader vào trong constructer của "Team". Tuy nhiên với function hasADiscussion() thì chúng ta không thể truyền 
+intance Discussion vào được. Như vậy chúng ta có thể phải dùng cả @Injectable và @Mocked.
+
+~~~~
+public class TeamTests {
+
+    @Injectable Leader aLeader;
+    /**
+		* Usually you will write `@Mocked Leader aLeader`, which is fine in most 
+		* cases but you will hit hidden issues when mocking too much than what you need
+		*/
+    @Mocked Discussion aDiscussion;
+    
+    @Test
+    public void testHasADiscussion() {
+        new NonStrictExpectations() {{
+            aLeader.getName(); result = "dev_leader";
+            aDiscussion.start(); result = true;
+        }};
+        
+        Team t = new Team(aLeader); // Note! You can pass in `aLeader` (but not aDiscussion) to `Team` here!
+        assertTrue(t.hasADiscussion());
+    }
+}
+~~~~
 
 
 

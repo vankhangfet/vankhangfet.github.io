@@ -29,3 +29,16 @@ Cấu trúc được chia thành các folder với những mục đích rõ ràn
         |
     Data Access Layer
 ~~~~
+
+Để giữ cho code trở lên dễ bảo trì, trong sáng chúng ta phải quan tâm đến những vấn đề sau:
+
+1. Controller: 
+   -> Chúng ta không thực hiện bussiness logic trong controller.
+2. Service Layer
+   -> Service Layer là nơi chúng ta triển khai bussiness do đó, Service Layer sẽ không gồm request/ response object. Service Layer cũng sẽ không chứa 
+   các thành phần liên quan tới HTTP status, header. 
+ 
+ Ngoài 2 điểm chinh trên, chúng ta nên kết hợp với những Pattern hay kỹ thuật sau :
+  - Pub/Sub Layer 
+  - Dependency Injection 
+ 

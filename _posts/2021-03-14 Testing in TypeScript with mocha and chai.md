@@ -45,5 +45,6 @@ Khi muốn chạy test thì chúng ta chỉ cần chạy câu lệnh đơn giả
 npm run test
 ~~~~
 Nếu như các test case đều OK, chúng ta sẽ thấy một repost trên console như sau:
+![UT Mocha](/img/UT.JPG "UT Mocha chai")
 
-
+Việc setup, sử dụng cũng khá đơn giản. Hy vọng các bạn sẽ thực hành hay sử dụng UT nhiều hơn trong các project của mình.

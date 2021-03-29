@@ -10,4 +10,18 @@ Có rất nhiều tác giả viết về vấn đề này. Mình chỉ note lạ
 
 Architectural principles
 
+- Separation of concerns
 
+- Encapsulation
+
+- Dependency inversion
+ The direction of dependency within the application should be in the direction of abstraction, not implementation details
+ Đơn giản dễ hiểu thì chúng ta nên thiết kế sao cho layer trên không phụ thuộc trực tiếp vào layer dưới, chúng nên giao tiếp thông qua interface. 
+ Ví dụ dưới đây là một thiết kế tốt khi sử dụng DI
+ 
+ https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/media/image4-1.png
+ 
+
+- Explicit dependencies
+
+- Single responsibility

@@ -28,3 +28,5 @@ Architectural principles
 - Explicit dependencies
 
 - Single responsibility
+
+![architecture](https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/media/image5-7.png "architecture")

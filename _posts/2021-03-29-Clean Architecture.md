@@ -31,4 +31,6 @@ Các phần khác nhau của ứng dụng nên có tính đóng gói (Encapsulat
 
 - Single responsibility
 
+- Don't repeat yourself (DRY)
+
 ![architecture](https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/media/image5-7.png "architecture")

@@ -38,4 +38,12 @@ Nó cho phép quá trình xử lý dữ liệu diễn ra trong thời gian thự
 Trong hệ thống chứng khoán. Mỗi khi có sự thay đổi về giá (stock price change), một sự kiện sẽ được tạo ra bao gồm thời gian,mã định danh cổ phiếu và giá giao dịch
 mới của nó mà trong ví dụ này là sự thay đổi trạng thái. Do có hàng nghìn cổ phiếu và hàng nghìn giao dịch diễn ra mỗi giây, điều này dẫn đến một luồng dữ liệu liên tục
 
+What is a Queue?
+
+Khác với Stream, Queue có đặc điểm như sau:
+
+- Queue là cách mà system có thể giao tiếp bất đồng bộ với system khác.
+- Queue lưu trữ message cho tới khi message được xử lý hoặc bị xóa.
+- Message trong queu được xử lý duy nhất một lần và với một loại consumer.
+
 

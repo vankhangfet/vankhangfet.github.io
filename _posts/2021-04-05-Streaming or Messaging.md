@@ -20,5 +20,9 @@ What is a Message?
 Khác với Event, Message cho ta biết được mục đích của action, mô tả điều gì đã xảy ra. Message có thể bao gồm nhiều thông tin. 
 Message có thể được biến đổi, để phù hợp với các hệ thống khác nhau. Và tất nhiên message được phân phối thông qua các kênh Messaging. 
 
+Qua định nghĩa trên thì ta thấy rằng Message và Event cũng có điểm chung. Vậy chúng có thể thay thế, hoán đổi cho nhau được không? 
+
+Hãy xem ví dụ sau:
 
 
+![No-DI](https://i1.wp.com/robertleggett.blog/wp-content/uploads/2020/03/Sample-Command-and-Event-Flow-Diagram.png?resize=768%2C747&ssl=1 "Event")

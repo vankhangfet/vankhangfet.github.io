@@ -26,3 +26,16 @@ Hãy xem ví dụ sau:
 
 
 ![No-DI](https://i1.wp.com/robertleggett.blog/wp-content/uploads/2020/03/Sample-Command-and-Event-Flow-Diagram.png?resize=768%2C747&ssl=1 "Event")
+
+như ở ví dụ trên thì message có thể được thay thế bằng event. Tuy nhiên message và event sẽ có mục đích sử dụng khác nhau, các bạn có thể xem pattern CQRS để thấy
+rõ sự khác nhau giữa chúng Command message (message) and Event message (event).
+
+What is Streaming?
+
+- Streaming of Data:  là luồng sự kiện liên tục trong đó mỗi sự kiện phải chứa đủ thông tin để phản ánh sự thay đổi trạng thái.
+Nó cho phép quá trình xử lý dữ liệu diễn ra trong thời gian thực. Với stream chúng ta có ví dụ sau đây để phản ánh dòng dữ liệu.
+
+Trong hệ thống chứng khoán. Mỗi khi có sự thay đổi về giá (stock price change), một sự kiện sẽ được tạo ra bao gồm thời gian,mã định danh cổ phiếu và giá giao dịch
+mới của nó mà trong ví dụ này là sự thay đổi trạng thái. Do có hàng nghìn cổ phiếu và hàng nghìn giao dịch diễn ra mỗi giây, điều này dẫn đến một luồng dữ liệu liên tục
+
+

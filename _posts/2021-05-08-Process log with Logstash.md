@@ -19,3 +19,7 @@ cloudwatch, sau đo xử lý log và stogare với ElasticSeach.
 Hệ thống cơ bản của chúng ta sẽ có kiến trúc như sau: 
 
 ![Log pipelines](/img/Logging-Pipelines.png "Log Pipelines")
+
+Metric. log sẽ được Logstash thu thập, xử lý qua các pipelines được định nghĩa bên trong Logstash. Output sẽ được lưu trữ vào ElasticSearch. Mặc dù kiến trúc phía trên sử 
+dụng Kibana. Tuy nhiên các bạn có thể sử dụng một số công cụ như Grafana để hiện metric.
+

@@ -9,7 +9,7 @@ Hi 👋 My name is Khang
 Software Engineer (Cloud/Web)
 -----------------------------
 
-I have more than 10 years of experience as a software engineer. I've managed development teams using a wide range of technologies and developed complicated projects over the years.
+I have more than 10 years of experience as a software engineer. I am a programmer, technical leader. I like to create well-thought-out systems, tools and frameworks that are used in production and make people's lives easier. 
 
 *   🌍  I'm based in Hanoi
 *   ✉️  You can contact me at [vankhangfet@gmail.com](mailto:vankhangfet@gmail.com)

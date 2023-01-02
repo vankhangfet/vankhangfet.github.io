@@ -6,7 +6,7 @@ title: About me
 Hi 👋 My name is Khang
 ======================
 
-Software Engineer (Cloud/Web)
+Software Engineer (Cloud/Web/IoT)
 -----------------------------
 
 I have more than 10 years of experience as a software engineer. I am a programmer, technical leader. I like to create well-thought-out systems, tools and frameworks that are used in production and make people's lives easier. 

@@ -1,7 +1,6 @@
-
 ---
 layout: post
-title: View model trong kiến trúc MVVM
+title: view model trong kiến trúc MVVM
 tags: [DESIGN]
 ---
 

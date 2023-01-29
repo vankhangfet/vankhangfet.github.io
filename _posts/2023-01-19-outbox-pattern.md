@@ -23,4 +23,12 @@ Nhưng điều gì xảy ra khi việc public message vào trong queue không th
 Nếu hệ thống của bạn đang thiết kế theo kiến trúc Event-Driven thì việc mất mát message sẽ gây ra rất nhiều vấn đề, và chúng ta cần tránh việc này xảy ra.
 
 # 2. Outbox Pattern
-Ý tưởng của outbox pattern là thay vì việc ghi trạng thái vào database, sau đó public mesage vào trong queue được thực hiện ở các bươc khác nhau thì chúng ta sẽ lấy trạng thái từ DB sau đó thực hiện việc public message vào trong queue. State trong DB sẽ được delete/update khi và chỉ khi việc public message vào trong queue được thực hiện thành công.
+Ý tưởng của outbox pattern là thay vì việc ghi trạng thái vào database, sau đó public mesage vào trong queue được thực hiện ở các bươc khác nhau thì chúng ta sẽ lấy trạng thái từ DB sau đó thực hiện việc public message vào trong queue. State trong DB sẽ được delete/update khi và chỉ khi việc public message vào trong queue được thực hiện thành công. Tuy nhiên khi sử dụng outbox pattern đó chính là đặc tính "At least once", điêu này sẽ xảy ra khi việc delete/update lại database không thành công, dân đên việc publisher sẽ pooling lại message tư DB. 
+
+![outbox04](/img/outbox_04.png "outbox4")
+
+![outbox05](/img/outbox_05.png "outbox4")
+
+![outbox06](/img/outbox_06.png "outbox4")
+
+![outbox07](/img/outbox_07.png "outbox4")

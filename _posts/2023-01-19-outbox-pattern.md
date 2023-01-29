@@ -25,10 +25,13 @@ Nếu hệ thống của bạn đang thiết kế theo kiến trúc Event-Driven
 # 2. Outbox Pattern
 Ý tưởng của outbox pattern là thay vì việc ghi trạng thái vào database, sau đó public mesage vào trong queue được thực hiện ở các bươc khác nhau thì chúng ta sẽ lấy trạng thái từ DB sau đó thực hiện việc public message vào trong queue. State trong DB sẽ được delete/update khi và chỉ khi việc public message vào trong queue được thực hiện thành công. Tuy nhiên khi sử dụng outbox pattern đó chính là đặc tính "At least once", điêu này sẽ xảy ra khi việc delete/update lại database không thành công, dân đên việc publisher sẽ pooling lại message tư DB. 
 
-![outbox04](/img/outbox_04.png "outbox4")
+Message được publish, hay state đươc lưu trữ trong cùng DB
+![outbox04](/img/outbox_4.png "outbox4")
 
-![outbox05](/img/outbox_05.png "outbox4")
+Sau khi state được lưu trữ trong DB thì, publisher sẽ pooling trong DB để publish message vào trong queue
 
-![outbox06](/img/outbox_06.png "outbox4")
+![outbox05](/img/outbox_5.png "outbox5")
 
-![outbox07](/img/outbox_07.png "outbox4")
+![outbox06](/img/outbox_6.png "outbox6")
+
+![outbox07](/img/outbox_7.png "outbox7")

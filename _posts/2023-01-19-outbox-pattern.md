@@ -38,6 +38,11 @@ Message được publish vào trong message broker
 Nếu như message được publish thành công, publisher sẽ delete/update lại trạng thái trong DB
 ![outbox07](/img/outbox_7.png "outbox7")
 
-Do state luôn được lưu giữ trong DB, nên dù publisher không thực hiện được việc publish message vào trong queue thì chúng ta vẫn có thể t
- 
+Do state luôn được lưu giữ trong DB, nên dù publisher không thực hiện được việc publish message vào trong queue thì chúng ta vẫn có thể thực hiện việc 
+publish lại message.
+
+Khi triển khai outbox pattern chúng ta tránh được việc mất mát message nhưng cần lưu ý vấn đề xử lý message tại consumer khi mà message sẽ là "At least once", nghĩa là việc message được gửi lại, hay lặp lại là có thể xảy ra.
+
+Bài viết đươc tóm tắt lại từ 
+https://codeopinion.com/outbox-pattern-reliably-save-state-publish-events/
 

@@ -28,10 +28,16 @@ Nếu hệ thống của bạn đang thiết kế theo kiến trúc Event-Driven
 Message được publish, hay state đươc lưu trữ trong cùng DB
 ![outbox04](/img/outbox_4.png "outbox4")
 
-Sau khi state được lưu trữ trong DB thì, publisher sẽ pooling trong DB để publish message vào trong queue
+Sau khi state được lưu trữ trong DB thì, publisher sẽ pull từ trong DB để publish message vào trong queue
 
 ![outbox05](/img/outbox_5.png "outbox5")
 
+Message được publish vào trong message broker
 ![outbox06](/img/outbox_6.png "outbox6")
 
+Nếu như message được publish thành công, publisher sẽ delete/update lại trạng thái trong DB
 ![outbox07](/img/outbox_7.png "outbox7")
+
+Do state luôn được lưu giữ trong DB, nên dù publisher không thực hiện được việc publish message vào trong queue thì chúng ta vẫn có thể t
+ 
+

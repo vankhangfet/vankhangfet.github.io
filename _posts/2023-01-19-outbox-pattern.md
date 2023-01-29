@@ -20,3 +20,7 @@ Sau khi dữ liệu được ghi trong DB thì hệ thống publish message vào
 ![outbox02](/img/outbox_02.png "outbox2")
 Nhưng điều gì xảy ra khi việc public message vào trong queue không thực hiện thành công (failed)
 ![outbox03](/img/outbox_03.png "outbox2")
+Nếu hệ thống của bạn đang thiết kế theo kiến trúc Event-Driven thì việc mất mát message sẽ gây ra rất nhiều vấn đề, và chúng ta cần tránh việc này xảy ra.
+
+# 2. Outbox Pattern
+Ý tưởng của outbox pattern là thay vì việc ghi trạng thái vào database, sau đó public mesage vào trong queue được thực hiện ở các bươc khác nhau thì chúng ta sẽ lấy trạng thái từ DB sau đó thực hiện việc public message vào trong queue. State trong DB sẽ được delete/update khi và chỉ khi việc public message vào trong queue được thực hiện thành công.

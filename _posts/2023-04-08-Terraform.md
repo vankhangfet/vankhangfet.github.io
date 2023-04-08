@@ -46,3 +46,76 @@ Initializing provider plugins...
     - Using hashicorp/aws v4.19.0 from the shared cache directory
 Terraform has been successfully initialized!
 ```
+Khi bạn khởi chạy câu lệnh "init", Terraform sẽ download code và thông tin provider vào file ".terraform.lock.hcl".
+
+Tiếp theo chúng ta chạy câu lệnh "plan" như sau:
+```
+$ terraform plan
+
+(...)
+
+Terraform will perform the following actions:
+
+  # aws_instance.example will be created
+  + resource "aws_instance" "example" {
+      + ami                          = "ami-0fb653ca2d3203ac1"
+      + arn                          = (known after apply)
+      + associate_public_ip_address  = (known after apply)
+      + availability_zone            = (known after apply)
+      + cpu_core_count               = (known after apply)
+      + cpu_threads_per_core         = (known after apply)
+      + get_password_data            = false
+      + host_id                      = (known after apply)
+      + id                           = (known after apply)
+      + instance_state               = (known after apply)
+      + instance_type                = "t2.micro"
+      + ipv6_address_count           = (known after apply)
+      + ipv6_addresses               = (known after apply)
+      + key_name                     = (known after apply)
+      (...)
+  }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+```
+Lệnh "plan" sẽ cho bạn biết những thay đổi thực sẽ được triển khai khi khởi tạo resource. Nếu như không có vấn đề gì, chúng ta 
+cần chạy lệnh "apply" để thực hiện việc triển khai.
+
+```
+$ terraform apply
+
+(...)
+
+Terraform will perform the following actions:
+
+  # aws_instance.example will be created
+  + resource "aws_instance" "example" {
+      + ami                          = "ami-0fb653ca2d3203ac1"
+      + arn                          = (known after apply)
+      + associate_public_ip_address  = (known after apply)
+      + availability_zone            = (known after apply)
+      + cpu_core_count               = (known after apply)
+      + cpu_threads_per_core         = (known after apply)
+      + get_password_data            = false
+      + host_id                      = (known after apply)
+      + id                           = (known after apply)
+      + instance_state               = (known after apply)
+      + instance_type                = "t2.micro"
+      + ipv6_address_count           = (known after apply)
+      + ipv6_addresses               = (known after apply)
+      + key_name                     = (known after apply)
+      (...)
+  }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value:
+```
+
+Nếu câu lệnh "apply" được thực thi thành công, chúng ta sẽ thấy một EC2 được tạo trên region AWS. 
+
+Mọi thứ khá là đơn giản? Nhưng nếu chúng ta muốn thay đổi resource thì Terraform sẽ quản lý state của resource như thế nào?
+

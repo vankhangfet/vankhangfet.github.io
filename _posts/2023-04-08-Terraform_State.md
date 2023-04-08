@@ -3,7 +3,7 @@ layout: post
 title: How to manage Terraform state
 tags: [Cloud]
 ---
-
+![Terraform](/img/terraform-state-1.webp "terraform-state-1")
 Tiếp theo part1 thì chúng ta cần add thêm tag cho EC2 như sau: 
 ```
 resource "aws_instance" "example" {
@@ -55,6 +55,7 @@ resource "aws_instance" "example" {
 }
 ```
 Sau khi chạy "apply" thì thông tin trong "terraform.tfstate" sẽ có thông tin như sau:
+![Terraform1](/img/terraform-tfstate-file.webp "terraform-state-2")
 ```
 {
   "version": 4,

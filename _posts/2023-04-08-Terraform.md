@@ -36,4 +36,13 @@ resource "aws_instance" "example" {
 }
 ```
 
+Sau đó cần chạy command sau:
 
+```
+$ terraform init
+Initializing the backend...
+Initializing provider plugins...
+    - Reusing previous version of hashicorp/aws from the lock file
+    - Using hashicorp/aws v4.19.0 from the shared cache directory
+Terraform has been successfully initialized!
+```

@@ -31,7 +31,7 @@ Tiếp đến là khai báo resource cần khởi tạo trên AWS, cụ thể �
 
 ```
 resource "aws_instance" "example" {
-  ami           =  "ami-0fb653ca2d3203ac1" 
+  ami           =  "xxxxx" 
   instance_type = "t2.micro"
 }
 ```
@@ -118,4 +118,5 @@ Do you want to perform these actions?
 Nếu câu lệnh "apply" được thực thi thành công, chúng ta sẽ thấy một EC2 được tạo trên region AWS. 
 
 Mọi thứ khá là đơn giản? Nhưng nếu chúng ta muốn thay đổi resource thì Terraform sẽ quản lý state của resource như thế nào?
+Mời xem part 2 : 
 

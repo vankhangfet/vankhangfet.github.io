@@ -23,6 +23,9 @@ Example:
 
 ![plant_uml_class](https://plantuml.com/imgw/img-9b1cb0ddb170053e36145d970c2973fc.png)
 
+Đó là những công cụ cho phép chúng tạo ra tài liệu, hình ảnh bằng việc code. Qua đó giúp chúng ta quản lý, cũng như sửa đổi tài liệu một
+cách dễ dàng hơn.
+
 Ngoài ra khi viết tài liệu thiết kế cần chú ý những điểm sau:
 
 1. Nên sử dụng từ ngữ mô tả hệ thống càng nhiều càng tốt, hạn chế sử dụng image.

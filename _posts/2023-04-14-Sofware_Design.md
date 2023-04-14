@@ -12,7 +12,17 @@ Trong quá trình phát triển sản phẩm, chúng ta sẽ cần các tài li�
 
 Khi hệ thống hay ứng dụng được phát triển trong một thời gian dài thì lượng tài liệu sẽ càng phức tạp, trở nên khó kiểm soát hơn.
 Vậy chúng ta cần phải có một cách thức, phương pháp để quản lý tài liệu tốt hơn. Với xu hướng everything as code, chúng ta nên 
-document bằng việc code. Cụ thể ở đây là tài liệu nên được viết bằng md file (https://www.markdownguide.org), seq nên được vẽ công cụ như PlantUml ( https://plantuml.com/class-diagram).
+document bằng việc code. Cụ thể ở đây là tài liệu nên được viết bằng md file (https://www.markdownguide.org),
+
+Example: 
+![document_markdown](https://mdg.imgix.net/assets/images/markdown-flowchart.png?auto=format&fit=clip&q=40&w=1080)
+
+Với những mô tả hệ thống như sequence diagram, class diagram nên được vẽ công cụ như PlantUml ( https://plantuml.com).
+
+Example:
+
+![plant_uml_class](https://plantuml.com/imgw/img-9b1cb0ddb170053e36145d970c2973fc.png)
+
 Ngoài ra khi viết tài liệu thiết kế cần chú ý những điểm sau:
 
 1. Nên sử dụng từ ngữ mô tả hệ thống càng nhiều càng tốt, hạn chế sử dụng image.

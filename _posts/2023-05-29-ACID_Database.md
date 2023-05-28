@@ -27,11 +27,19 @@ ACID sẽ đảm bảo giao dịch được an toàn và dữ liệu có tính t
 
 A - Atomicity
 
+Atomicity guarantees that all of the commands that make up a transaction are treated as a single unit and either succeed or fail together. 
+
 C - Consistency 
+
+Consistency guarantees that changes made within a transaction are consistent with database constraints. This includes all rules, constraints, and triggers. If the data gets into an illegal state, the whole transaction fails.
 
 I - Isolation
 
+Isolation ensures that all transactions run in an isolated environment. That enables running transactions concurrently because transactions don’t interfere with each other.
+
 D - Durability
+
+Durability guarantees that once the transaction completes and changes are written to the database, they are persisted. This ensures that data within the system will persist even in the case of system failures like crashes or power outages.
 
 Tóm lại, hiểu về ACID là cần thiết, và ACID cung cấp cho dev cách thức thực hiện hay biết được rằng dữ liệu sẽ được toàn vẹn,
 thống nhất khi thực hiện các thao tác trên dữ liệu.

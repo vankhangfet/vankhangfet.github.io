@@ -34,7 +34,7 @@ B-tree là một cây tìm kiếm cân bằng. Quay trở lại với bài toán
 
 Tuy nhiên thực tế thì có nhiều kiểu Index, vơi mỗi kiểu index sẽ được thiết kế tối ưu cho những use-case khác nhau:
 
-**B-tree* - the default index, 
+**B-tree** - the default index, 
 
 Sẽ phù hợp với những toán tử truy vấn sau: <, <=, =, >=,>, BETWEEN, IN, IS NULL or IS NOT NULL
 
@@ -46,3 +46,8 @@ Kiểu Hash sẽ hoạt động rất tốt với toán tử  =
 **GiST** 
 - the shortcut that stands for Generalized Search Tree. Phù hợp với các toán tử sau: <<, &<, &>, >>, <<|, &<|, |&>, |>>, @>, <@, ~= or &&
 
+**Khi nào cần Index?**
+
+- Index columns that you search on
+- Index columns used for join operations 
+- Index column that you often use for sorting

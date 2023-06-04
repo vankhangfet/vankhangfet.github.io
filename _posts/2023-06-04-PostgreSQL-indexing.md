@@ -44,7 +44,8 @@ Kiểu Hash sẽ hoạt động rất tốt với toán tử  =
 
 
 **GiST** 
-- the shortcut that stands for Generalized Search Tree. Phù hợp với các toán tử sau: <<, &<, &>, >>, <<|, &<|, |&>, |>>, @>, <@, ~= or &&
+
+Generalized Search Tree. Phù hợp với các toán tử sau: <<, &<, &>, >>, <<|, &<|, |&>, |>>, @>, <@, ~= or &&
 
 **Khi nào cần Index?**
 

@@ -21,4 +21,15 @@ CREATE UNIQUE INDEX slug_idx ON users (slug);
 ```
 Rõ ràng bạn thấy rằng tốc độ đã được cải thiện rất nhiều lần. Vậy thực sự Index là gì? Và tại sao nó giúp cải thiện tốc dộ tốt như vậy.
 
+**High-level definition**
+
 Giải thích ở mức high-level thì bạn có thể hình dung index trong một tình huống như sau. Việc tìm kiếm dữ liệu giốg như bạn thực hiện tra từ điển, khi tra từ điển thì trong cuốn từ điển, các từ vựng đã đã xếp lại theo thứ tự chữ cái. Do đó việc khoanh vùng tiếm kiếm sẽ dễ hơn. Nói tóm lại khi bạn tạo Index thì database giúp bạn tạo ra một cấu trúc dữ liệu đã được sắp xếp, từ đó việc tìm kiếm sẽ nhanh hơn.
+
+**Low-level definition**
+Về chi tiết, sẽ có nhiều kiểu Index khác nhau. Một trong những kiểu dữ liệu phổ biến nhất là B-tree.
+B-tree là một cây tìm kiếm cân bằng. Quay trở lại với bài toán tìm kiếm trong danh bạ, chúng ta có thể hình dung B-tree như sau: 
+
+![Btree_contacts](/img/B-tree.png "B-tree contacts")
+
+
+

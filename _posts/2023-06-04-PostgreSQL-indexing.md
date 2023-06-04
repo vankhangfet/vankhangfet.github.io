@@ -19,3 +19,6 @@ SELECT * FROM users WHERE users.id = 'user411' LIMIT 1;
 ```
 CREATE UNIQUE INDEX slug_idx ON users (slug);
 ```
+Rõ ràng bạn thấy rằng tốc độ đã được cải thiện rất nhiều lần. Vậy thực sự Index là gì? Và tại sao nó giúp cải thiện tốc dộ tốt như vậy.
+
+Giải thích ở mức high-level thì bạn có thể hình dung index trong một tình huống như sau. Việc tìm kiếm dữ liệu giốg như bạn thực hiện tra từ điển, khi tra từ điển thì trong cuốn từ điển, các từ vựng đã đã xếp lại theo thứ tự chữ cái. Do đó việc khoanh vùng tiếm kiếm sẽ dễ hơn. Nói tóm lại khi bạn tạo Index thì database giúp bạn tạo ra một cấu trúc dữ liệu đã được sắp xếp, từ đó việc tìm kiếm sẽ nhanh hơn.

@@ -52,3 +52,22 @@ Generalized Search Tree. Phù hợp với các toán tử sau: <<, &<, &>, >>, <
 - Index columns that you search on
 - Index columns used for join operations 
 - Index column that you often use for sorting
+
+**Index trên một trường hay nhiều trường dữ liệu?**
+
+Mặc định bạn có thể index trên 1 trường dữ liệu là đủ? Nhưng bạn cũng có thể thực hiện index trên nhiều trường dữ liệu như ví
+dụ dưới đây: 
+
+```
+CREATE INDEX title_idx ON articles (title);
+CREATE INDEX title_category_idx ON articles (title, category);
+```
+
+Hoặc bạn cũng có thể index với một dữ liệu cụ thể như sau: 
+
+```
+CREATE INDEX title_idx ON articles (title) WHERE published = true;
+```
+
+
+Bài viết có tham khảo link sau:  https://mastermind.dev/indexes-in-postgresql

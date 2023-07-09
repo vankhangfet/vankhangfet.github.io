@@ -67,3 +67,23 @@ Từ kết quả query sau chúng ta có thể thấy rằng việc truy vấn u
 1. Thực hiện scan table user
 2. Việc filter user thực hiện loại bỏ 2487813 rows
 3. Câu truy vấn này cần sử dụng buffers là 202,622 tương đương với sử dụng 1.58 GB bộ nhớ.
+
+Vậy chúng ta thực hiện tối ưu câu truy vấn này thế nào? Việc chúng ta hay nghĩ đến đó là thực hiện index 
+
+```sql
+CREATE INDEX CONCURRENTLY twitter_test ON users (twitter);
+```
+Sau đó thực hiện chay lại EXPLAIN query và xem kết quả:
+
+```sql
+Aggregate  (cost=61002.82..61002.83 rows=1 width=8) (actual time=297.311..297.312 rows=1 loops=1)
+  Buffers: shared hit=51854 dirtied=19
+  ->  Index Only Scan using twitter_test on users  (cost=0.43..60873.13 rows=51877 width=0) (actual time=279.184..293.532 rows=51833 loops=1)
+        Filter: ((twitter)::text <> ''::text)
+        Rows Removed by Filter: 2487830
+        Heap Fetches: 26037
+        Buffers: shared hit=51854 dirtied=19
+Planning time: 0.191 ms
+Execution time: 297.334 ms
+```
+

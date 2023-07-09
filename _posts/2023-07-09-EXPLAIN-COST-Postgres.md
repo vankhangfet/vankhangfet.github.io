@@ -86,4 +86,4 @@ Aggregate  (cost=61002.82..61002.83 rows=1 width=8) (actual time=297.311..297.31
 Planning time: 0.191 ms
 Execution time: 297.334 ms
 ```
-
+https://docs.gitlab.com/ee/development/database/understanding_explain_plans.html

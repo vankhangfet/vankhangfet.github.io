@@ -28,5 +28,16 @@ Sort  (cost=66.83..69.33 rows=1000 width=17)                  |
   Sort Key: username                                          |
   ->  Seq Scan on users  (cost=0.00..17.00 rows=1000 width=17)|
 ```
+Kết quả trả ra là với việc scan thì cost gần như là 0.0 tuy nhiên việc sort sẽ tiêu tốn cost = 66.83. Đây là chi phí để xử lý 
+dữ liệu với 1000 rows. Nếu chúng ta LIMIT lại số bản ghi thì sao?
 
+```sql
+EXPLAIN SELECT * FROM users LIMIT 1;
+ 
+QUERY PLAN                                                    |
+--------------------------------------------------------------+
+Limit  (cost=0.00..0.02 rows=1 width=17)                      |
+  ->  Seq Scan on users  (cost=0.00..17.00 rows=1000 width=17)|
+```
+Có thể thấy khi LIMIT bản ghi thì cost cho việc limit rất nhỏ, nhưng cost cho việc scan thì không thây đổi.
 

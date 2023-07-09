@@ -166,4 +166,16 @@ export default App;
 Nếu chạy đoạn code trên bạn sẽ thấy hiện tượng này
 ![Re-calculate](https://www.joshwcomeau.com/_next/image/?url=%2Fimages%2Fusememo-and-usecallback%2Fclock-prime.png%3Fv%3D2&w=1920&q=75)
 
-
+Vậy có cách nào để skip việc tính toán lại này, câu trả lời đó là useMemo.
+```js
+const allPrimes = React.useMemo(() => {
+  const result = [];
+  for (let counter = 2; counter < selectedNum; counter++) {
+    if (isPrime(counter)) {
+      result.push(counter);
+    }
+  }
+  return result;
+}, [selectedNum]);
+```
+Với đoạn code như trên thì việc thực hiện lại tín toán chỉ được thực hiện khi mà selectedNum thực sự thay đổi. Ở đây useMemo sử dụng tham số thứ 2 là một array để chứa các dependency. 

@@ -4,7 +4,9 @@ title: Understanding the Postgres EXPLAIN cost
 tags: [Database]
 ---
 
-EPLAIN là một câu lệnh rất hữu ích trong việc tìm hiểu và tối ưu câu lệnh truy vấn của bạn khi làm việc với Postgres.
+**1. EXPAIN query như thế nào?**
+
+EXPLAIN là một câu lệnh rất hữu ích trong việc tìm hiểu và tối ưu câu lệnh truy vấn của bạn khi làm việc với Postgres.
 Do đó chúng ta cần hiểu kết quả của câu lệnh EXPLAIN.
 
 Chúng ta hãy xem xét ví dụ sau. Giả sử chúng ta có dữ liệu user như dưới đây. Đoạn sql sẽ tạo ra table user với 1000 records.
@@ -39,5 +41,7 @@ QUERY PLAN                                                    |
 Limit  (cost=0.00..0.02 rows=1 width=17)                      |
   ->  Seq Scan on users  (cost=0.00..17.00 rows=1000 width=17)|
 ```
-Có thể thấy khi LIMIT bản ghi thì cost cho việc limit rất nhỏ, nhưng cost cho việc scan thì không thây đổi.
+Có thể thấy khi LIMIT bản ghi thì cost cho việc limit rất nhỏ, nhưng cost cho việc scan thì không thây đổi. Điều đó cho thấy chúng ta có thể optimize query dựa vào cost và thông qua việc EXPLAIN query. Vậy optimize thế nào?
+
+**2. Optimizing queries**
 

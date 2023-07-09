@@ -44,4 +44,26 @@ Limit  (cost=0.00..0.02 rows=1 width=17)                      |
 Có thể thấy khi LIMIT bản ghi thì cost cho việc limit rất nhỏ, nhưng cost cho việc scan thì không thây đổi. Điều đó cho thấy chúng ta có thể optimize query dựa vào cost và thông qua việc EXPLAIN query. Vậy optimize thế nào?
 
 **2. Optimizing queries**
+Trong phần này mình sẽ tham khảo ví dụ của Gitlab, chúng ta giả định query như sau: 
 
+```sql
+EXPLAIN (ANALYZE, BUFFERS)
+SELECT COUNT(*)
+FROM users
+WHERE twitter != '';
+```
+Kết quả truy vấn như sau:
+```sql
+Aggregate  (cost=845110.21..845110.22 rows=1 width=8) (actual time=1271.157..1271.158 rows=1 loops=1)
+  Buffers: shared hit=202662
+  ->  Seq Scan on users  (cost=0.00..844969.99 rows=56087 width=0) (actual time=0.019..1265.883 rows=51833 loops=1)
+        Filter: ((twitter)::text <> ''::text)
+        Rows Removed by Filter: 2487813
+        Buffers: shared hit=202662
+Planning time: 0.390 ms
+Execution time: 1271.180 ms
+```
+Từ kết quả query sau chúng ta có thể thấy rằng việc truy vấn user tốn khá nhiều chi phí.
+1. Thực hiện scan table user
+2. Việc filter user thực hiện loại bỏ 2487813 rows
+3. Câu truy vấn này cần sử dụng buffers là 202,622 tương đương với sử dụng 1.58 GB bộ nhớ.

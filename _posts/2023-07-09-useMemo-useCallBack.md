@@ -163,4 +163,7 @@ function isPrime(n) {
 
 export default App;
 ```
+Nếu chạy đoạn code trên bạn sẽ thấy hiện tượng này
+![Re-calculate](https://www.joshwcomeau.com/_next/image/?url=%2Fimages%2Fusememo-and-usecallback%2Fclock-prime.png%3Fv%3D2&w=1920&q=75)
+
 

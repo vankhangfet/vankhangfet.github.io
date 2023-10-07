@@ -9,8 +9,18 @@ Athena có thể truy vấn dữ liệu trên s3, dynamo db,etc. Hỗ trợ truy
 và việc thiết kế với Athena làm tôi cảm thấy có chút khó hiểu? 
 
 Vấn đề xảy ra khi tôi thực hiện truy vấn một bảng dữ liệu trong dynamo. Để thực hiện việc truy vấn này, các bạn sẽ cần triển khai theo infra như sau:
-Refer: https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/access-query-and-join-amazon-dynamodb-tables-using-athena.html
+Refer: 
+https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/access-query-and-join-amazon-dynamodb-tables-using-athena.html
 ![athena-lambda](https://docs.aws.amazon.com/images/prescriptive-guidance/latest/patterns/images/pattern-img/e6ff94af-d208-40c7-94e4-af257755a603/images/bc8e0132-b578-463b-bf55-3c39ce359c17.png "aws athena")
+
+Kiến trúc này giúp bạn có thể thực hiện truy vấn SQL phức tạp như (join, group by,etc.) tới dynamo DB. Tuy nhiên có một vấn đề phát sinh tới schema đó là
+để tạo ra schema của table thì Athena chỉ lấy mẫu một vài bản ghi trong DynamoDB để tạo ra schema. Do đó nếu như trong một table, các record có attribute khác nhau thì 
+Athena sẽ có thể không thực hiện truy vấn tới attr này. 
+Refer: 
+
+https://github.com/awslabs/aws-athena-query-federation/issues/1346
+
+https://stackoverflow.com/questions/74083235/new-dynamodb-attribute-cant-be-queried-from-athena
 
 
 

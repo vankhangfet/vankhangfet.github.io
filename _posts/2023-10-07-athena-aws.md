@@ -29,6 +29,9 @@ Sau khi dành thời gian tìm hiểu thì tôi được gợi ý cần phải t
 1. Dùng Glue Crawler để tạo ra table trong Database Catalog Glue.
 2. Sẽ export data từ dynamo ra s3, sau đó sử dụng Athena query tới s3.
 
+Với solution 1, khá là rõ ràng, nhưng thật khó hiểu khi tôi tạo crawler để tạo ra db và table trong Glue thì đến giao diện query của Athena thì Db lại không có table đó? 
+Thực sự rất khó hiểu với thiết kế này của AWS.
+
 Sau khi rất nhiều try and fail tôi nhận thấy cần phải làm như sau: 
 
 ![athena-dynamo-s3](https://www.nordhero.com/posts/bi-pipeline/bi-pipeline-components.jpg "athena-dynamo-s3")

@@ -31,6 +31,8 @@ Sau khi dành thời gian tìm hiểu thì tôi được gợi ý cần phải t
 
 Sau khi rất nhiều try and fail tôi nhận thấy cần phải làm như sau: 
 
+![athena-dynamo-s3](https://www.nordhero.com/posts/bi-pipeline/bi-pipeline-components.jpg "athena-dynamo-s3")
+
 
 
 

@@ -23,6 +23,5 @@ Vậy làm sao để khắc phục điểm này?
 Điều cần làm là, khi "nhận ra lỗi" hãy phân tích thật kỹ nguyên nhân. Làm thế nào để phân tích kỹ nguyên nhân? Tôi nghĩ phải thực hiện
 ít nhất 2Why? Có lẽ không cần 5Why? Nhưng đặt câu hỏi tự vấn 2 lần bao giờ cũng tốt hơn 1 lần, nó sẽ giúp bạn tốt hơn trong lần tiếp theo.
 
-Hãy xem một tình huống mà tôi gặp phải?
 
 

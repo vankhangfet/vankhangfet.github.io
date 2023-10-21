@@ -14,3 +14,14 @@ Việc lưu dữ vào partion sẽ được lưu trữ dựa trên partition key
 Nhưng cần lưu ý là giớ hạn này được chia đều cho các partions. Để cho dễ hiểu ta hãy xem ví dụ sau:
 Giả sử chúng ta configure RCUs và WCUs là 50 cho table và tabel này có 2 partition thì mỗi partition sẽ có giới RCUs/WCUs là 25.
 
+Do đó mỗi khi bạn thực hiện read/write data vào table thì request sẽ được thực hiện trên các partition và khi số lượng read/write vượt quá giới hạn thì exception
+Throttling sẽ xảy ra. Mặc dù chúng ta thấy rằng Dynamo DB là fully-mananged service, nhưng khi thiết kế vấn đề Throttling nên cần được quan tâm. 
+
+Chúng ta đã biết mỗi khi tạo một table, AWS sẽ cung cấp cho chúng ta 2 lựa chọn 
+1. Provisioned model
+2. On-demand model
+
+
+
+
+

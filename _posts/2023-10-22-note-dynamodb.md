@@ -21,6 +21,8 @@ Chúng ta đã biết mỗi khi tạo một table, AWS sẽ cung cấp cho chún
 1. Provisioned model
 2. On-demand model
 
+Với option 1, có thể dễ thấy là Throttling có thể xảy ra nếu như chúng ta tính toán sai về RCUs/WCUs. Vậy còn option 2? Vì là On-demand nên không xảy ra Throttling?
+
 
 
 

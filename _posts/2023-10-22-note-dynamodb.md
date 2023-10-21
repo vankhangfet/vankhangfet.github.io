@@ -30,7 +30,10 @@ Tuy nhiên option 2 vẫn không hoàn toàn tránh được Throttling, nó v�
 Vậy làm sao có thể giảm thiểu throttling? Chúng ta hãy xem xét những yếu tố sau: 
 
 *Hot partitions
-Vậy Hot partition là gì? Như đã đề cập trước đó thì giới hạn RCUs/WCUs được chia đều cho các partition. Nên nếu như thiết kế không tốt dẫn đến khả năng 1 partition nào đó bị truy cập quá nhiều sẽ dẫn đến việc mất cân bằng, và vượt quá giới hạn.
-Để monitor các partitions các bạn có thể dùng tool sau: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/contributorinsights_HowItWorks.html
+Vậy Hot partition là gì? Như đã đề cập trước đó thì giới hạn RCUs/WCUs được chia đều cho các partition. Nên nếu như thiết kế không tốt dẫn đến khả năng 1 partition nào đó bị truy cập quá nhiều sẽ dẫn đến việc mất cân bằng, và vượt quá giới hạn. Để dễ hình dung ta hãy xem ví dụ sau: 
+Giả sử chúng ta thiết kế table Product để lưu trữ các sản phẩm, và sử dụng "Product_Id" làm partition key. Khi đó nếu như product_Id này có số lượng tìm kiếm. hoặc update 
+lớn thì rất dễ gây ra hiện tượng Throttling. Vậy làm sao để hạn chế việc này, cách tốt hơn là chúng ta nên sử dụng "Category" làm partition key và sort key là "Product_Id".
+Khi đó mỗi khi chúng ta thực hiện tìm kiếm/ update "Product_Id" thì request sẽ được chia đều vào các partition "Category".
+Ngoài ra để monitor các partitions các bạn có thể dùng tool sau: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/contributorinsights_HowItWorks.html
 
 

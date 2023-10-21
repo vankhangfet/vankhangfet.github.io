@@ -22,7 +22,10 @@ Chúng ta đã biết mỗi khi tạo một table, AWS sẽ cung cấp cho chún
 2. On-demand model
 
 Với option 1, có thể dễ thấy là Throttling có thể xảy ra nếu như chúng ta tính toán sai về RCUs/WCUs. Vậy còn option 2? Vì là On-demand nên không xảy ra Throttling?
+Tuy nhiên option 2 vẫn không hoàn toàn tránh được Throttling, nó vẫn xảy ra dưới điều kiện sau: 
 
+1. Not enough capacity - When most of the partitions exceed the 3000 RCU and 1000 WCU.
+2. When traffic doubles the previous peak - If your DynamoDB traffic increases more than double the previous peak within 30 minutes, you might experience throttling.
 
 
 

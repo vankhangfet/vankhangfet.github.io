@@ -27,6 +27,10 @@ Tuy nhiên option 2 vẫn không hoàn toàn tránh được Throttling, nó v�
 1. Not enough capacity - When most of the partitions exceed the 3000 RCU and 1000 WCU.
 2. When traffic doubles the previous peak - If your DynamoDB traffic increases more than double the previous peak within 30 minutes, you might experience throttling.
 
+Vậy làm sao có thể giảm thiểu throttling? Chúng ta hãy xem xét những yếu tố sau: 
 
+*Hot partitions
+Vậy Hot partition là gì? Như đã đề cập trước đó thì giới hạn RCUs/WCUs được chia đều cho các partition. Nên nếu như thiết kế không tốt dẫn đến khả năng 1 partition nào đó bị truy cập quá nhiều sẽ dẫn đến việc mất cân bằng, và vượt quá giới hạn.
+Để monitor các partitions các bạn có thể dùng tool sau: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/contributorinsights_HowItWorks.html
 
 

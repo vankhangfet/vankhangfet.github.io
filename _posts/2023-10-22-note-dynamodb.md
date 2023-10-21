@@ -1,5 +1,5 @@
 --
 layout: post
-title: Thế nào là làm việc nghiêm túc?
-tags: [Others]
+title: Dynamo DB một số điều cần lưu ý
+tags: [Design]
 ---

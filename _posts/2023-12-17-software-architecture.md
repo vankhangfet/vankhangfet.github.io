@@ -19,7 +19,7 @@ rất rõ kiến trúc của ứng dụng đó. Vậy kiến trúc phần mềm 
 
 Bạn có thấy hình vẽ dưới đây rất quen thuộc phải không? 
 
-![architecture-1](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/images/ee658124.b8220f0d-f76a-40d6-8b1b-5279f7cdcee9(en-us,pandp.10).png)
+<img src="https://learn.microsoft.com/en-us/previous-versions/msp-n-p/images/ee658124.b8220f0d-f76a-40d6-8b1b-5279f7cdcee9(en-us,pandp.10).png" height="350">
 
 Đây là một trong những kiến trúc rất phổ biến, và khi nhắc tới software architecture chúng ta sẽ đề cập đến vấn đề sau: 
 - High-level 

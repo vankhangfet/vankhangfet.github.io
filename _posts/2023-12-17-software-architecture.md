@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kiến trúc phần mểm?
+title: Kiến trúc phần mểm là gì? Làm thế nào để có thể tạo nên một Clean Architecture
 tags: [Design]
 ---
 

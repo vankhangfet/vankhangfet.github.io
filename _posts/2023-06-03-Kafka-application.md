@@ -5,4 +5,4 @@ tags: [SoftwareDesign]
 ---
 
 Kafka use case
-![Kafka Application](/img/Kafka_application.jpg "Kafka application")
+![Kafka Application](/assets/img/Kafka_application.jpg "Kafka application")

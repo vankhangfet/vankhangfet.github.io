@@ -34,3 +34,8 @@ Tuy nhiên những mô tả trên chỉ nên dùng ở mức trừu tượng, v�
 - Components
   
 <img src="/assets/img/sa-01.png" height="300">
+
+Khi hệ thống trở lên phức tạp thì kiến trúc phần mềm cũng phức tạp dần lên, và bắt đầu nảy sinh nhiểu vấn đề đó là *Messy vs Clean Architecture*
+
+<img src="/assets/img/sa-02.png" height="300">
+

@@ -28,3 +28,9 @@ Bạn có thấy hình vẽ dưới đây rất quen thuộc phải không?
 - Components 
 - Relationships
 
+Tuy nhiên những mô tả trên chỉ nên dùng ở mức trừu tượng, và software architecture trừu tượng những gì?
+
+- Layers
+- Components
+  
+<img src="/assets/img/sa-01.png" height="300">

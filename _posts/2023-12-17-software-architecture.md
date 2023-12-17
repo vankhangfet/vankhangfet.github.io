@@ -17,3 +17,14 @@ Refer: https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ee658093(v=pa
 Và khi nhắc đến kiến trúc phầm mềm (software architecture) tôi hy vọng các bạn sẽ thấy không xa lạ, và tất nhiên để có thể phát triển một ứng dụng tốt, bạn cần hiểu 
 rất rõ kiến trúc của ứng dụng đó. Vậy kiến trúc phần mềm là gì? Điều gì hay những thành phần nên được mô tả trong kiến trúc phần mềm?
 
+Bạn có thấy hình vẽ dưới đây rất quen thuộc phải không? 
+
+![architecture-1](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/images/ee658124.b8220f0d-f76a-40d6-8b1b-5279f7cdcee9(en-us,pandp.10).png)
+
+Đây là một trong những kiến trúc rất phổ biến, và khi nhắc tới software architecture chúng ta sẽ đề cập đến vấn đề sau: 
+- High-level 
+- Structure 
+- Layers 
+- Components 
+- Relationships
+

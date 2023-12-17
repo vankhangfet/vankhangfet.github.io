@@ -46,5 +46,13 @@ Vậy làm thế nào để có thể tạo ra một Clean Architecture. Nhìn l
 Để dễ hình dung, chúng ta có thể xem ví dụ dưới đây. Điểm khác biệt giữa 2 cách tiệp cận, kiến trúc này đó là trung tâm (core). Thay vì tập trung ở vào những gì ở data layer, ta nên tập trung ở nghiệm vụ (domain)
 <img src="/assets/img/sa-03.png" height="300">
 
+Nhìn qua thì có vẻ khá đơn giản phải không? Nhưng không hề như vậy, Clean Architecture cũng có rất nhiều cách triển khai và góc nhìn khác nhau. Phổ biến là các kiểu kiến trúc sau:
+
+- Hexagonal Architecture
+  
+<img src="/assets/img/sa-04.png" height="300">
+
+- Onion Architecture
+- Clean Architecture
 
 

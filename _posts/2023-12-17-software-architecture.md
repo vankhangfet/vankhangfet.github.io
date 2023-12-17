@@ -39,3 +39,12 @@ Khi hệ thống trở lên phức tạp thì kiến trúc phần mềm cũng ph
 
 <img src="/assets/img/sa-02.png" height="300">
 
+Nếu duy trì một kiến trúc tồi sẽ phát sinh rất nhiều vấn đề trong tương lai, nó sẽ gây tốn kém khi hệ thống có yêu cầu mới, cũng như làm giảm khả năng bảo trì.
+Vậy làm thế nào để có thể tạo ra một Clean Architecture. Nhìn lại cách thiết kế, khi thiết kế chúng ta có hướng tiếp cận theo dữ liệu (data first) hay theo nghiệp vụ (domain)?
+*Database- vs. Domain-centric*
+
+Để dễ hình dung, chúng ta có thể xem ví dụ dưới đây. Điểm khác biệt giữa 2 cách tiệp cận, kiến trúc này đó là trung tâm (core). Thay vì tập trung ở vào những gì ở data layer, ta nên tập trung ở nghiệm vụ (domain)
+<img src="/assets/img/sa-03.png" height="300">
+
+
+

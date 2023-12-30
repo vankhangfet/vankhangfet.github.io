@@ -24,4 +24,9 @@ Sau đó giải nén và chạy command sau:
 ```` 
 ~/sonarqube/bin/macosx-universal-64/sonar.sh console
 ````
+Tuy nhiên một đống lỗi sẽ xuất hiện, mất một lúc tìm hiểu thì tôi mới có thể chạy được Sonarqube. Nếu như để dễ dàng hơn bạn có thể dùng docker, cách này sẽ dễ hơn.
 
+Lỗi không chạy được liên quan tới java version. Trong lúc loay hoay setup java thì tôi vô tình tìm được tool sau: https://sdkman.io/install.
+sdkman sẽ giúp bạn download java version và thiết lập phiên bản java tương ứng một cách rất dễ dàng.
+
+Ngoài ra bạn cũng có thể tham khảo link sau, nếu như gặp khó khăn khi cài java trên mac và muốn thay đổi các version của java tùy vào dự án. https://stackoverflow.com/questions/52524112/how-do-i-install-java-on-mac-osx-allowing-version-switching

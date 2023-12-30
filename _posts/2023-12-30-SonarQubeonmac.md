@@ -33,3 +33,8 @@ Lỗi không chạy được liên quan tới java version. Trong lúc loay hoay
 sdkman sẽ giúp bạn download java version và thiết lập phiên bản java tương ứng một cách rất dễ dàng.
 
 Ngoài ra bạn cũng có thể tham khảo link sau, nếu như gặp khó khăn khi cài java trên mac và muốn thay đổi các version của java tùy vào dự án. https://stackoverflow.com/questions/52524112/how-do-i-install-java-on-mac-osx-allowing-version-switching
+
+Quay trở lại việc setup sonarqube, việc gỡ lỗi vẫn chưa dừng ở đó. Sau một hồi loay hoay thì cuối cùng tôi đã scan được project vơi những phiên bản sau:
+
+1. Sonarqube v9.9.3 LTS
+2. Extension: https://github.com/estebanhiguitad/sonar-swift/releases

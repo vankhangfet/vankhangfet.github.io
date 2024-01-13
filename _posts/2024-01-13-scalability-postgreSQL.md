@@ -17,4 +17,10 @@ Client cần giao tiếp với Postgres thông qua connection, nhưng số lư�
 Do đó chúng ta không thể có một con số giới hạn chung cho tất cả các tenant.
 <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F76dfaf50-d653-4f97-8985-ddb997f13333_1128x697.png" width="400">
 
+Để giải quyết vấn đề về connection, Cloudflare sử dụng PgBouncer. PgBouncer là một connection pool, được thiết lập phía trước của PostgreSQL.
+Khi client kết nối với DB, connection này sẽ được quản lý bởi connection pool. Chi tiết về PgBouncer các bạn có thể xem ở đây https://www.pgbouncer.org/features.html
+
+2. Clients query a server concurrently
+Với PgBouncer bạn đã có thể giải quyết bài toán về tối ưu connection pool. Ngoài ra còn một vấn đề rất phức tạp đó là khi có nhiều client thực hiện đồng thời truy vấn vào DB,
+nó sẽ gây ra vấn đề về hiệu năng cho DB.
 

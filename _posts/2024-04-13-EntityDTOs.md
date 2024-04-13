@@ -16,5 +16,8 @@ Chúng ta nên hiểu Entity sẽ phản ảnh hay đại diện thực thể tr
 nghĩ tới việc cần phải thiết kế một Entity là Book, vậy Entity Book này nên có những thuộc tính gì? Tất nhiên trong thực tế Book sẽ có tiêu đề, tác giả, giá bán,etc. Vậy nên
 Entity cũng nên phản ánh hay có những thuộc tính như vậy. Tuy nhiên khi nhắc tới mã nguồn thì Entity sẽ có tương ứng trực tiếp với các bảng cơ sở dữ liệu hoặc các đối tượng lĩnh vực. Do đó, mục đích chính của chúng (Entity) là đóng gói và quản lý trạng thái và hành vi của các đối tượng này.
 
-3. 
+### 3. DTO
+DTOs đúng như tên gọi chúng có nhiệm vụ chuyển dữ liệu, không có bất kỳ logic nào được triển khai trong. Chúng được sử dụng để truyền dữ liệu giữa các ứng dụng khác nhau hoặc các phần của cùng một ứng dụng.
+
+Trong các ứng dụng đơn giản, việc sử dụng trực tiếp các Domain Object (Entity) vực như là DTO là phổ biến. Tuy nhiên, khi ứng dụng phức tạp hơn, việc tiết lộ toàn bộ Entỉy ra bên ngoài là không tốt nếu đánh giá từ quan điểm bảo mật và tính đóng gói.
 

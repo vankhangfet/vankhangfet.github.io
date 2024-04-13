@@ -24,14 +24,26 @@ Trong các ứng dụng đơn giản, việc sử dụng trực tiếp các Doma
 ### 4. Tại sao lại cần cả Entity và DTOs
 Trong việc tổ chức mã nguồn có những lợi ích sau khi bạn thiết kế mã nguồn có Entity và DTOs.
 
-#### 4.1 Separation of Concerns 
+#### 4.1 Separation of Concerns
 Mình cũng không biết là dịch sang tiếng Việt thế nào cho đúng, nhưng việc chia tách nhiệm vụ là rõ ràng, nó giúp mã nguồn trong sáng và dễ chỉnh sửa hơn.
 Các Entity có mối liên kết với schema của cơ sở dữ liệu và domain. Ngược lại, DTO được thiết kế chỉ cho mục đích truyền dữ liệu.
 
 Trong một số mô hình kiến trúc, như kiến trúc hexagonal, chúng ta có thể tìm thấy một lớp bổ sung, thường được gọi là Model hoặc Domain Model. Lớp này phục vụ mục đích quan trọng là hoàn toàn tách rời Domain khỏi bất kỳ công nghệ nào (giảm sự phụ thuộc). Như vậy, business logic cốt lõi vẫn độc lập với chi tiết triển khai của cơ sở dữ liệu, framework, hoặc hệ thống bên ngoài.
 
-### 4.2 Hiding Sensitive Data
+### 4.2 Che giấu thông tin không cần thiết (Hiding Sensitive Data)
 Khi làm việc với các hệ thống bên ngoài, việc kiểm soát những dữ liệu nào được tiết lộ ra thế giới bên ngoài là rất quan trọng. Các Entity có thể chứa thông tin nhạy cảm hoặc logic mà nên được giữ kín khỏi hệ thống bên ngoài. DTOs hoạt động như một rào cản giúp chúng ta chỉ tiết lộ những dữ liệu an toàn và liên quan đến hệ thống bên ngoài yêu cầu.
 
+### 4.3 Cải thiện hiệu năng
+Nếu bạn có tìm hiểu về DTOs thì có thể bạn đã đọc bài viết sau https://martinfowler.com/eaaCatalog/dataTransferObject.html
+"An object that carries data between processes in order to reduce the number of method" 
+DTO sẽ giúp chúng ta mang những dữ liệu cần thiết, mà chỉ cần một lần gọi. Ví dụ như khi chúng ta cần biết thông tin của User và Order thì OrderDetailDTO có thể 
+mang cả thông tin user và order của user đó, tất cả được đóng gói trong DTO trên.
 
+Thay vì thực hiện nhiều cuộc gọi để lấy từng mảnh dữ liệu, chúng ta có thể gói các dữ liệu liên quan vào một DTO và truyền nó trong một yêu cầu duy nhất. Cách tiếp cận này giảm bớt công việc liên quan đến nhiều cuộc gọi mạng.
+
+Một cách thực hiện mẫu DTO là thông qua GraphQL, cho phép khách hàng chỉ định dữ liệu mà nó mong muốn, cho phép nhiều truy vấn trong một yêu cầu duy nhất.
+
+### 5. Take away notes
+
+Các Entities và DTO có vai trò khác nhau và có thể rất khác biệt. Sự kết hợp giữa Entities và DTO đảm bảo bảo mật dữ liệu, phân tách các mối quan tâm và quản lý dữ liệu hiệu quả trong các hệ thống phần mềm phức tạp. Tiếp cận này dẫn đến các giải pháp phần mềm mạnh mẽ và dễ bảo trì hơn.
 

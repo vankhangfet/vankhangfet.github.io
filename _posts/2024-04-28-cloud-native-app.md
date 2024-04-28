@@ -27,3 +27,8 @@ Việc phát triển ứng dụng trên nền tảng Cloud yêu cầu phương p
 
 #### 1.4 Continuous integration and continuous delivery (CI/CD):
 Quy trình CI/CD giúp tự động hóa quá trình xây dựng, thử nghiệm và triển khai các thay đổi của ứng dụng một cách nhanh chóng và tin cậy.
+
+Thông qua những trụ cột của Cloud Native, chúng ta có thể thấy rằng Cloud native dường như là một tập hợp những best practice để xây dựng ứng dụng trên cloud. Tuy nhiên Cloud Native không chỉ là như vậy. Vậy sự khác biệt khi ta nói đến Cloud và Cloud Native là gì?
+
+Thực sự có sự khác biệt giữa Cloud và Cloud Native. Cloud đề cập đến Cloud Computing, các dịch vụ sẽ được triển khai trên hạ tầng Cloud. 
+Tuy nhiên thuật ngữ “Cloud Native” không chỉ nói về việc áp dụng, triển khai ứng dụng trên cloud. Thay vào đó, nó đề cập đến cách các ứng dụng được xây dựng và phân phối chứ không chỉ là nơi chúng được triển khai. Trong một số trường hợp, ứng dụng thậm chí có thể không chạy trên Cloud.

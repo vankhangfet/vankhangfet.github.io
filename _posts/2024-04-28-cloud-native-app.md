@@ -45,7 +45,7 @@ Thành thật mà nói, kiến trúc monolithic không phải lúc nào cũng t�
 Rất nhiều ứng dụng ngày nay được tạo ra dựa trên kiến trúc monolithic. Ứng dụng sau đó tiếp tục phát triển, hết lần này đến lần khác, bổ sung thêm nhiều chức năng hơn. Tuy nhiên, đến một lúc nào đó, bạn bắt đầu cảm thấy khó chịu. Bạn thấy mình mất quyền kiểm soát ứng dụng. Thời gian trôi qua, việc mất kiểm soát càng ngày càng tồi tệ hơn và cuối cùng bạn bước vào trạng thái được gọi là Chu kỳ sợ hãi (Fear Cycle):
 
 - Ứng dụng này đã trở nên cực kỳ phức tạp đến mức không một ai có thể hiểu được nó.
-- Bạn sợ phải thay đổi - mỗi thay đổi đều có những tác dụng phụ không mong muốn và tốn kém.
+- Bạn sợ phải thay đổi - mỗi thay đổi đều có những tác động không mong muốn và tốn kém.
 - Các tính năng/bản sửa lỗi mới trở nên phức tạp, tốn thời gian và tốn kém khi triển khai.
 - Mỗi bản phát hành trở nên nhỏ nhất có thể và yêu cầu triển khai đầy đủ toàn bộ ứng dụng.
 - Một thành phần không ổn định có thể làm hỏng toàn bộ hệ thống.

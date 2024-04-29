@@ -19,6 +19,7 @@ triển khai hệ thống.
 ### 1. Cloud native là gì? Những trụ cột trong cloud native
 Refer: [What is Cloud native?](https://cloud.google.com/learn/what-is-cloud-native#section-3)
 
+Figure 1: Cloud-Native Pillars
 <img src="https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/media/cloud-native-foundational-pillars.png" alt="drawing" width="500"/>
 
 #### 1.1 Microservices
@@ -45,6 +46,7 @@ Tuy nhiên thuật ngữ “Cloud Native” không chỉ nói về việc áp d�
 ### 2. Ứng dụng thiết kế theo Cloud Native như thế nào?
 Trước khi microservice trở lên phổ biến. Khi xây dựng một ứng dụng chúng ta có có một kiến trúc cho ứng dụng như:
 
+Figure 2: Monolithic design
 <img src="https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/media/monolithic-design.png" alt="architecture_1" width="500">
 
 Bạn xây dựng một ứng dụng bao gồm tất cả domain logic, business. Các module đều được đóng gói trong một mã nguồn, các module đều chạy trên một máy chủ duy nhất. Các mô-đun chia sẻ một cơ sở dữ liệu quan hệ. Đó là mô hình tiêu biểu cho kiến trúc monolithic.
@@ -62,8 +64,9 @@ Rất nhiều ứng dụng ngày nay được tạo ra dựa trên kiến trúc 
 - Rất khó để triển khai các phương pháp triển khai, phát hành sản phẩm một cách nhanh chóng và đáng tin cậy.
 
 Cuối cùng, các chuyên gia tư vấn đến và bảo bạn viết lại. Để giải quyết Fear Cycle, rất nhiều tổ chức chọn cách tiếp cận theo Cloud Native.
-Khi ứng dụng ứng dụng cloud native, thì kiến trúc sẽ được thay đổi như dưới đây:
+Khi ứng dụng được triển khai theo cloud native, thì hệ thống sẽ được triển khai như hình dưới:
 
+Figure 3: Cloud native design
 <img src="https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/media/cloud-native-design.png" width="500">
 
 Nhìn qua kiến trúc trên thì cũng rất khó để nhận biết một ứng dụng Cloud native cần phải đảm bảo, và triển khai như thế nào? 
@@ -88,6 +91,7 @@ Chi tiết có thể xem ở link tham khảo phía trên. Tài liệu mô tả 
 ### 3. Cloud-Native Container Ecosystem
 Refer: [A CTO’s Guide to Navigating the Cloud-Native Container Ecosystem](https://www.gartner.com/doc/reprints?id=1-2FNEEDI0&ct=231116&st=sb)
 
+Figure 3: Cloud native Container Ecosytem
 ![Context](/assets/img/Figure_1_Cloud-Native_Container_Ecosystem.png "Containers")
 
 

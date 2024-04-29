@@ -9,7 +9,7 @@ Khi thực hiện xây dựng, thiết kế hệ thống chúng ta có thể th�
 triển khai hệ thống.
 
 ### 1. Cloud native là gì? Những trụ cột trong cloud native là gì?
-Refer: https://cloud.google.com/learn/what-is-cloud-native#section-3
+Refer: [What is Cloud native?](https://cloud.google.com/learn/what-is-cloud-native#section-3)
 
 <img src="https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/media/cloud-native-foundational-pillars.png" alt="drawing" width="500"/>
 
@@ -59,7 +59,9 @@ Khi ứng dụng ứng dụng cloud native, thì kiến trúc sẽ được thay
 
 Nhìn qua kiến trúc trên thì cũng rất khó để nhận biết một ứng dụng Cloud native cần phải đảm bảo, và triển khai như thế nào? 
 Tuy nhiên chúng ta có thể đánh giá một ứng dụng thông qua những yếu tố sau. Theo tài liệu của Ms thì chúng ta có 12 yếu tố. 
-Refer: https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/definition và https://12factor.net
+Refer: 
+
+[Cloud Native Definition](https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/definition) và [12 yếu tố khi triển khai](https://12factor.net)
 
 | Factor    | Explanation |
 | -------- | ------- |

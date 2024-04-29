@@ -44,7 +44,7 @@ Tuy nhiên thuật ngữ “Cloud Native” không chỉ nói về việc áp d�
 
  <a id="item-two"></a>
 ### 2. Ứng dụng thiết kế theo Cloud Native như thế nào?
-Trước khi microservice trở lên phổ biến. Khi xây dựng một ứng dụng chúng ta có có một kiến trúc cho ứng dụng như:
+Trước khi microservice trở lên phổ biến. Khi xây dựng một ứng dụng thì kiến trúc Monolithic là rất phổ biến như dưới đây:
 
 Figure 2: Monolithic design
 <img src="https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/media/monolithic-design.png" alt="architecture_1" width="500">

@@ -57,6 +57,19 @@ Khi ứng dụng ứng dụng cloud native, thì kiến trúc sẽ được thay
 
 <img src="https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/media/cloud-native-design.png" width="500">
 
+Nhìn qua kiến trúc trên thì cũng rất khó để nhận biết một ứng dụng Cloud native cần phải đảm bảo, và triển khai như thế nào? 
+Tuy nhiên chúng ta có thể đánh giá một ứng dụng thông qua những yếu tố sau. Theo tài liệu của Ms thì chúng ta có 12 yếu tố. 
+Refer: https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/definition và https://12factor.net
+
+| Factor    | Explanation |
+| -------- | ------- |
+| 1 - Code Base  | A single code base for each microservice, stored in its own repository. Tracked with version control, it can deploy to multiple environments (QA, Staging, Production).   |
+| 2 - Dependencies | Each microservice isolates and packages its own dependencies, embracing changes without impacting the entire system.    |
+| 3 - Configurations    | Configuration information is moved out of the microservice and externalized through a configuration management tool outside of the code. The same deployment can propagate across environments with the correct configuration applied.   |
+| 4 - Backing Services | Ancillary resources (data stores, caches, message brokers) should be exposed via an addressable URL. Doing so decouples the resource from the application, enabling it to be interchangeable. | 
+|5 - Build, Release, Run | Each release must enforce a strict separation across the build, release, and run stages. Each should be tagged with a unique ID and support the ability to roll back. Modern CI/CD systems help fulfill this principle. | 
+...
+Chi tiết có thể xem ở link tham khảo phía trên.
 
 
 

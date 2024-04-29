@@ -32,3 +32,26 @@ Thông qua những trụ cột của Cloud Native, chúng ta có thể thấy r�
 
 Thực sự có sự khác biệt giữa Cloud và Cloud Native. Cloud đề cập đến Cloud Computing, các dịch vụ sẽ được triển khai trên hạ tầng Cloud. 
 Tuy nhiên thuật ngữ “Cloud Native” không chỉ nói về việc áp dụng, triển khai ứng dụng trên cloud. Thay vào đó, nó đề cập đến cách các ứng dụng được xây dựng và phân phối chứ không chỉ là nơi chúng được triển khai. Trong một số trường hợp, ứng dụng thậm chí có thể không chạy trên Cloud.
+
+### 2. Ứng dụng thiết kế theo Cloud Native như thế nào?
+Trước khi microservice trở lên phổ biến. Khi xây dựng một ứng dụng chúng ta có có một kiến trúc cho ứng dụng như:
+
+<img src="https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/media/monolithic-design.png" alt="architecture_1" width="500">
+
+Bạn xây dựng một ứng dụng bao gồm tất cả domain logic, business. Các module đều được đóng gói trong một mã nguồn, các module đều chạy trên một máy chủ duy nhất. Các mô-đun chia sẻ một cơ sở dữ liệu quan hệ. Đó là mô hình tiêu biểu cho kiến trúc monolithic.
+
+Thành thật mà nói, kiến trúc monolithic không phải lúc nào cũng tệ, đôi khi nó lại hoạt động tốt.
+
+Nhiều ứng dụng thành công tồn tại ngày nay được tạo ra dưới dạng nguyên khối. Ứng dụng này đã thành công và tiếp tục phát triển, hết lần này đến lần khác, bổ sung thêm nhiều chức năng hơn. Tuy nhiên, đến một lúc nào đó, bạn bắt đầu cảm thấy khó chịu. Bạn thấy mình mất quyền kiểm soát ứng dụng. Thời gian trôi qua, cảm giác đó trở nên mãnh liệt hơn và cuối cùng bạn bước vào trạng thái được gọi là Chu kỳ sợ hãi (Fear Cycle):
+
+- Ứng dụng này đã trở nên cực kỳ phức tạp đến mức không một ai có thể hiểu được nó.
+- Bạn sợ phải thay đổi - mỗi thay đổi đều có những tác dụng phụ không mong muốn và tốn kém.
+- Các tính năng/bản sửa lỗi mới trở nên phức tạp, tốn thời gian và tốn kém khi triển khai.
+- Mỗi bản phát hành trở nên nhỏ nhất có thể và yêu cầu triển khai đầy đủ toàn bộ ứng dụng.
+- Một thành phần không ổn định có thể làm hỏng toàn bộ hệ thống.
+- Các công nghệ mới không phải là một lựa chọn.
+- Rất khó để triển khai các phương pháp triển khai, phát hành sản phẩm một cách nhanh chóng và đáng tin cậy.
+
+Cuối cùng, các chuyên gia tư vấn đến và bảo bạn viết lại.
+
+

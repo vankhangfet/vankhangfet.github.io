@@ -42,7 +42,7 @@ Bạn xây dựng một ứng dụng bao gồm tất cả domain logic, business
 
 Thành thật mà nói, kiến trúc monolithic không phải lúc nào cũng tệ, đôi khi nó lại hoạt động tốt.
 
-Nhiều ứng dụng thành công tồn tại ngày nay được tạo ra dưới dạng nguyên khối. Ứng dụng này đã thành công và tiếp tục phát triển, hết lần này đến lần khác, bổ sung thêm nhiều chức năng hơn. Tuy nhiên, đến một lúc nào đó, bạn bắt đầu cảm thấy khó chịu. Bạn thấy mình mất quyền kiểm soát ứng dụng. Thời gian trôi qua, cảm giác đó trở nên mãnh liệt hơn và cuối cùng bạn bước vào trạng thái được gọi là Chu kỳ sợ hãi (Fear Cycle):
+Rất nhiều ứng dụng ngày nay được tạo ra dựa trên kiến trúc monolithic. Ứng dụng sau đó tiếp tục phát triển, hết lần này đến lần khác, bổ sung thêm nhiều chức năng hơn. Tuy nhiên, đến một lúc nào đó, bạn bắt đầu cảm thấy khó chịu. Bạn thấy mình mất quyền kiểm soát ứng dụng. Thời gian trôi qua, việc mất kiểm soát càng ngày càng tồi tệ hơn và cuối cùng bạn bước vào trạng thái được gọi là Chu kỳ sợ hãi (Fear Cycle):
 
 - Ứng dụng này đã trở nên cực kỳ phức tạp đến mức không một ai có thể hiểu được nó.
 - Bạn sợ phải thay đổi - mỗi thay đổi đều có những tác dụng phụ không mong muốn và tốn kém.
@@ -52,6 +52,11 @@ Nhiều ứng dụng thành công tồn tại ngày nay được tạo ra dướ
 - Các công nghệ mới không phải là một lựa chọn.
 - Rất khó để triển khai các phương pháp triển khai, phát hành sản phẩm một cách nhanh chóng và đáng tin cậy.
 
-Cuối cùng, các chuyên gia tư vấn đến và bảo bạn viết lại.
+Cuối cùng, các chuyên gia tư vấn đến và bảo bạn viết lại. Để giải quyết Fear Cycle, rất nhiều tổ chức chọn cách tiếp cận theo Cloud Native.
+Khi ứng dụng ứng dụng cloud native, thì kiến trúc sẽ được thay đổi như dưới đây:
+
+<img src="https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/media/cloud-native-design.png" width="500">
+
+
 
 

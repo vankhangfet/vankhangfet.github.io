@@ -88,7 +88,7 @@ Chi tiết có thể xem ở link tham khảo phía trên. Tài liệu mô tả 
 ### 3. Cloud-Native Container Ecosystem
 Refer: [A CTO’s Guide to Navigating the Cloud-Native Container Ecosystem](https://www.gartner.com/doc/reprints?id=1-2FNEEDI0&ct=231116&st=sb)
 
-<img src="https://github.com/vankhangfet/vankhangfet.github.io/blob/master/assets/img/Figure_1_Cloud-Native_Container_Ecosystem.png">
+![Context](/assets/img/Figure_1_Cloud-Native_Container_Ecosystem.png "Containers")
 
 
 

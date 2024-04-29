@@ -68,8 +68,10 @@ Refer: https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/defini
 | 3 - Configurations    | Configuration information is moved out of the microservice and externalized through a configuration management tool outside of the code. The same deployment can propagate across environments with the correct configuration applied.   |
 | 4 - Backing Services | Ancillary resources (data stores, caches, message brokers) should be exposed via an addressable URL. Doing so decouples the resource from the application, enabling it to be interchangeable. | 
 |5 - Build, Release, Run | Each release must enforce a strict separation across the build, release, and run stages. Each should be tagged with a unique ID and support the ability to roll back. Modern CI/CD systems help fulfill this principle. | 
+
 ...
-Chi tiết có thể xem ở link tham khảo phía trên.
+
+Chi tiết có thể xem ở link tham khảo phía trên. Tài liệu mô tả rất chi tiết về các factor.
 
 
 

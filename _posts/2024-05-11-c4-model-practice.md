@@ -22,4 +22,5 @@ Chúng ta sẽ bắt đầu với System Context diagram, hệ thống sẽ đư
 
 <img src="/assets/img/Iot_alg_sys_context.png" width="450px">
 
-
+Khi muốn mô tả chi tiết hơn hệ thống, chúng ta sẽ sử dụng Container, trong Container đội phát triển có thể sẽ thấy chi tiết hơn về các thành phần, công nghệ được
+sử dụng trong hệ thống.

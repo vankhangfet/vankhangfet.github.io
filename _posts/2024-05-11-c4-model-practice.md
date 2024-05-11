@@ -18,4 +18,8 @@ Các bạn có thể hình dung hệ thống như sau: Khi có sự thay đổi 
 Vậy khi sử dụng C4 model, để mô tả về hệ thống này sẽ như thế nào? Vì tôi không thể vẽ qua chi tiết hệ thống nhưng tôi sẽ cố gắng mô tả hệ thống này gần bài toán 
 của đội phát triển nhất có thể.
 
+Chúng ta sẽ bắt đầu với System Context diagram, hệ thống sẽ được mô tả như sau:
+
+<img src="/assets/img/Iot_alg_sys_context.png" width="450px">
+
 

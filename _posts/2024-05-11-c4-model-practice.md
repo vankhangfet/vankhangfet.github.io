@@ -18,11 +18,14 @@ Các bạn có thể hình dung hệ thống như sau: Khi có sự thay đổi 
 Vậy khi sử dụng C4 model, để mô tả về hệ thống này sẽ như thế nào? Vì tôi không thể vẽ qua chi tiết hệ thống nhưng tôi sẽ cố gắng mô tả hệ thống này gần bài toán 
 của đội phát triển nhất có thể.
 
-Chúng ta sẽ bắt đầu với System Context diagram, hệ thống sẽ được mô tả như sau:
+Chúng ta sẽ bắt đầu với **System Context diagram**, hệ thống sẽ được mô tả như sau:
 
 <img src="/assets/img/Iot_alg_sys_context.png" width="450px">
 
-Khi muốn mô tả chi tiết hơn hệ thống, chúng ta sẽ sử dụng Container, trong Container đội phát triển có thể sẽ thấy chi tiết hơn về các thành phần, công nghệ được
+Khi muốn mô tả chi tiết hơn hệ thống, chúng ta sẽ sử dụng **Container diagram**, trong Container đội phát triển có thể sẽ thấy chi tiết hơn về các thành phần, công nghệ được
 sử dụng trong hệ thống.
 
 <img src="/assets/img/Iot_alg-Container.png" width="450px">
+
+Nếu tiếp tục muốn mô tả kỹ hơn các thành phần trong Container, chúng ta sẽ tiếp tục với **Component diagram**. 
+Component diagram sẽ hướng đến dev và architecture, diagram này sẽ cho chúng ta cái nhìn chi tiết hơn về các component ví dụ như webApi sẽ có những controller nào? hay những service, công nghệ nào được sử dụng trong webApi

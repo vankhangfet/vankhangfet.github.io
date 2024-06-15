@@ -24,6 +24,8 @@ Các mô hình ngôn ngữ lớn nhận một đoạn văn bản làm đầu và
 [VectorDB](https://aws.amazon.com/what-is/vector-databases/)
 
 Bạn có thể lựa chọn vectorDB theo những tiêu chí sau:
+Refer: [vector-embeddings-and-rag](https://community.aws/content/2gvh8oJzNrM4vxdZDd903zcEFJc/vector-embeddings-and-rag-demystified-2?lang=en#)
+
 <img src="/assets/img/vectorDB.png">
 
 

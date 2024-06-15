@@ -6,7 +6,13 @@ tags: [Architec]
 
 Với sự phát triển mạnh mẽ của các mô hình ngôn ngữ lớn và điện toán đám mây thì việc tự xây dựng một chatbot thực sự đã trở lên rất dễ dàng.
 Tôi cũng đã thử tự mình xây dựng chatbot và tìm hiểu về RAG (Retrieval-Augmented Generation), qua đó giúp tôi có cơ hội thực hành, hiểu rõ các 
-service để tạo nên một hệ thống Chatbot như AWS Bedrock, và Kendra. Trước khi đi chi tiết hơn, tôi note lại một số cần chú ý khi xây dựng hệ thống RAG. 
+service để tạo nên một hệ thống Chatbot như AWS Bedrock, và Kendra. Trong post này tôi sẽ tóm tắt lại những nội dung gồm:
+
+- Generative AI là gì?
+- Vector DB
+- Xây dựng kiến trúc RAG, ChatBot với AWS
+
+Trước khi đi chi tiết hơn, tôi note lại một số cần chú ý khi xây dựng hệ thống RAG. 
 Nhắc lại một chút thì hệ thống sẽ sử dụng mô hình ngôn ngữ lớn (large language model) và Generative AI.
 
 Nếu các bạn chưa từng nghe hay biết đến Genartive AI,thì khóa học sau sẽ rất hữu ích.
@@ -28,9 +34,21 @@ Refer: [vector-embeddings-and-rag](https://community.aws/content/2gvh8oJzNrM4vxd
 
 <img src="/assets/img/vectorDB.png">
 
-Sau đó chúng ta có thể bắt đầu với kiến trúc như sau:
+Để xây dựng hệ thống RA chúng ta có thể bắt đầu với kiến trúc như sau:
 
 <img src="/assets/img/RAG_Architecture.png">
+
+Trong kiến trúc này gồm các thành phần sau: 
+
+1. Web UI: cung cấp giao diện cho phép người dùng tương tác vơi ChatBot. Ở đây tôi sử dụng [Streamlit](https://streamlit.io). UI sẽ invoke Lambda function để gửi/nhận request/response
+2. Lambda function: cung cấp api endpoint để Web UI có thể tương tác được với hệ thống.
+3. S3: lưu trữ document (Knowledge base)
+4. Amazon Kendar: index document cũng như search service trả ra dữ liệu liên quan tới câu hỏi từ người dùng.
+5. Amazon Bedrock: đây là một manged service cung cấp foudation model LLM.
+
+Trong quá trình triển khai chúng ta sẽ sử dụng đến framework [LangChain](https://python.langchain.com/v0.2/docs/introduction/)
+
+
 
 
 Refer: https://medium.com/@zekaouinoureddine/how-to-build-high-accuracy-serverless-rag-using-amazon-bedrock-and-kendra-on-aws-9ec9681e4e9b

@@ -28,6 +28,14 @@ Refer: [vector-embeddings-and-rag](https://community.aws/content/2gvh8oJzNrM4vxd
 
 <img src="/assets/img/vectorDB.png">
 
+Sau đó chúng ta có thể bắt đầu với kiến trúc như sau:
+
+<img src="/assets/img/RAG_Architecture.png">
+
+
+Refer: https://medium.com/@zekaouinoureddine/how-to-build-high-accuracy-serverless-rag-using-amazon-bedrock-and-kendra-on-aws-9ec9681e4e9b
+
+
 
 
 

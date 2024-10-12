@@ -13,7 +13,28 @@ Vậy làm thế nào để cải thiện kỹ năng này???
 Không có cách nào khác ngoài việc luyện tập, với các bạn dev thì việc xử lý các ticket cũng chính là cơ hội để luyện tập kỹ năng reporting.
 Điều này thể hiện rất rõ qua việc các bạn thường xuyên phải close các ticket. Khi close ticket không chỉ là close ticket đó, nó còn là tài liệu để 
 tra cứu khi có một vấn đề tương tự xảy ra. Nếu như các bạn dev, có thể report một cách chính xác điều gì đang xảy ra thì các bạn đã thấy rằng kỹ năng
-reporting đã được cải thiện rồi.
+reporting đã được cải thiện rồi. Dưới đây là một số tip giúp các bạn viết report một cách tốt hơn.
+
+## 1. Xác định rõ đối tượng đọc
+   Khi viết report bạn hãy cân nhắc đối tượng người đọc là ai? Người đọc có đủ hiểu biết chi tiết, hay có đủ khả năng để hiểu code không?
+   Vấn đề người đọc quan tâm là gì? hãy chú ý rằng khi bạn report thì người đọc không phải là bạn, do đó hãy đặt mình vào vị trí người đọc để có thể viết
+   tốt hơn, trọng tâm vào vấn đề.
+   
+## 2. Xác định bố cục trình bày
+    Thông thường với những báo cáo thường sẽ có bố cục như sau:
+    - Background
+    - Issue
+    - Rootcause
+    - Solution
+
+   Đây là một ví dụ cơ bản mà chúng ta có thể sử dụng trong hầu hết các báo báo kỹ thuật.
+
+## 3. Trích dẫn nguồn thông tin đáng tin cậy
+   Điều này rất quan trọng, khi thông tin đươc cung cấp đầy đủ, kèm theo trích dẫn tin cậy thì báo cáo sẽ có tính thuyết phục cao.
+   Người đọc sẽ không phải mất công xác thực, kiểm chứng thông tin. Ngoài ra nó cũng giúp bạn có một nhận định mạnh, thuyết phục người đọc.
+
+
+
 
 
 

@@ -32,6 +32,13 @@ reporting đã được cải thiện rồi. Dưới đây là một số tip gi
 ## 3. Trích dẫn nguồn thông tin đáng tin cậy
    Điều này rất quan trọng, khi thông tin đươc cung cấp đầy đủ, kèm theo trích dẫn tin cậy thì báo cáo sẽ có tính thuyết phục cao.
    Người đọc sẽ không phải mất công xác thực, kiểm chứng thông tin. Ngoài ra nó cũng giúp bạn có một nhận định mạnh, thuyết phục người đọc.
+   
+## 4. Hãy đọc nhiều báo cáo tốt, hay tham khảo những báo cáo tốt.
+   Điều này giúp bạn hình thành thói quen, hay nhận ra những điểm thiếu trong báo cáo của mình, từ đó cải thiện khả năng viết, báo cáo.
+
+Hiện tại thì tôi vẫn đang cải thiện khả năng này từng ngày, khi mà tôi phải tham gia vào các đội phát triển khác nhau, cũng như làm việc với 
+nhiều phòng ban khác nhau. Hy vọng một số gợi ý trên sẽ giúp các bạn có khả năng report tốt hơn.
+
 
 
 

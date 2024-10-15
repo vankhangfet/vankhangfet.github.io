@@ -16,10 +16,22 @@ các chỉ số DORA là bốn chỉ số chính được sử dụng để ch�
 | 1. Deployment frequency  | How often an organization successfully releases to production    |
 | 2. Lead time for changes  | The amount of time it takes for a commit to get into production   |
 | 3. Change failure rate | The percentage of deployments causing a failure in production   |
-| 4. Change failure rate | The amount of time it takes for an organization to recover from a failure in production   |
+| 4. Time to restore service | The amount of time it takes for an organization to recover from a failure in production   |
 
 Chỉ có 4 chỉ số, nhưng việc đo lường 4 chỉ số này là một bài toán và thách thức cho các đội phát triển. Trước khi đi chi tiết vào đo lường, chúng
 ta hãy xem các chỉ số này sẽ giúp cho đội phát triển như thế nào? Nó có ý nghĩa gì?
+
+Trong DORA thì việc xác định năng suất được chia làm 4 level: low performers, medium performers, high performers, and elite performers.
+| ---- | Deployment frequency     | Lead time for changes  | Change failure rate | Time to restore service |
+|------| -------- | ------- | ------| ------ |
+|Low performers|
+|Medium performers|
+|High performers|
+|Elite performers|
+
+
+
+
 
 
 
